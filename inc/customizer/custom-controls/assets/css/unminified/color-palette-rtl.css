@@ -112,6 +112,7 @@
 
 #customize-control-astra-color-palettes .ast-color-palette-wrapper {
 	clear: both;
+    position: sticky;
 }
 
 #customize-control-astra-color-palettes .ast-palette-selection-wrapper {
