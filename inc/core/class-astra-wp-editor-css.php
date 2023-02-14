@@ -553,6 +553,10 @@ class Astra_WP_Editor_CSS {
 				'background-color' => esc_attr( $btn_bg_h_color ),
 				'border-color'     => empty( $btn_border_h_color ) ? esc_attr( $btn_bg_h_color ) : esc_attr( $btn_border_h_color ),
 			),
+			'.wp-block-button.is-style-outline > .wp-block-button__link:hover, .wp-block-button.is-style-outline > .wp-block-button__link:not(.has-text-color):hover' => array(
+				'color'            => esc_attr( $btn_h_color ),
+				'background-color' => esc_attr( $btn_bg_h_color ),
+			),
 			'.wp-block-button.is-style-outline > .wp-block-button__link.has-text-color' => array(
 				'border-color' => 'initial',
 			),
