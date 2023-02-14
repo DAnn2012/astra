@@ -553,6 +553,12 @@ class Astra_WP_Editor_CSS {
 				'background-color' => esc_attr( $btn_bg_h_color ),
 				'border-color'     => empty( $btn_border_h_color ) ? esc_attr( $btn_bg_h_color ) : esc_attr( $btn_border_h_color ),
 			),
+			'.wp-block-button.is-style-outline > .wp-block-button__link.has-text-color' => array(
+				'border-color' => 'initial',
+			),
+			'.wp-block-button.is-style-outline > .wp-block-button__link:not(.has-text-color)' => array(
+				'color' => empty( $btn_border_color ) ? esc_attr( $btn_bg_color ) : esc_attr( $btn_border_color ),
+			),
 
 			// Margin bottom same as applied on frontend.
 			'.editor-styles-wrapper .is-root-container.block-editor-block-list__layout > .wp-block-heading' => array(
