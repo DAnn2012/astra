@@ -560,6 +560,9 @@ class Astra_WP_Editor_CSS {
 			'.wp-block-button.is-style-outline > .wp-block-button__link.has-text-color' => array(
 				'border-color' => 'initial',
 			),
+			'.wp-block-button.is-style-outline > .wp-block-button__link' => array(
+				'padding' => '.667em 1.333em',
+			),
 			'.wp-block-button.is-style-outline > .wp-block-button__link:not(.has-text-color)' => array(
 				'color' => empty( $btn_border_color ) ? esc_attr( $btn_bg_color ) : esc_attr( $btn_border_color ),
 			),
