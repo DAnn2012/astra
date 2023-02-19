@@ -1322,8 +1322,8 @@
 	}
 	/** Modal Popup */
 	.ast-fields-wrap .components-circular-option-picker__option-wrapper .components-circular-option-picker__option:focus::after {
-		width: auto;
-		height: auto;
+		width: 21px;
+		height: 21px;
 	}
 	.ast-fields-wrap .ast-color-palette .components-circular-option-picker__option-wrapper,
 	.ast-fields-wrap .ast-color-palette .components-circular-option-picker__option-wrapper {
@@ -1331,8 +1331,8 @@
 		width: 20px;
 	}
 	.ast-fields-wrap .ast-color-palette .components-circular-option-picker__option.is-pressed + svg {
-		left: 1px;
-		top: -2.5px;
+		left: 2.5px;
+		top: -1px;
 		width: 18px;
 	}
 }
