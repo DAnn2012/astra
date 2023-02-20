@@ -256,7 +256,7 @@ function astra_load_modern_block_editor_ui( $dynamic_css ) {
 	$astra_full_stretched_selector  = $astra_block_editor_v2_ui ? '.ast-plain-container.ast-no-sidebar .entry-content > .alignfull' . $exclude_uagb_selector . ', .ast-page-builder-template .ast-no-sidebar .entry-content > .alignfull' . $exclude_uagb_selector : '.ast-plain-container.ast-no-sidebar .entry-content .alignfull' . $exclude_uagb_selector . ', .ast-page-builder-template .ast-no-sidebar .entry-content .alignfull' . $exclude_uagb_selector;
 
 	$dynamic_css .= '
-	.entry-content > .wp-block-group, .entry-content > .wp-block-cover, .entry-content > .wp-block-columns {
+	.entry-content .wp-block-group, .entry-content .wp-block-cover, .entry-content .wp-block-columns {
 		padding-top: var(--wp--custom--ast-default-block-top-padding);
 		padding-right: var(--wp--custom--ast-default-block-right-padding);
 		padding-bottom: var(--wp--custom--ast-default-block-bottom-padding);
