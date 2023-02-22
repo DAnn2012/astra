@@ -11605,7 +11605,7 @@ const StarterTemplates = () => {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("main", {
     className: "relative tablet:my-16"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "w-full blur-xs opacity-40"
+    className: "w-full blur-[8px]"
   }, _Common_block_icons__WEBPACK_IMPORTED_MODULE_2__["default"]["starter-canvas"]), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "max-w-[39rem] h-max bg-white m-auto shadow-overlay-modal text-center rounded-lg p-8 absolute inset-3 top-[150%] sm:top-0 sm:inset-0"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
