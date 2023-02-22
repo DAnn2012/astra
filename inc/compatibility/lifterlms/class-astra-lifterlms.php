@@ -240,7 +240,7 @@ if ( ! class_exists( 'Astra_LifterLMS' ) ) :
 					'post_type'        => 'llms_review',
 					'post_status'      => 'publish',
 					'post_parent'      => get_the_ID(),
-					'suppress_filters' => true,
+					'suppress_filters' => true, // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.SuppressFiltersTrue -- Required for the query to work properly.
 				);
 				/** @psalm-suppress ArgumentTypeCoercion */ // phpcs:ignore Generic.Commenting.DocComment.MissingShort
 				$posts_array = get_posts( $args );
@@ -290,7 +290,7 @@ if ( ! class_exists( 'Astra_LifterLMS' ) ) :
 					'post_status'      => 'publish',
 					'post_parent'      => get_the_ID(),
 					'author'           => get_current_user_id(),
-					'suppress_filters' => true,
+					'suppress_filters' => true, // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.SuppressFiltersTrue -- Required for the query to work properly.
 				);
 				$posts_array = get_posts( $args );
 

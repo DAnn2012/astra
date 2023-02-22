@@ -180,7 +180,7 @@ if ( ! function_exists( 'astra_check_is_ie' ) ) :
 		$is_ie = false;
 
 		if ( ! empty( $_SERVER['HTTP_USER_AGENT'] ) ) {
-			$ua = htmlentities( sanitize_text_field( wp_unslash( $_SERVER['HTTP_USER_AGENT'] ) ), ENT_QUOTES, 'UTF-8' );
+			$ua = htmlentities( sanitize_text_field( wp_unslash( $_SERVER['HTTP_USER_AGENT'] ) ), ENT_QUOTES, 'UTF-8' );  // phpcs:ignore WordPressVIPMinimum.Variables.RestrictedVariables.cache_constraints___SERVER__HTTP_USER_AGENT__ -- Need to check if its ie.
 			if ( strpos( $ua, 'Trident/7.0' ) !== false ) {
 				$is_ie = true;
 			}
@@ -998,7 +998,8 @@ function astra_get_font_extras( $config, $setting, $unit = false ) {
  * @param array  $font_size Font size.
  * @param string $font_extras contains all font controls.
  * @param string $color In most of cases color is also added, so included optional param here.
- * @return  array  array of build CSS font settings.
+
+ * @return array  array of build CSS font settings.
  *
  * @since 4.0.0
  */

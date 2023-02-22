@@ -825,7 +825,7 @@ function astra_theme_background_updater_4_0_0() {
 								$migrated_post_metadata[]   = $tax_slug;
 								$theme_options[ $tax_slug ] = 'category';
 
-								$tax_counter = $tax_counter + 1;
+								$tax_counter = ++$tax_counter;
 								$tax_slug    = 'ast-dynamic-single-' . esc_attr( $post_type ) . '-taxonomy-' . $tax_counter;
 							}
 							break;
@@ -834,7 +834,7 @@ function astra_theme_background_updater_4_0_0() {
 								$migrated_post_metadata[]   = $tax_slug;
 								$theme_options[ $tax_slug ] = 'post_tag';
 
-								$tax_counter = $tax_counter + 1;
+								$tax_counter = ++$tax_counter;
 								$tax_slug    = 'ast-dynamic-single-' . esc_attr( $post_type ) . '-taxonomy-' . $tax_counter;
 							}
 							break;

@@ -24,6 +24,7 @@ v4.1.0 (Unreleased)
 - Fix: Inside container spacing for single posts affecting the related posts section.
 - Fix: PHP error 'Uncaught TypeError: ltrim()' for getting taxonomy term link.
 - Fix: Single post title transformed to capitalize after 4.0 update.
+- Fix: WooCommerce - Console throwing an event listener error when a product has only 1 item in stock.
 
 v4.0.2
 - Deprecated: Filter 'astra_single_banner_post_meta' for single post meta markup has been deprecated instead use 'astra_single_post_meta'.

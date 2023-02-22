@@ -1967,17 +1967,17 @@ function hasWordPressWidgetBlockEditor() {
 				mobile_break_point = astraBuilderPreview.mobile_break_point || 544;
 				if (size.desktop != '' || size.tablet != '' || size.mobile != '') {
 					var dynamicStyle = '';
-					dynamicStyle += '.single_add_to_cart_button {';
+					dynamicStyle += '.woocommerce div.product form.cart .button.single_add_to_cart_button {';
 					dynamicStyle += 'width: ' + size.desktop + '%' + ';';
 					dynamicStyle += '} ';
 					dynamicStyle += '@media (max-width: ' + tablet_break_point + 'px) {';
-					dynamicStyle += '.single_add_to_cart_button {';
+					dynamicStyle += '.woocommerce div.product form.cart .button.single_add_to_cart_button {';
 					dynamicStyle += 'width: ' + size.tablet + '%' + ';';
 					dynamicStyle += '} ';
 					dynamicStyle += '} ';
 
 					dynamicStyle += '@media (max-width: ' + mobile_break_point + 'px) {';
-					dynamicStyle += '.single_add_to_cart_button {';
+					dynamicStyle += '.woocommerce div.product form.cart .button.single_add_to_cart_button {';
 					dynamicStyle += 'width: ' + size.mobile + '%' + ';';
 					dynamicStyle += '} ';
 					dynamicStyle += '} ';

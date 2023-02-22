@@ -216,7 +216,7 @@ if ( ! class_exists( 'Astra_Blog_Layout_Configs' ) ) {
 					'renderAs'   => 'text',
 					'title'      => __( 'Format', 'astra' ),
 					'choices'    => array(
-						''       => __( 'Inherit', 'astra' ),
+						''       => __( 'Default', 'astra' ),
 						'F j, Y' => 'November 6, 2010',
 						'Y-m-d'  => '2010-11-06',
 						'm/d/Y'  => '11/06/2010',

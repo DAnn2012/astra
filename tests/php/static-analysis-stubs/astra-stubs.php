@@ -149,6 +149,11 @@ namespace {
         {
         }
     }
+    /**
+     * Astra_API_Init.
+     *
+     * @since x.x.x
+     */
     class Astra_API_Init extends \WP_REST_Controller
     {
         /**
@@ -285,6 +290,11 @@ namespace {
         {
         }
     }
+    /**
+     * Astra_Menu.
+     *
+     * @since x.x.x
+     */
     class Astra_Menu
     {
         /**
@@ -436,17 +446,17 @@ namespace {
          * Get Astra's useful plugins.
          * Extend this in following way -
          *
-         * array(
-         *      'title' => "Plugin Name",
-         *      'subtitle' => "Plugin description goes here.",
-         *      'path' => 'plugin-slug/plugin-slug.php',
-         *      'redirection' => admin_url( 'admin.php?page=sc-dashboard' ),
-         *      'status' => self::get_plugin_status( 'plugin-slug/plugin-slug.php' ),
-         *      'logoPath' => array(
-         *          'internal_icon' => true, // true = will take internal Astra's any icon. false = provide next custom icon link.
-         *          'icon_path' => "spectra", // If internal_icon false then - example custom SVG URL: ASTRA_THEME_URI . 'inc/assets/images/astra.svg'.
-         *      ),
-         *  ),
+         * //  array(
+         * //         'title' => "Plugin Name",
+         * //         'subtitle' => "Plugin description goes here.",
+         * //         'path' => 'plugin-slug/plugin-slug.php',
+         * //         'redirection' => admin_url( 'admin.php?page=sc-dashboard' ),
+         * //         'status' => self::get_plugin_status( 'plugin-slug/plugin-slug.php' ),
+         * //         'logoPath' => array(
+         * //             'internal_icon' => true, // true = will take internal Astra's any icon. false = provide next custom icon link.
+         * //             'icon_path' => "spectra", // If internal_icon false then - example custom SVG URL: ASTRA_THEME_URI . 'inc/assets/images/astra.svg'.
+         * //         ),
+         * //     ),
          *
          * @since 4.0.0
          * @return array
@@ -459,18 +469,18 @@ namespace {
          * Get Astra's recommended integrations.
          * Extend this in following way -
          *
-         * array(
-         *      'title' => "Plugin Name",
-         *      'subtitle' => "Plugin description goes here.",
-         *      'isPro' => false,
-         *      'status' => self::get_plugin_status( 'plugin-slug/plugin-slug.php' ),
-         *      'path' => 'plugin-slug/plugin-slug.php',
-         *      'redirection' => admin_url( 'admin.php?page=sc-dashboard' ),
-         *      'logoPath' => array(
-         *          'internal_icon' => true, // true = will take internal Astra's any icon. false = provide next custom icon link.
-         *          'icon_path' => "spectra", // If internal_icon false then - example custom SVG URL: ASTRA_THEME_URI . 'inc/assets/images/astra.svg'.
-         *      ),
-         *  ),
+         * // array(
+         * //    'title' => "Plugin Name",
+         * //    'subtitle' => "Plugin description goes here.",
+         * //     'isPro' => false,
+         * //     'status' => self::get_plugin_status( 'plugin-slug/plugin-slug.php' ),
+         * //     'path' => 'plugin-slug/plugin-slug.php',
+         * //     'redirection' => admin_url( 'admin.php?page=sc-dashboard' ),
+         * //     'logoPath' => array(
+         * //         'internal_icon' => true, // true = will take internal Astra's any icon. false = provide next custom icon link.
+         * //         'icon_path' => "spectra", // If internal_icon false then - example custom SVG URL: ASTRA_THEME_URI . 'inc/assets/images/astra.svg'.
+         * //     ),
+         * // ),
          *
          * @since 4.0.0
          * @return array
@@ -12785,7 +12795,7 @@ namespace {
          *
          * @var array
          */
-        private static $db_updates = array('3.0.0' => array('astra_header_builder_compatibility'), '3.0.1' => array('astra_clear_assets_cache'), '3.3.0' => array('astra_gutenberg_pattern_compatibility', 'astra_icons_svg_compatibility', 'astra_check_flex_based_css'), '3.4.0' => array('astra_update_cart_style'), '3.5.0' => array('astra_update_related_posts_grid_layout', 'astra_site_title_tagline_responsive_control_migration'), '3.6.0' => array('astra_headings_font_support', 'astra_remove_logo_max_width', 'astra_transparent_header_default_value'), '3.6.3' => array('astra_button_default_values_updated'), '3.6.4' => array('astra_update_underline_link_setting'), '3.6.5' => array('astra_support_block_editor'), '3.6.7' => array('astra_fix_footer_widget_right_margin_case', 'astra_remove_elementor_toc_margin'), '3.6.8' => array('astra_set_removal_widget_design_options_flag'), '3.6.9' => array('astra_zero_font_size_comp', 'astra_unset_builder_elements_underline', 'astra_remove_responsive_account_menu_colors_support'), '3.7.0' => array('astra_global_color_compatibility'), '3.7.4' => array('astra_improve_gutenberg_editor_ui'), '3.7.9' => array('astra_set_default_breadcrumb_separator_option', 'astra_fullwidth_layouts_apply_content_background'), '3.8.1' => array('astra_apply_modern_block_editor_ui'), '3.8.3' => array('astra_update_customizer_layout_defaults', 'astra_apply_modern_block_editor_v2_ui'), '3.9.0' => array('astra_update_single_product_breadcrumb', 'astra_display_cart_total_title_compatibility', 'astra_update_woocommerce_cart_icons', 'astra_legacy_customizer_maintenance', 'astra_apply_modern_ecommerce_setup', 'astra_responsive_shop_content_alignment'), '3.9.2' => array('astra_apply_woocommerce_show_password_icon_css', 'astra_shop_style_design_layout'), '3.9.4' => array('astra_theme_background_updater_3_9_4'), '4.0.0' => array('astra_theme_background_updater_4_0_0'), '4.0.2' => array('astra_theme_background_updater_4_0_2'), '4.1.0' => array('astra_theme_background_updater_4_1_0'));
+        private static $db_updates = array('3.0.0' => array('astra_header_builder_compatibility'), '3.0.1' => array('astra_clear_assets_cache'), '3.3.0' => array('astra_gutenberg_pattern_compatibility', 'astra_icons_svg_compatibility', 'astra_check_flex_based_css'), '3.4.0' => array('astra_update_cart_style'), '3.5.0' => array('astra_update_related_posts_grid_layout', 'astra_site_title_tagline_responsive_control_migration'), '3.6.0' => array('astra_headings_font_support', 'astra_remove_logo_max_width', 'astra_transparent_header_default_value'), '3.6.3' => array('astra_button_default_values_updated'), '3.6.4' => array('astra_update_underline_link_setting'), '3.6.5' => array('astra_support_block_editor'), '3.6.7' => array('astra_fix_footer_widget_right_margin_case', 'astra_remove_elementor_toc_margin'), '3.6.8' => array('astra_set_removal_widget_design_options_flag'), '3.6.9' => array('astra_zero_font_size_comp', 'astra_unset_builder_elements_underline', 'astra_remove_responsive_account_menu_colors_support'), '3.7.0' => array('astra_global_color_compatibility'), '3.7.4' => array('astra_improve_gutenberg_editor_ui'), '3.7.9' => array('astra_set_default_breadcrumb_separator_option', 'astra_fullwidth_layouts_apply_content_background'), '3.8.1' => array('astra_apply_modern_block_editor_ui'), '3.8.3' => array('astra_update_customizer_layout_defaults', 'astra_apply_modern_block_editor_v2_ui'), '3.9.0' => array('astra_update_single_product_breadcrumb', 'astra_display_cart_total_title_compatibility', 'astra_update_woocommerce_cart_icons', 'astra_legacy_customizer_maintenance', 'astra_apply_modern_ecommerce_setup', 'astra_responsive_shop_content_alignment'), '3.9.2' => array('astra_apply_woocommerce_show_password_icon_css', 'astra_shop_style_design_layout'), '3.9.4' => array('astra_theme_background_updater_3_9_4'), '4.0.0' => array('astra_theme_background_updater_4_0_0'), '4.0.2' => array('astra_theme_background_updater_4_0_2'));
         /**
          *  Constructor
          */
@@ -12924,6 +12934,7 @@ namespace {
     /**
      * Define Constants
      */
+    \define('ASTRA_THEME_VERSION', '4.0.2');
     \define('ASTRA_THEME_VERSION', '4.1.0');
     \define('ASTRA_THEME_SETTINGS', 'astra-settings');
     \define('ASTRA_THEME_DIR', \trailingslashit(\get_template_directory()));
@@ -13875,6 +13886,7 @@ namespace {
      * @since 4.0.0
      * @package Astra\Compatibility\Starter_Content
      */
+    // @codingStandardsIgnoreStart WordPressVIPMinimum.Security.Mustache.OutputNotation -- Required for starter content.
     $astra_default_home_content = '<!-- wp:cover {"minHeight":720,"minHeightUnit":"px","customGradient":"linear-gradient(35deg,rgb(6,0,151) 0%,rgb(130,4,255) 73%,rgb(193,15,255) 100%)","isDark":false,"align":"full"} -->
 <div class="wp-block-cover alignfull is-light" style="min-height:720px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim has-background-gradient" style="background:linear-gradient(35deg,rgb(6,0,151) 0%,rgb(130,4,255) 73%,rgb(193,15,255) 100%)"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"align":"wide","layout":{"inherit":true,"type":"constrained"}} -->
 <div class="wp-block-group alignwide"><!-- wp:media-text {"mediaPosition":"right","mediaId":118,"mediaLink":"","mediaType":"image","mediaWidth":43,"verticalAlignment":"center"} -->
@@ -14914,6 +14926,16 @@ namespace {
      * @return string  $meta_markup Markup of meta.
      */
     function astra_deprecated_astra_single_banner_post_meta_filter($meta_markup)
+    {
+    }
+    /**
+     * Don't apply direct new layouts to legacy users.
+     *
+     * @since x.x.x
+     * @param string $dynamic_blog_layout false if it is an existing user , true if not.
+     * @return boolean  $dynamic_blog_layout false if it is an existing user , true if not.
+     */
+    function astra_deprecated_astra_get_option_dynamic_blog_layouts_filter($dynamic_blog_layout)
     {
     }
     /**
@@ -16052,7 +16074,8 @@ namespace {
      * @param array  $font_size Font size.
      * @param string $font_extras contains all font controls.
      * @param string $color In most of cases color is also added, so included optional param here.
-     * @return  array  array of build CSS font settings.
+     *
+     * @return array  array of build CSS font settings.
      *
      * @since 4.0.0
      */
@@ -17231,7 +17254,7 @@ namespace {
      * @package Astra
      * @since 4.0.0
      */
-    $post_type = \strval(\get_post_type());
+    $astra_post_type = \strval(\get_post_type());
     /**
      * Template part for displaying the footer component.
      *
@@ -17309,5 +17332,5 @@ namespace {
      * @package Astra
      * @since 4.0.0
      */
-    $post_type = \strval(\get_post_type());
+    $astra_post_type = \strval(\get_post_type());
 }

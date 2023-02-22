@@ -164,7 +164,7 @@ if ( ! class_exists( 'Astra_Edd' ) ) :
 		public function header_cart_icon_class( $classes ) {
 
 			if ( false === Astra_Builder_Helper::$is_header_footer_builder_active && ! defined( 'ASTRA_EXT_VER' ) ) {
-				return;
+				return $classes;
 			}
 
 			$header_cart_icon_style = astra_get_option( 'edd-header-cart-icon-style' );

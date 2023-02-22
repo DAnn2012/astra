@@ -21,7 +21,7 @@ describe( 'Above footer inner column spacing setting in customizer', () => {
 						0: 'social-icons-1',
 					},
 					above_2: {
-						0: 'copyright',
+						0: 'html-1',
 					},
 				},
 			},

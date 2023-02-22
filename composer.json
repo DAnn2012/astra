@@ -12,7 +12,8 @@
     "php-stubs/woocommerce-stubs": "^5.2",
     "phpcompatibility/phpcompatibility-wp": "*",
     "wp-coding-standards/wpcs": "^2.1.0",
-    "wptrt/wpthemereview": "^0.2.0"
+    "wptrt/wpthemereview": "^0.2.0",
+    "automattic/vipwpcs": "^2.3"
   },
   "extra": {
     "hooks": {
