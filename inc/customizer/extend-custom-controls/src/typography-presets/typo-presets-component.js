@@ -67,8 +67,6 @@ const TypoPresetControl = ( props ) => {
 		const typoOptions = [
 			"body-font-family",
 			"headings-font-family",
-			"body-line-height",
-			"headings-line-height",
 			"font-size-body",
 			"font-size-h1",
 			"font-size-h2",
@@ -76,16 +74,13 @@ const TypoPresetControl = ( props ) => {
 			"font-size-h4",
 			"font-size-h5",
 			"font-size-h6",
-			"line-height-h1",
-			"line-height-h2",
-			"line-height-h3",
-			"line-height-h4",
-			"line-height-h5",
-			"line-height-h6",
 			"font-size-page-title",
 		];
 
 		typoOptions.forEach(function (option) {
+			if (undefined === props.customizer.control( 'astra-settings[' + option + ']' )) {
+				console.log(option);
+			}
 			setCustomizerSetting(option, presetKey);
 		});
 
