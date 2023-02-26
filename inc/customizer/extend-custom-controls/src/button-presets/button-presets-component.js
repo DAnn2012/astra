@@ -12,7 +12,7 @@ const ButtonPresetsComponent = (props) => {
 	const [state, setState] = value ? useState(value) : useState( defaultValue );
 
 	const onChangePreset = ( presetKey ) => {
-		const borderRadius = options[ presetKey ][ 'border-radius' ];
+		const borderRadius = options[ presetKey ][ 'border-radius-fields' ];
 		const btnBackgroundColor = options[ presetKey ][ 'button-bg-color' ];
 		const borderWidth = options[ presetKey ][ 'border-size' ];
 		const padding = options[ presetKey ][ 'button-padding' ];
@@ -28,7 +28,7 @@ const ButtonPresetsComponent = (props) => {
 
 		// Border Radius.
 		props.customizer
-			.control( 'astra-settings[button-radius]' )
+			.control( 'astra-settings[button-radius-fields]' )
 			.setting.set( borderRadius );
 
 		// Border size.
