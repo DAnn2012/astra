@@ -1,5 +1,5 @@
 v4.1.1 (Unreleased)
-- Fix: Shwing author info multiple time and goes to infinite loop.
+- Fix: Showing author info multiple time and goes to infinite loop.
 
 v4.1.0 (Unreleased)
 - New: Accessibility options to change color and style of highlighted element.
