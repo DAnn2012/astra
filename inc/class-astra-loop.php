@@ -171,7 +171,12 @@ if ( ! class_exists( 'Astra_Loop' ) ) :
 		 * @since 1.3.1
 		 */
 		public function loop_markup_page() {
-			$this->loop_markup( true );
+			$is_page = true;
+			if (function_exists('is_bbpress') && is_bbpress()) {
+				$is_page = false;
+			}
+
+			$this->loop_markup( $is_page );
 		}
 
 		/**
