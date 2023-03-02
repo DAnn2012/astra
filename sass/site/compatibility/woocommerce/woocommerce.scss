@@ -1358,6 +1358,10 @@ p.demo_store,
 				color: rgba(desaturate($highlight, 75%), 0.5);
 			}
 		}
+
+		a.ast-loop-product__link {
+			display: inline-block;
+		}
 	}
 
 	.woocommerce-result-count {

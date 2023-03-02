@@ -1,5 +1,6 @@
 v4.1.1 (Unreleased)
 - Fix: Custom Layouts - Block Editor custom padding does not apply to Custom Layout blocks.
+- Fix: Customizer - Double border top applied on above footer preview.
 
 v4.1.0 (Unreleased)
 - New: Accessibility options to change color and style of highlighted element.
@@ -19,7 +20,6 @@ v4.1.0 (Unreleased)
 - Fix: Footer builder - Widgets dynamic CSS gets added multiple times on the frontend.
 - Fix: WooCommerce - Error, info content messages UI breaking on the frontend.
 - Fix: Builder - Off-canvas menu - Dropdown menu arrow icon is misplaced in case of toggle for desktop.
-- Fix: Spectra Compatibility - Spectra spacing options for applying custom margin and padding not working.
 - Fix: Content background color does not apply to Author Box in customizer preview.
 - Fix: Cost Calculator Builder - compatibility range slider.
 - Fix: Disable the title from elementor setting is not working as expected.

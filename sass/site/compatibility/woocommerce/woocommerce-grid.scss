@@ -912,7 +912,6 @@ p.demo_store,
 
 						a {
 							text-shadow: inherit;
-							outline: none;
 						}
 
 						&::before {
@@ -1345,6 +1344,10 @@ p.demo_store,
 				text-transform: uppercase;
 				color: rgba(desaturate($highlight, 75%), 0.5);
 			}
+		}
+
+		a.ast-loop-product__link {
+			display: inline-block;
 		}
 	}
 
