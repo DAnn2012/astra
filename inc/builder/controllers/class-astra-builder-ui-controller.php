@@ -324,6 +324,32 @@ if ( ! class_exists( 'Astra_Builder_UI_Controller' ) ) {
 			</div>
 			<?php
 		}
+
+		/**
+		 * Render fallback gravatar for black avatar type.
+		 * @since x.x.x
+		 *
+		 * @param string $avatar        HTML for the user's avatar.
+		 * @param mixed  $id_or_email   The avatar to retrieve. Accepts a user_id, Gravatar MD5 hash,
+		 *                              user email, WP_User object, WP_Post object, or WP_Comment object.
+		 * @param int    $size          Square avatar width and height in pixels to retrieve.
+		 * @param string $default_value URL for the default image or a default type. Accepts '404', 'retro', 'monsterid',
+		 *                              'wavatar', 'indenticon', 'mystery', 'mm', 'mysteryman', 'blank', or 'gravatar_default'.
+		 * @param string $alt           Alternative text to use in the avatar image tag.
+		 * @param array  $args          Arguments passed to get_avatar_data(), after processing.
+		 *
+		 * @return string $avatar        HTML for the user's avatar.
+		 *
+		 * @return
+		 */
+		public static function astra_fallback_blank_avatar( $avatar, $id_or_email, $size, $default_value, $alt, $args ) {
+			vl( $avatar );
+			if ( strpos( $avatar, 'blank' ) !== false ) {
+
+			}
+			return $avatar;
+		}
+
 		/**
 		 * Account HTML.
 		 */
@@ -400,9 +426,10 @@ if ( ! class_exists( 'Astra_Builder_UI_Controller' ) ) {
 
 							<?php
 							if ( 'avatar' === $login_profile_type ) {
-
+								// if ( 'blank' === get_option( 'avatar_default' ) ) {
+								add_filter( 'get_avatar', __CLASS__ . '::astra_fallback_blank_avatar', 10, 6 );
 								echo get_avatar( get_current_user_id() );
-
+								remove_filter( 'get_avatar', __CLASS__ . '::astra_fallback_blank_avatar', 10, 6 );
 							} elseif ( 'icon' === $login_profile_type ) {
 								echo self::fetch_svg_icon( $icon_skin ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 							} elseif ( 'text' === $login_profile_type ) {
