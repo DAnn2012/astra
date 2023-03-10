@@ -1442,8 +1442,8 @@ function hasWordPressWidgetBlockEditor() {
 	}
 
 	// WooCommerce global button compatibility for new users only.
-	const woo_btn_normal_sector = astraCustomizer.astra_woo_btn_global_compatibility ? ', .woocommerce a.button' : '';
-	const woo_btn_hover_sector = astraCustomizer.astra_woo_btn_global_compatibility ? ', .woocommerce a.button:hover' : '';
+	const woo_btn_normal_sector = astraCustomizer.astra_woo_btn_global_compatibility ? ', .woocommerce a.button, .woocommerce button.button' : '';
+	const woo_btn_hover_sector = astraCustomizer.astra_woo_btn_global_compatibility ? ', .woocommerce a.button:hover, .woocommerce button.button:hover' : '';
 
 	/**
 	 * Button border
