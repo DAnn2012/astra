@@ -3362,8 +3362,7 @@ button.pswp__button--zoom:hover {
   content: '\e028';
   display: inline-block;
   position: absolute;
-  top: 1em;
-  right: 1.5em;
+  right: 1em;
 }
 
 .woocommerce-message .button,

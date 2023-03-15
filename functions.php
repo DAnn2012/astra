@@ -12,6 +12,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+// add_filter( 'astra_attr_{$context}_output', 'update_footer_widgets_attr', 10, 4 );
+// function update_footer_widgets_attr( $output, $attributes, $context, $args ) {
+// 	return $output;
+// }
+
 /**
  * Define Constants
  */
