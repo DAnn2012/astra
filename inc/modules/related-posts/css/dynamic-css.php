@@ -91,7 +91,7 @@ function astra_related_posts_css( $dynamic_css ) {
 			/**
 			 * Related Posts - Post Title
 			 */
-			'.ast-related-post-content .entry-header .ast-related-post-title, .ast-related-post-content .entry-header .ast-related-post-title a' => astra_get_font_array_css( astra_get_option( 'related-posts-title-font-family' ), astra_get_option( 'related-posts-title-font-weight' ), $related_post_title_font_size, 'related-posts-title-font-extras', $related_post_text_color ),
+			'.ast-related-post-content .entry-header .ast-related-post-title, .ast-related-post-content .entry-header .ast-related-post-title a' => astra_get_font_array_css( astra_get_option( 'related-posts-title-font-family' ), astra_get_option( 'related-posts-title-font-weight' ), astra_get_option( 'related-posts-title-font-size' ), 'related-posts-title-font-extras', $related_post_text_color ),
 
 			/**
 			 * Related Posts - Meta
