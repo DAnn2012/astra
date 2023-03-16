@@ -1,5 +1,6 @@
 v4.1.1 (Unreleased)
 - Fix: Customizer - Typography and Button Preset options selected preset not highlighting and reset button not functioning.
+- Fix: Related Post Title Font Size Not Working in Responsive mode.
 
 v4.1.0 (Unreleased)
 - New: Accessibility options to change color and style of highlighted element.
