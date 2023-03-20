@@ -782,6 +782,7 @@
     position: relative !important;
     right: 5px !important;
     top: -35px !important;
+    transform: unset !important;
 }
 .color-group-item .components-popover .components-popover__content,
 .ast-color-palette .components-popover .components-popover__content {
