@@ -1614,6 +1614,11 @@ if ( ! class_exists( 'Astra_Woocommerce' ) ) :
 
 			// WooCommerce global button compatibility for new users only.
 			if ( ! $astra_support_woo_btns_global ) {
+				$css_desktop_output['.woocommerce #content table.cart td.actions .button, .woocommerce table.cart td.actions .button, .woocommerce-page #content table.cart td.actions .button, .woocommerce-page table.cart td.actions .button'] = array(
+					'line-height' => '1',
+					'border-width' => '1px',
+					'border-style' => 'solid',
+				);
 				$css_desktop_output['.woocommerce ul.products li.product .button, .woocommerce-page ul.products li.product .button'] = array(
 					'line-height' => '1.3',
 				);
