@@ -1544,10 +1544,6 @@ if ( ! class_exists( 'Astra_Woocommerce' ) ) :
 					'background-color' => $link_color,
 				),
 
-				'.woocommerce .woocommerce-cart-form button[name="update_cart"]:disabled' => array(
-					'color' => esc_attr( $btn_color ),
-				),
-
 				'.woocommerce .star-rating, .woocommerce .comment-form-rating .stars a, .woocommerce .star-rating::before' => array(
 					'color' => 'var(--ast-global-color-3)',
 				),
@@ -1614,6 +1610,17 @@ if ( ! class_exists( 'Astra_Woocommerce' ) ) :
 
 			// WooCommerce global button compatibility for new users only.
 			if ( ! $astra_support_woo_btns_global ) {
+				$css_desktop_output['.woocommerce .woocommerce-cart-form button[name="update_cart"]:disabled'] = array(
+					'color' => esc_attr( $btn_color ),
+				);
+				$css_desktop_output['.woocommerce #content table.cart .button[name="apply_coupon"], .woocommerce-page #content table.cart .button[name="apply_coupon"]'] = array(
+					'padding' => '10px 40px',
+				);
+				$css_desktop_output['.woocommerce table.cart td.actions .button, .woocommerce #content table.cart td.actions .button, .woocommerce-page table.cart td.actions .button, .woocommerce-page #content table.cart td.actions .button'] = array(
+					'line-height' => '1',
+					'border-width' => '1px',
+					'border-style' => 'solid',
+				);
 				$css_desktop_output['.woocommerce ul.products li.product .button, .woocommerce-page ul.products li.product .button'] = array(
 					'line-height' => '1.3',
 				);

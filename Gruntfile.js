@@ -631,9 +631,6 @@ module.exports = function (grunt) {
 					'!admin/tailwind.config.js',
 					'!admin/webpack.config.js',
 					'!playwright-report/**',
-					'!inc/customizer/custom-controls/typography/typography.js',
-					'!inc/customizer/custom-controls/typography/selectWoo.js',
-					'!assets/css/unminified/**',
                 ],
                 dest: 'astra/'
             }

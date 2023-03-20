@@ -1457,7 +1457,6 @@ p.demo_store,
 		&:disabled,
 		&.disabled,
 		&:disabled[disabled] {
-			color: inherit;
 			cursor: not-allowed;
 			opacity: 0.5;
 			padding: 0.618em 1em;
@@ -2700,10 +2699,6 @@ p.demo_store,
 			.button{
 				display: inline-block;
 				width: auto;
-
-				&[name="apply_coupon"] {
-					padding: 10px 40px;
-				}
 			}
 		}
 	}
@@ -3411,10 +3406,6 @@ button.pswp__button--zoom:hover {
 				padding: .5em .75em;
 			}
 		}
-		.button {
-			padding: .5em 1em;
-			line-height: 1.5;
-		}
 
 		input.button{
 			display: inline-block;
@@ -3593,9 +3584,6 @@ button.pswp__button--zoom:hover {
 				padding: .5em 1em;
 				vertical-align: initial;
 				line-height: 1.35;
-				&[name="apply_coupon"] {
-					padding: 10px 40px;
-				}
 			}
 
 			@media ( max-width: 420px ) {
