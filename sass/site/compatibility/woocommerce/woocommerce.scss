@@ -1473,7 +1473,6 @@ p.demo_store,
 		&:disabled,
 		&.disabled,
 		&:disabled[disabled] {
-			color: inherit;
 			cursor: not-allowed;
 			opacity: 0.5;
 			padding: 0.618em 1em;

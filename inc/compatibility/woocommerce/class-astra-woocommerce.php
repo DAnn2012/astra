@@ -1544,10 +1544,6 @@ if ( ! class_exists( 'Astra_Woocommerce' ) ) :
 					'background-color' => $link_color,
 				),
 
-				'.woocommerce .woocommerce-cart-form button[name="update_cart"]:disabled' => array(
-					'color' => esc_attr( $btn_color ),
-				),
-
 				'.woocommerce .star-rating, .woocommerce .comment-form-rating .stars a, .woocommerce .star-rating::before' => array(
 					'color' => 'var(--ast-global-color-3)',
 				),
@@ -1618,6 +1614,9 @@ if ( ! class_exists( 'Astra_Woocommerce' ) ) :
 					'line-height' => '1',
 					'border-width' => '1px',
 					'border-style' => 'solid',
+				);
+				$css_desktop_output['.woocommerce .woocommerce-cart-form button[name="update_cart"]:disabled'] = array(
+					'color' => esc_attr( $btn_color ),
 				);
 				$css_desktop_output['.woocommerce ul.products li.product .button, .woocommerce-page ul.products li.product .button'] = array(
 					'line-height' => '1.3',
