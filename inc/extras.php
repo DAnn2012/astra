@@ -419,7 +419,7 @@ function astra_dropdown_icon_to_menu_link( $title, $item, $args, $depth ) {
 		$icon = Astra_Icons::get_icons( 'arrow' );
 	}
 	$custom_tabindex  = true === Astra_Builder_Helper::$is_header_footer_builder_active ? 'tabindex="0"' : '';
-	$astra_arrow_icon = ( ! defined( 'ASTRA_EXT_VER' ) && ( true === Astra_Builder_Helper::$is_header_footer_builder_active || Astra_Icons::is_svg_icons() ) ) ? '<span role="' . esc_attr( $role ) . '" class="dropdown-menu-toggle ast-header-navigation-arrow" ' . $custom_tabindex . ' aria-expanded="false" aria-label="' . esc_attr__( 'Menu Toggle', 'astra' ) . '" >' . $icon . '</span>' : '';
+	$astra_arrow_icon = ( ( true === Astra_Builder_Helper::$is_header_footer_builder_active || Astra_Icons::is_svg_icons() ) ) ? '<span role="' . esc_attr( $role ) . '" class="dropdown-menu-toggle ast-header-navigation-arrow" ' . $custom_tabindex . ' aria-expanded="false" aria-label="' . esc_attr__( 'Menu Toggle', 'astra' ) . '" >' . $icon . '</span>' : '';
 
 	foreach ( $item->classes as $value ) {
 		if ( 'menu-item-has-children' === $value ) {
