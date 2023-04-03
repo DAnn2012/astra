@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { __ } from "@wordpress/i18n";
-import { useState, useEffect } from "react";
-import {Dashicon} from '@wordpress/components';
+import { useState } from "react";
+import { Dashicon } from '@wordpress/components';
 
 const ButtonPresetsComponent = (props) => {
 	const { title, options } = props.control.params;
@@ -12,7 +12,8 @@ const ButtonPresetsComponent = (props) => {
 	const [state, setState] = value ? useState(value) : useState( defaultValue );
 
 	const onChangePreset = ( presetKey ) => {
-		const borderRadius = options[ presetKey ][ 'border-radius' ];
+
+		const buttonRadiusFields = options[ presetKey ][ 'button-radius-fields' ];
 		const btnBackgroundColor = options[ presetKey ][ 'button-bg-color' ];
 		const borderWidth = options[ presetKey ][ 'border-size' ];
 		const padding = options[ presetKey ][ 'button-padding' ];
@@ -26,10 +27,14 @@ const ButtonPresetsComponent = (props) => {
 			.control( 'astra-settings[theme-button-padding]' )
 			.renderContent();
 
-		// Border Radius.
+		// Button Radius.
 		props.customizer
-			.control( 'astra-settings[button-radius]' )
-			.setting.set( borderRadius );
+			.control( 'astra-settings[button-radius-fields]' )
+			.setting.set( buttonRadiusFields );
+
+		props.customizer
+			.control( 'astra-settings[button-radius-fields]' )
+			.renderContent();
 
 		// Border size.
 		props.customizer
@@ -47,7 +52,7 @@ const ButtonPresetsComponent = (props) => {
 
 	const onResetClick = () => {
 		const btnOptions = [
-			'button-radius',
+			'button-radius-fields',
 			'theme-button-border-group-border-size',
 			'theme-button-padding',
 			'button-bg-color',
@@ -82,7 +87,6 @@ const ButtonPresetsComponent = (props) => {
 					dangerouslySetInnerHTML={{
 						__html: window.svgIcons[presetData.src],
 					}}
-					key={key}
 					onClick={() => onChangePreset(key)}
 				></div>
 			);

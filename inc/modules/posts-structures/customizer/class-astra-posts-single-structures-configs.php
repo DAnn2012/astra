@@ -585,7 +585,7 @@ class Astra_Posts_Single_Structures_Configs extends Astra_Customizer_Config_Base
 					'renderAs'   => 'text',
 					'title'      => __( 'Format', 'astra' ),
 					'choices'    => array(
-						''       => __( 'Inherit', 'astra' ),
+						''       => __( 'Default', 'astra' ),
 						'F j, Y' => 'November 6, 2010',
 						'Y-m-d'  => '2010-11-06',
 						'm/d/Y'  => '11/06/2010',

@@ -186,6 +186,7 @@ class AstraColorPickerControl extends Component {
 														<>
 															<AstraGradientPicker
 																className={`ast-gradient-color-picker ${ AstraBuilderCustomizerData.isWP_5_9 ? 'ast-gradient-ui': '' }`}
+																gradients={[]}
 																value={ this.props.color && this.props.color.includes( 'gradient' ) ? this.props.color : '' }
 																onChange={ ( gradient ) => this.onChangeGradientComplete( gradient ) }
 															/>

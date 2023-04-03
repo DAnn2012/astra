@@ -245,7 +245,7 @@ if ( ! class_exists( 'Astra_Customizer_Register_Sections_Panels' ) ) {
 				/**
 				* Accessibility Panel
 				*
-				* @since x.x.x
+				* @since 4.1.0
 				*/
 				array(
 					'name'     => 'section-accessibility',

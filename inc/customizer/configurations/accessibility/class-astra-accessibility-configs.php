@@ -6,7 +6,7 @@
  * @author      Astra
  * @copyright   Copyright (c) 2023, Astra
  * @link        https://wpastra.com/
- * @since       Astra x.x.x
+ * @since       Astra 4.1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -23,7 +23,7 @@ class Astra_Accessibility_Configs extends Astra_Customizer_Config_Base {
 	 *
 	 * @param Array                $configurations Astra Customizer Configurations.
 	 * @param WP_Customize_Manager $wp_customize instance of WP_Customize_Manager.
-	 * @since x.x.x
+	 * @since 4.1.0
 	 * @return Array Astra Customizer Configurations with updated configurations.
 	 */
 	public function register_configuration( $configurations, $wp_customize ) {
@@ -41,6 +41,7 @@ class Astra_Accessibility_Configs extends Astra_Customizer_Config_Base {
 				'title'    => __( 'Site Accessibility', 'astra' ),
 				'section'  => 'section-accessibility',
 				'priority' => 1,
+				'divider'  => array( 'ast_class' => 'ast-section-spacing' ),
 			),
 
 			/**

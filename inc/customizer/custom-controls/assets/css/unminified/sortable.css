@@ -191,6 +191,8 @@
 }
 .customize-control-content {
     width: 100%;
+	display: flex;
+	flex-direction: column;
 }
 
 .ast-sortable-subfields-wrap .ast-fields-wrap {

@@ -346,7 +346,7 @@ class Astra_Social_Icon_Component_Configs {
 					'priority'    => 2,
 					'transport'   => 'postMessage',
 					'default'     => astra_get_option( $builder_type . '-social-' . $index . '-bg-space' ),
-					'title'       => __( 'Icon Background Spacing', 'astra' ),
+					'title'       => __( 'Icon Background Space', 'astra' ),
 					'suffix'      => 'px',
 					'type'        => 'control',
 					'control'     => 'ast-slider',

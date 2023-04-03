@@ -825,7 +825,7 @@ function astra_theme_background_updater_4_0_0() {
 								$migrated_post_metadata[]   = $tax_slug;
 								$theme_options[ $tax_slug ] = 'category';
 
-								$tax_counter = $tax_counter + 1;
+								$tax_counter = ++$tax_counter;
 								$tax_slug    = 'ast-dynamic-single-' . esc_attr( $post_type ) . '-taxonomy-' . $tax_counter;
 							}
 							break;
@@ -834,7 +834,7 @@ function astra_theme_background_updater_4_0_0() {
 								$migrated_post_metadata[]   = $tax_slug;
 								$theme_options[ $tax_slug ] = 'post_tag';
 
-								$tax_counter = $tax_counter + 1;
+								$tax_counter = ++$tax_counter;
 								$tax_slug    = 'ast-dynamic-single-' . esc_attr( $post_type ) . '-taxonomy-' . $tax_counter;
 							}
 							break;
@@ -1014,7 +1014,7 @@ function astra_theme_background_updater_4_0_2() {
 /**
  * Handle backward compatibility on version 4.1.0
  *
- * @since x.x.x
+ * @since 4.1.0
  * @return void
  */
 function astra_theme_background_updater_4_1_0() {
@@ -1117,8 +1117,8 @@ function astra_theme_background_updater_4_1_0() {
 			update_option( 'astra-settings', $theme_options );
 		}
 
-		if ( ! isset( $theme_options['woo-global-h2-flag'] ) ) {
-			$theme_options['woo-global-h2-flag'] = true;
+		if ( ! isset( $theme_options['woo_support_global_settings'] ) ) {
+			$theme_options['woo_support_global_settings'] = true;
 			update_option( 'astra-settings', $theme_options );
 		}
 

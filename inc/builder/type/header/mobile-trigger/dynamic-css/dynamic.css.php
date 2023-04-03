@@ -179,7 +179,7 @@ function astra_mobile_trigger_row_setting( $dynamic_css, $dynamic_css_filtered =
 			);
 			$dynamic_css              .= astra_parse_css( $css_output_outline );
 			$dynamic_css              .= astra_parse_css( $css_output_outline_tablet, '', astra_get_tablet_breakpoint() );
-			$dynamic_css              .= astra_parse_css( $css_output_outline_mobile, '', astra_get_tablet_breakpoint() );
+			$dynamic_css              .= astra_parse_css( $css_output_outline_mobile, '', astra_get_mobile_breakpoint() );
 			if ( false === $is_customizer ) {
 				break;
 			}

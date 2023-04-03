@@ -78,14 +78,18 @@ function astrawpWooQuantityButtons( $quantitySelector ) {
             }
 
             // Quantity input.
-            var objBody = document.getElementsByTagName( 'BODY' )[0];
-            if ( objBody.classList.contains( 'single-product' ) && ! $cart.classList.contains( 'grouped_form' ) ) {
+            let objbody = document.getElementsByTagName('BODY')[0];
+            let cart = document.getElementsByClassName('cart')[0];
+
+            if (objbody.classList.contains('single-product') && !cart.classList.contains('grouped_form')) {
+                let quantityInput = document.querySelector('.woocommerce input[type=number].qty');
                 // Check for single product page.
-                var $quantityInput = document.querySelector( '.woocommerce input[type=number].qty' );
-                $quantityInput.addEventListener( 'keyup' , function() {
-                    var qty_val = $quantityInput.value;
-                    $quantityInput.value = qty_val;
-                });
+                if (quantityInput) {
+                    quantityInput.addEventListener('keyup', function () {
+                        let qtyVal = quantityInput.value;
+                        quantityInput.value = qtyVal;
+                    });
+                }
             }
 
             var plus_minus_obj = e.querySelectorAll( '.plus, .minus' );

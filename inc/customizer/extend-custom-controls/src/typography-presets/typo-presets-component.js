@@ -41,12 +41,6 @@ const TypoPresetControl = ( props ) => {
 			'font-weight-h4',
 			'font-weight-h5',
 			'font-weight-h6',
-			'text-transform-h1',
-			'text-transform-h2',
-			'text-transform-h3',
-			'text-transform-h4',
-			'text-transform-h5',
-			'text-transform-h6',
 		];
 
 		fontDropdownOptions.forEach( function( option ) {
@@ -74,8 +68,6 @@ const TypoPresetControl = ( props ) => {
 		const typoOptions = [
 			"body-font-family",
 			"headings-font-family",
-			"body-line-height",
-			"headings-line-height",
 			"font-size-body",
 			"font-size-h1",
 			"font-size-h2",
@@ -83,12 +75,6 @@ const TypoPresetControl = ( props ) => {
 			"font-size-h4",
 			"font-size-h5",
 			"font-size-h6",
-			"line-height-h1",
-			"line-height-h2",
-			"line-height-h3",
-			"line-height-h4",
-			"line-height-h5",
-			"line-height-h6",
 			"font-size-page-title",
 		];
 
@@ -182,8 +168,6 @@ const TypoPresetControl = ( props ) => {
 		const options = [
 			"body-font-family",
 			"headings-font-family",
-			"body-line-height",
-			"headings-line-height",
 			"font-size-body",
 			"font-size-h1",
 			"font-size-h2",
@@ -191,12 +175,6 @@ const TypoPresetControl = ( props ) => {
 			"font-size-h4",
 			"font-size-h5",
 			"font-size-h6",
-			"line-height-h1",
-			"line-height-h2",
-			"line-height-h3",
-			"line-height-h4",
-			"line-height-h5",
-			"line-height-h6",
 			"font-size-page-title",
 		];
 

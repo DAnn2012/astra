@@ -5,7 +5,7 @@ import { scrollToElement } from '../../../../../utils/scroll-to-element';
 describe( 'Above footer vertical alignment setting in customizer', () => {
 	it( 'verical alignment should apply correctly', async () => {
 		const verticalAlignment = {
-			'footer-copyright-editor': 'Copyright [copyright] [current_year] [site_title] | Powered by [theme_author] Copyright [copyright] [current_year] [site_title] | Powered by [theme_author]',
+			'footer-copyright-editor': 'Copyright [copyright] [current_year] [site_title] | Powered by WP_ASTRA',
 			'hba-footer-column': 3,
 			'hba-footer-vertical-alignment': 'flex-end',
 			'footer-desktop-items': {

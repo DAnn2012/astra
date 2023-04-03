@@ -962,7 +962,7 @@ astScrollToTopHandler = function ( masthead, astScrollTop ) {
 			tabNavigation();
 		}
 
-		
+
 	}
 
 	// Tab navigation for accessibility.
@@ -1211,5 +1211,11 @@ astScrollToTopHandler = function ( masthead, astScrollTop ) {
 		astScrollTop.onclick = function(e){
 			astraSmoothScroll( e, 0 );
 		};
+
+		astScrollTop.addEventListener( 'keydown' , function(e) {
+			if ( e.key === 'Enter') {
+				astraSmoothScroll( e, 0 );
+			}
+		});
 	}
 })();

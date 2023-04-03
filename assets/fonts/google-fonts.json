@@ -4721,6 +4721,14 @@
         }
     },
     {
+        "Gajraj One": {
+            "variants": [
+                "regular"
+            ],
+            "category": "display"
+        }
+    },
+    {
         "Galada": {
             "variants": [
                 "regular"
@@ -4985,6 +4993,14 @@
             "variants": [
                 "regular",
                 "700"
+            ],
+            "category": "serif"
+        }
+    },
+    {
+        "Gloock": {
+            "variants": [
+                "regular"
             ],
             "category": "serif"
         }
@@ -6939,6 +6955,31 @@
         }
     },
     {
+        "Labrada": {
+            "variants": [
+                "100",
+                "200",
+                "300",
+                "regular",
+                "500",
+                "600",
+                "700",
+                "800",
+                "900",
+                "100italic",
+                "200italic",
+                "300italic",
+                "italic",
+                "500italic",
+                "600italic",
+                "700italic",
+                "800italic",
+                "900italic"
+            ],
+            "category": "serif"
+        }
+    },
+    {
         "Lacquer": {
             "variants": [
                 "regular"
@@ -8714,6 +8755,14 @@
         }
     },
     {
+        "Mynerve": {
+            "variants": [
+                "regular"
+            ],
+            "category": "handwriting"
+        }
+    },
+    {
         "Mystery Quest": {
             "variants": [
                 "regular"
@@ -9986,7 +10035,7 @@
         }
     },
     {
-        "Noto Sans N Ko": {
+        "Noto Sans NKo": {
             "variants": [
                 "regular"
             ],
@@ -10933,17 +10982,6 @@
         }
     },
     {
-        "Noto Serif Nyiakeng Puachue Hmong": {
-            "variants": [
-                "regular",
-                "500",
-                "600",
-                "700"
-            ],
-            "category": "serif"
-        }
-    },
-    {
         "Noto Serif Oriya": {
             "variants": [
                 "regular",
@@ -11812,6 +11850,20 @@
                 "700italic"
             ],
             "category": "sans-serif"
+        }
+    },
+    {
+        "Phudu": {
+            "variants": [
+                "300",
+                "regular",
+                "500",
+                "600",
+                "700",
+                "800",
+                "900"
+            ],
+            "category": "display"
         }
     },
     {
@@ -13571,6 +13623,25 @@
                 "regular"
             ],
             "category": "handwriting"
+        }
+    },
+    {
+        "Shantell Sans": {
+            "variants": [
+                "300",
+                "regular",
+                "500",
+                "600",
+                "700",
+                "800",
+                "300italic",
+                "italic",
+                "500italic",
+                "600italic",
+                "700italic",
+                "800italic"
+            ],
+            "category": "display"
         }
     },
     {

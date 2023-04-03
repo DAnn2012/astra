@@ -96,7 +96,7 @@ class Astra_Scroll_To_Top_Loader {
 	 * @since 4.0.0
 	 */
 	public function new_customize_register( $wp_customize ) {
-		require_once ASTRA_SCROLL_TO_TOP_DIR . 'classes/customizer/class-astra-scroll-to-top-configs.php';
+		require_once ASTRA_SCROLL_TO_TOP_DIR . 'classes/customizer/class-astra-scroll-to-top-configs.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound -- Not a template file so loading in a normal way.
 	}
 
 	/**

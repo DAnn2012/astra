@@ -39,8 +39,8 @@ jobs:
             - [ ] Run to update version number  : `grunt version-bump --ver=<version-number>`
             - [ ] Check the Background Process function version
             - [ ] Update - Tested Upto - style.css & readme.txt
-            - [ ] Update - `theme-auto-version` : In `inc/compatibility/starter-content/astra-settings-export.json`
             - [ ] Update Readme.txt file and then run: `grunt readme`
+            - [ ] Update - `theme-auto-version` : In `inc/compatibility/starter-content/astra-settings-export.json`
             - [ ] Generate POT file             : `wp i18n make-pot wp-content/themes/astra wp-content/themes/astra/languages/astra.pot`
             - [ ] Add draft Release notes on github
             - [ ] Add draft changelogs to wpastra.com

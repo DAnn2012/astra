@@ -14,6 +14,22 @@
 	<rule ref="WordPress-Core" />
 	<rule ref="WordPress-Docs" />
 	<rule ref="WordPress-Extra" />
+	<rule ref="WordPress-VIP-Go" />
+	<rule ref="WordPress" >
+		<!-- Ignoring WordpressVIP specific functions for now. -->
+		<exclude name="WordPressVIPMinimum.Functions.RestrictedFunctions.attachment_url_to_postid_attachment_url_to_postid" />
+		<!-- Ignoring WordpressVIP specific functions for now. -->
+		<exclude name="WordPressVIPMinimum.Functions.RestrictedFunctions.wp_is_mobile_wp_is_mobile" />
+		<!-- Creates issue getting remote data. -->
+		<exclude name="WordPressVIPMinimum.Functions.RestrictedFunctions.wp_remote_get_wp_remote_get" />
+		<!-- Creates issue with rendering svg icons. -->
+		<exclude name="WordPressVIPMinimum.Files.IncludingNonPHPFile.IncludingNonPHPFile" /> 
+		<!-- Ignoring WordpressVIP specific functions for now. -->
+		<exclude name="WordPressVIPMinimum.Functions.RestrictedFunctions.get_adjacent_post_get_next_post" /> 
+		<!-- Ignoring WordpressVIP specific functions for now. -->
+		<exclude name="WordPressVIPMinimum.Functions.RestrictedFunctions.get_adjacent_post_get_previous_post" /> 
+	</rule>
+
 	<rule ref="WordPress.Security.EscapeOutput">
 		<properties>
 			<property name="customAutoEscapedFunctions" type="array">

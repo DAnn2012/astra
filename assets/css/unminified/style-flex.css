@@ -771,11 +771,6 @@ a:hover {
   outline: 0;
 }
 
-*:focus-visible {
-  outline: thin dotted;
-  color: royalblue;
-}
-
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -3427,7 +3422,6 @@ input[type="color"]::-webkit-color-swatch {
 
 .entry-content {
   word-wrap: break-word;
-  display: flow-root;
 }
 
 .entry-content p {
