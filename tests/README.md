@@ -32,7 +32,7 @@ Run the following in a terminal/command line
 
 -   Use `docker ps` to confirm that the Docker containers are running. You should see a log indicating that everything had been built as expected
 
-After running the command of npm run env: up, you can see the message of
+After running the command of npm run play:up, you can see the message of
 
 ## Success! Your E2E Test Environment is now ready.
 
@@ -48,10 +48,10 @@ For Astra all the environment build-in port number 8889. See `.wp-env.json` file
 # install Playwright
 npm run play:install
 
-# Run test case in headless mood
+# Run test case in headless mode
 npm run play:run hello.spec.js
 
-# Run test case in interactive mood
+# Run test case in interactive mode
 npm run play:run:interactive hello.spec.js
 ```
 
