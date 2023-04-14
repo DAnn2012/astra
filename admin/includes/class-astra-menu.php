@@ -185,7 +185,7 @@ class Astra_Menu {
 			);
 		}
 
-		if ( ! astra_is_white_labelled() ) {
+		if ( ! $this->spectra_has_top_level_menu() && ! astra_is_white_labelled() ) {
 			// Add Spectra submenu.
 			add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page -- Taken the menu on top level
 				self::$plugin_slug,
@@ -201,13 +201,23 @@ class Astra_Menu {
 	}
 
 	/**
+	 * In version 2.4.1 Spectra introduces top level admin menu so there is no meaning to show Spectra submenu from Astra menu.
+	 *
+	 * @since x.x.x
+	 * @return bool true|false.
+	 */
+	public function spectra_has_top_level_menu() {
+		return defined( 'UAGB_VER' ) && version_compare( UAGB_VER, '2.4.1', '>=' ) ? true : false;
+	}
+
+	/**
 	 * Provide the Spectra admin page URL.
 	 *
 	 * @since 4.1.1
 	 * @return string url.
 	 */
 	public function get_spectra_page_admin_link() {
-		$spectra_admin_url = defined( 'UAGB_VER' ) ? ( version_compare( UAGB_VER, '2.4.1', '>=' ) ? admin_url( 'admin.php?page=' . UAGB_SLUG ) : admin_url( 'options-general.php?page=' . UAGB_SLUG ) ) : 'admin.php?page=' . self::$plugin_slug . '&path=spectra';
+		$spectra_admin_url = defined( 'UAGB_VER' ) ? ( $this->spectra_has_top_level_menu() ? admin_url( 'admin.php?page=' . UAGB_SLUG ) : admin_url( 'options-general.php?page=' . UAGB_SLUG ) ) : 'admin.php?page=' . self::$plugin_slug . '&path=spectra';
 		return apply_filters( 'astra_dashboard_spectra_admin_link', $spectra_admin_url );
 	}
 

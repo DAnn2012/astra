@@ -1552,6 +1552,10 @@ input[type="text"], input[type="password"], input[type="color"], input[type="dat
   z-index: 1;
 }
 
+#customize-control-astra-settings-learndash-distraction-free-learning .ast-control-tooltip {
+    padding-top: 32px;
+}
+
 .customize-control.customize-control-ast-toggle-control.ast-top-dotted-divider .ast-control-tooltip {
   position: absolute;
   top: 55%;
