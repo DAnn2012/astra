@@ -40,8 +40,10 @@ module.exports = defineConfig({
 		/* Base URL to use in actions like `await page.goto('/')`. */
 
 		/* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-		trace: 'on-first-retry',
-		baseURL: 'http://localhost:8889/',
+		trace: 'retain-on-failure',
+		baseURL: 'http://localhost:8888/',
+		headless: true,
+		ignoreHTTPSErrors: true,
 	},
 	/* Configure projects for major browsers */
 	projects: [

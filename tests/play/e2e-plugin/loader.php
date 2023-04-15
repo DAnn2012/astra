@@ -11,6 +11,7 @@
 
 namespace Astra\E2E;
 
+require_once __DIR__ . '/admin-login-cli.php';
 require_once __DIR__ . '/rest-api/namespace.php';
 require_once __DIR__ . '/customizer-settings/namespace.php';
 

@@ -36,7 +36,7 @@ After running the command of npm run play:up, you can see the message of
 
 ## Success! Your E2E Test Environment is now ready.
 
-For Astra all the environment build-in port number 8889. See `.wp-env.json` file for configurations.
+For Astra all the environment build-in port number 8888. See `.wp-env.json` file for configurations.
 
 ## Usage
 

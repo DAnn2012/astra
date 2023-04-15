@@ -10,4 +10,7 @@ wp theme activate astra
 echo "Rewrite permalinks..."
 wp rewrite structure /%postname%/ --hard --quiet
 
+echo "Triggering wp-admin..."
+wp e2e login --username=admin --password=password
+
 echo "Success! Your E2E Test Environment is now ready."

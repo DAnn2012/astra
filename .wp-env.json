@@ -3,7 +3,6 @@
   "themes": ["."],
   "plugins": [
     "./tests/play/e2e-plugin",
-    "https://downloads.wordpress.org/plugin/gutenberg.zip",
     "https://downloads.wordpress.org/plugin/reset-astra-customizer.zip"
   ],
   "config": {
