@@ -1400,7 +1400,8 @@ img {
   /* Adhere to container width. */
 }
 
-hr {
+hr,
+.ast-container .entry-content hr {
   background-color: #ccc;
   border: 0;
   height: 1px;

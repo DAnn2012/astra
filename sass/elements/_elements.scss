@@ -100,7 +100,8 @@ img {
 	max-width: 100%; /* Adhere to container width. */
 }
 
-hr {
+hr,
+.ast-container .entry-content hr {
 	background-color: $color-background-hr;
 	border: 0;
 	height: 1px;
