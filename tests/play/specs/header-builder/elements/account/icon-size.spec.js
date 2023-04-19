@@ -4,7 +4,7 @@ const { setCustomizeSettings } = require( '../../../../utils/customize' );
 test.describe( 'Account icon size verification', () => {
 	const iconSize = {
         'header-account-icon-size': {
-            'desktop': 45,
+            'desktop': '45',
         },
         'header-account-login-link': {
             url: '#',

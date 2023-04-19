@@ -56,7 +56,7 @@ function rest_route() : void {
 						)
 					);
 				},
-				'permission_callback' => '__return_true',
+				// 'permission_callback' => '__return_true',
 			),
 		)
 	);
@@ -77,7 +77,7 @@ function rest_route() : void {
 						)
 					);
 				},
-				'permission_callback' => '__return_true',
+				// 'permission_callback' => '__return_true',
 				'args'                => array(
 					'settings' => array(
 						'default'  => array(),
