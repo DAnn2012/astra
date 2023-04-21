@@ -288,7 +288,6 @@ function astra_load_modern_block_editor_ui( $dynamic_css ) {
 	}
 	.entry-content[ast-blocks-layout] > * {
 		max-width: var(--wp--custom--ast-content-width-size);
-		margin-left: auto;
 		margin-right: auto;
 	}
 	' . $astra_wide_particular_selector . ' {
