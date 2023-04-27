@@ -7,6 +7,7 @@ v4.1.4 (Unreleased)
 - Fix: WooCommerce - Cart - Realtime quantity updater not working on change of input box when Mix Match plugin is activated.
 - Fix: Breadcrumb content text-decoration style not working for active menu link.
 - Fix: WooCommerce - Cart - PHP error "can not redeclare astra_cart_position function".
+- Fix: Single Product Payment Icons Incorrect display on Safari.
 
 v4.1.3
 - Fix: Container - Content Boxed layout removes Spectra column or container left padding.
