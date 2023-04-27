@@ -2876,7 +2876,7 @@ if ( ! class_exists( 'Astra_Woocommerce' ) ) :
 
 					.ast-single-product-payments ul {
 						display: flex;
-						flex-wrap: wrap;
+						flex-wrap: nowrap;
 						margin: 0;
 						padding: 0;
 						list-style: none;
