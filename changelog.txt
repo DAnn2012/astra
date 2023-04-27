@@ -10,6 +10,7 @@ v4.1.4 (Unreleased)
 - Fix: WooCommerce - Cart - PHP error "can not redeclare astra_cart_position function".
 - Fix: WooCommerce - Pagination does not work for WooCommerce Categories without Subcategories if displaying subcategories on products.
 - Fix: Double border-top applied for above footer in customizer preview.
+- Fix: Spectra Compatibility - Spectra Slider Block compatibility with Astra Header Footer Builder.
 
 v4.1.3
 - Fix: Container - Content Boxed layout removes Spectra column or container left padding.
