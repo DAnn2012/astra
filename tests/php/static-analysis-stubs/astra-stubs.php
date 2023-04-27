@@ -3647,6 +3647,15 @@ namespace {
         public static function astra_check_default_color_typo()
         {
         }
+		/**
+		 * Dynamic CSS for Spectra Blocks Related Compatibility.
+		 *
+		 * @return mixed the parsed css.
+		 * @since x.x.x
+		 */
+		public static function astra_spectra_blocks_compat()
+        {
+		}
     }
     /**
      * Global palette class
