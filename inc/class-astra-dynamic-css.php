@@ -3601,10 +3601,8 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 				$parse_css .= astra_parse_css( $transparent_header_builder_mobile_css, '', astra_get_mobile_breakpoint() );
 			}
 
-			// Spectra Blocks Compatibility Dynamic CSS.
-			if ( defined( 'UAGB_VER' ) ) {
-				$parse_css .= self::astra_spectra_blocks_compat();
-			}
+			// Spectra blocks compatibility dynamic css.
+			$parse_css .= self::astra_spectra_blocks_compat();
 
 			$parse_css .= $dynamic_css;
 			$custom_css = astra_get_option( 'custom-css' );
