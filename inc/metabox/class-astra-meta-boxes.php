@@ -351,9 +351,9 @@ if ( ! class_exists( 'Astra_Meta_Boxes' ) ) {
 								<?php esc_html_e( 'Disable Banner Area', 'astra' ); ?>
 								</label>
 							</div>
-								<?php 
-							} 
-						} 
+								<?php
+							}
+						}
 						?>
 
 					<?php } ?>
@@ -533,7 +533,7 @@ if ( ! class_exists( 'Astra_Meta_Boxes' ) ) {
 					'sticky_addon_enabled'           => ( $astra_ext_extension_class_exists && Astra_Ext_Extension::is_active( 'sticky-header' ) ) ? true : false,
 					'register_astra_metabox'         => apply_filters( 'astra_settings_metabox_register', true ),
 					'is_hide_contnet_layout_sidebar' => $ast_content_layout_sidebar,
-					'upgrade_pro_link'               => ASTRA_PRO_UPGRADE_URL,
+					'upgrade_pro_link'               => ASTRA_PRO_CUSTOMIZER_UPGRADE_URL,
 					'show_upgrade_notice'            => astra_showcase_upgrade_notices(),
 				)
 			);

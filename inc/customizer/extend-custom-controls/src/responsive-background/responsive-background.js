@@ -148,6 +148,9 @@ const ResponsiveBackground = props => {
 				onSelectImage={(media, backgroundType) => onSelectImage(media, key, backgroundType)}
 				onChangeImageOptions={(mainKey, value, backgroundType) => onChangeImageOptions(mainKey, value, key, backgroundType)}
 				backgroundType={undefined !== state.value[key]['background-type'] && state.value[key]['background-type'] ? state.value[key]['background-type'] : 'color'}
+				overlayType={undefined !== state.value[key]['overlay-type'] && state.value[key]['overlay-type'] ? state.value[key]['overlay-type'] : 'none'}
+				overlayColor={undefined !== state.value[key]['overlay-color'] && state.value[key]['overlay-color'] ? state.value[key]['overlay-color'] : ''}
+				overlayGradient={undefined !== state.value[key]['overlay-gradient'] && state.value[key]['overlay-gradient'] ? state.value[key]['overlay-gradient'] : ''}
 				allowGradient={true} allowImage={true}/>
 		</>;
 	};

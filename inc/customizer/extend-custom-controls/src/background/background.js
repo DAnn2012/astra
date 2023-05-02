@@ -102,6 +102,9 @@ const Background = props => {
 				onSelectImage={(media, backgroundType) => onSelectImage(media, backgroundType)}
 				onChangeImageOptions={(mainKey, value, backgroundType) => onChangeImageOptions(mainKey, value, backgroundType)}
 				backgroundType={undefined !== props_value['background-type'] && props_value['background-type'] ? props_value['background-type'] : 'color'}
+				overlayType={undefined !== props_value['overlay-type'] && props_value['overlay-type'] ? props_value['overlay-type'] : 'none'}
+				overlayColor={undefined !== props_value['overlay-color'] && props_value['overlay-color'] ? props_value['overlay-color'] : ''}
+				overlayGradient={undefined !== props_value['overlay-gradient'] && props_value['overlay-gradient'] ? props_value['overlay-gradient'] : ''}
 				allowGradient={true} allowImage={true} />
 		</>;
 	};

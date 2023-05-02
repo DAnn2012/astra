@@ -167,6 +167,19 @@
     vertical-align: initial;
 }
 
+#wpfooter, #wpbody-content {
+    background: #fff;
+}
+.ast-admin-settings-page #wpfooter, .ast-admin-settings-page #wpbody-content {
+    background: inherit;
+}
+div.shadow-overlay-modal {
+    --tw-shadow: 0px 32px 60px -20px rgba(0, 0, 0, 0.5);
+    --tw-shadow-colored: 0px 32px 64px -24px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+
 @media (max-width: 781px) {
 	div.ast-changelog-popup-wrap {
 		margin-top: 46px; // Managed as per admin bar height.

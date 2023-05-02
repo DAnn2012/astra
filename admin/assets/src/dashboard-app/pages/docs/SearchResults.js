@@ -7,7 +7,7 @@ const SearchResults = ({ data }) => {
 			{data &&
 				data.map((item, key) => (
 					<a
-						href={item.url}
+						href={item.url + '?utm_source=dashboard&utm_medium=free-theme&utm_campaign=knowledge'}
 						target="blank"
 						className="flex items-center justify-between text-slate-800 rounded-md p-2 pl-0 hover:bg-gray-50 group cursor-pointer"
 						key={key}
