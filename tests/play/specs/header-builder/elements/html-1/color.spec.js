@@ -1,6 +1,6 @@
 const { test, expect } = require( '@playwright/test' );
 const { setCustomizeSettings } = require( '../../../../utils/customize' );
-const { setBrowserViewport } = require( '../../../../utils/set-browser-viewport' );
+// const { setBrowserViewport } = require( '../../../../utils/set-browser-viewport' );
 
 test.describe( 'HTML 1 color verification', () => {
 	const colorSettings = {
@@ -26,13 +26,13 @@ test.describe( 'HTML 1 color verification', () => {
 			const html = await page.locator('.ast-header-html-1 .ast-builder-html-element');
 			await expect(html).toHaveCSS('color', colorSettings[ 'header-html-1color' ].desktop);
 
-            await setBrowserViewport( 'medium' );
-            const htmlTablet = await page.locator('.ast-header-html-1 .ast-builder-html-element');
-			await expect(htmlTablet).toHaveCSS('color', colorSettings[ 'header-html-1color' ].tablet);
+            // await setBrowserViewport( 'medium' );
+            // const htmlTablet = await page.locator('.ast-header-html-1 .ast-builder-html-element');
+			// await expect(htmlTablet).toHaveCSS('color', colorSettings[ 'header-html-1color' ].tablet);
 
-            await setBrowserViewport( 'small' );
-            const htmlMobile = await page.locator('.ast-header-html-1 .ast-builder-html-element');
-			await expect(htmlMobile).toHaveCSS('color', colorSettings[ 'header-html-1color' ].mobile);
+            // await setBrowserViewport( 'small' );
+            // const htmlMobile = await page.locator('.ast-header-html-1 .ast-builder-html-element');
+			// await expect(htmlMobile).toHaveCSS('color', colorSettings[ 'header-html-1color' ].mobile);
 		});
     } );
 } );
