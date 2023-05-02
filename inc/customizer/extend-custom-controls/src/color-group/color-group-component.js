@@ -272,6 +272,9 @@ const ColorGroupComponent = props => {
 								onSelectImage={(media, backgroundType) => onSelectImage(key, media, device, backgroundType)}
 								onChangeImageOptions={(mainKey, value, backgroundType) => onChangeImageOptions(mainKey, value, device, backgroundType, key)}
 								backgroundType={undefined !== value[device]['background-type'] && value[device]['background-type'] ? value[device]['background-type'] : 'color'}
+								overlayType={undefined !== value[device]['overlay-type'] && value[device]['overlay-type'] ? value[device]['overlay-type'] : 'none'}
+								overlayColor={undefined !== value[device]['overlay-color'] && value[device]['overlay-color'] ? value[device]['overlay-color'] : ''}
+								overlayGradient={undefined !== value[device]['overlay-gradient'] && value[device]['overlay-gradient'] ? value[device]['overlay-gradient'] : ''}
 								allowGradient={true} allowImage={true}/>
 							</div>
 						</Tooltip>
@@ -310,6 +313,9 @@ const ColorGroupComponent = props => {
 								onSelectImage={(media, backgroundType) => onSelectImage(key, media, backgroundType)}
 								onChangeImageOptions={(mainKey, value, backgroundType) => onChangeImageOptions(mainKey, value, backgroundType, key)}
 								backgroundType={undefined !== value['background-type'] && value['background-type'] ? value['background-type'] : 'color'}
+								overlayType={undefined !== value['overlay-type'] && value['overlay-type'] ? value['overlay-type'] : 'none'}
+								overlayColor={undefined !== value['overlay-color'] && value['overlay-color'] ? value['overlay-color'] : ''}
+								overlayGradient={undefined !== value['overlay-gradient'] && value['overlay-gradient'] ? value['overlay-gradient'] : ''}
 								allowGradient={true} allowImage={true}/>
 							</div>
 						</Tooltip>

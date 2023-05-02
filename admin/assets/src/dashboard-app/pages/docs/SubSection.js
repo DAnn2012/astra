@@ -41,7 +41,7 @@ const SubSection = ({ item }) => {
 						{/* Single Item */}
 						{subItems.splice(0, 5).map((item, key) => (
 							<a
-								href={item.url}
+								href={item.url + '?utm_source=dashboard&utm_medium=free-theme&utm_campaign=knowledge'}
 								target="_blank"
 								className="flex items-center justify-between text-slate-800 rounded-md p-2 pl-0 hover:bg-gray-50 group cursor-pointer focus:outline-0"
 								key={key}
@@ -63,7 +63,7 @@ const SubSection = ({ item }) => {
 					</div>
 
 					<a
-						href={`https://wpastra.com/docs-category/${item[0]}/`}
+						href={`https://wpastra.com/docs-category/${item[0]}/?utm_source=dashboard&utm_medium=free-theme&utm_campaign=knowledge`}
 						target="_blank"
 						className="text-base font-medium leading-4 text-astra flex items-center"
 					>

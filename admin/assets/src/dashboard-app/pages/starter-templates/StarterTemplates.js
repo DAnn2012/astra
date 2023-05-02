@@ -90,14 +90,14 @@ const StarterTemplates = () => {
 
 	const onLearnMoreGuideClick = () => {
 		window.open(
-			'https://wpastra.com/starter-templates/?utm_source=wp&utm_medium=dashboard',
+			'https://wpastra.com/website-templates/?utm_source=dashboard&utm_medium=free-theme&utm_campaign=starter-templates',
 			'_blank'
 		);
 	};
 
 	return (
 		<main className="relative tablet:my-16">
-			<div className="w-full blur-xs opacity-40">
+			<div className="w-full blur-sm opacity-40">
 				{ Astra_Admin_Icons['starter-canvas'] }
 			</div>
 
