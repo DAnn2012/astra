@@ -3601,11 +3601,6 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 				$parse_css .= astra_parse_css( $transparent_header_builder_mobile_css, '', astra_get_mobile_breakpoint() );
 			}
 
-			// Spectra Blocks Compatibility Dynamic CSS.
-			if ( defined( 'UAGB_VER' ) ) {
-				$parse_css .= self::astra_spectra_blocks_compat();
-			}
-
 			$parse_css .= $dynamic_css;
 			$custom_css = astra_get_option( 'custom-css' );
 
@@ -4857,27 +4852,6 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 		public static function astra_woo_support_global_settings() {
 			$astra_settings = get_option( ASTRA_THEME_SETTINGS );
 			return apply_filters( 'astra_get_option_woo_support_global_settings', isset( $astra_settings['woo_support_global_settings'] ) ? false : true );
-		}
-
-		/**
-		 * Dynamic CSS for Spectra Blocks Related Compatibility.
-		 *
-		 * @return mixed the parsed css.
-		 * @since x.x.x
-		 */
-		public static function astra_spectra_blocks_compat() {
-			return astra_parse_css(
-
-				// Slider block compat.
-				array(
-					'.ast-builder-grid-row > .site-header-section > *:has(.uagb-slider-container),
-					.ast-builder-grid-row.ast-grid-center-col-layout-only:has(.uagb-slider-container),
-					.site-header-section:has(.uagb-slider-container),
-					.site-footer-section:has(.uagb-slider-container)' => array(
-						'min-width' => 0,
-					),
-				)
-			);
 		}
 	}
 }

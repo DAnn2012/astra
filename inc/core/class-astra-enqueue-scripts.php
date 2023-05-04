@@ -366,6 +366,7 @@ if ( ! class_exists( 'Astra_Enqueue_Scripts' ) ) {
 				'is_scroll_to_id'                 => astra_get_option( 'enable-scroll-to-id' ),
 				'is_scroll_to_top'                => astra_get_option( 'scroll-to-top-enable' ),
 				'is_header_footer_builder_active' => Astra_Builder_Helper::$is_header_footer_builder_active,
+				'is_spectra_active'               => defined( 'UAGB_VER' ),
 			);
 
 			wp_localize_script( 'astra-theme-js', 'astra', apply_filters( 'astra_theme_js_localize', $astra_localize ) );

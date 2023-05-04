@@ -1218,4 +1218,19 @@ astScrollToTopHandler = function ( masthead, astScrollTop ) {
 			}
 		});
 	}
+
+	/**
+	 * Spectra Slider Compatibility.
+	 */
+	if( astra.is_spectra_active ) {
+		const siteHeader = document.querySelector('.site-header-section');
+		const siteFooter = document.querySelector('.site-footer-section');
+
+		// Only add Slider Compatibility CSS if Slider block is used.
+		if ( siteHeader.querySelector('.uagb-slider-container') || siteFooter.querySelector('.uagb-slider-container') ) {
+			const sliderCompatStyle = document.querySelector('#astra-theme-css-inline-css');
+			sliderCompatStyle.sheet.insertRule('.site-header-section, .site-footer-section, .header-widget-area { min-width: 0; }');
+		}
+	}
+
 })();
