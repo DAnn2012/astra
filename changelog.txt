@@ -1,5 +1,6 @@
 v4.1.4 (Unreleased)
 - New: Introducing new "Disable Banner Area" metabox based option to control visibility of title banner area. (Needs doc)
+- New: Introducing new filter "astra_rank_math_theme_support" to enable/disable rank-math theme support. (Needs doc)
 - New: Introducing new color and gradient overlay settings for background type image customizer options.
 - Improvement: Theme package size has been optimized from 9MB to under 6MB.
 - Improvement: Added WPML translation support for Pro Custom Layout's Layout, Display-Exclusion rules, Users rule options.
@@ -8,6 +9,7 @@ v4.1.4 (Unreleased)
 - Fix: WooCommerce - Cart - Realtime quantity updater not working on change of input box when Mix Match plugin is activated.
 - Fix: Breadcrumb content text-decoration style not working for active menu link.
 - Fix: WooCommerce - Cart - PHP error "can not redeclare astra_cart_position function".
+- Fix: Header Builder - Off-canvas - Getting white flash jerk when closing offcanvas toggle menu.
 - Fix: WooCommerce - Pagination does not work for WooCommerce Categories without Subcategories if displaying subcategories on products.
 - Fix: Double border-top applied for above footer in customizer preview.
 - Fix: Spectra Compatibility - Spectra Slider Block compatibility with Astra Header Footer Builder.
