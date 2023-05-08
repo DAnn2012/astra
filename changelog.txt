@@ -11,7 +11,7 @@ v4.1.4 (Unreleased)
 - Fix: WooCommerce - Cart - PHP error "can not redeclare astra_cart_position function".
 - Fix: Header Builder - Off-canvas - Getting white flash jerk when closing offcanvas toggle menu.
 - Fix: WooCommerce - Pagination does not work for WooCommerce Categories without Subcategories if displaying subcategories on products.
-- Fix: Double border-top applied for above footer in customizer preview.
+- Fix: Double border-top applied for footer in customizer preview.
 
 v4.1.3
 - Fix: Container - Content Boxed layout removes Spectra column or container left padding.
