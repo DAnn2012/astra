@@ -125,8 +125,17 @@ if ( ! class_exists( 'Astra_Elementor' ) ) :
 					),
 				);
 
+				$elementor_hr_style = array(
+					'hr, .ast-container .entry-content hr' => array(
+						'background-color' => '$color-background-hr',
+						'border'           => '0',
+						'height'           => '1px',
+						'margin-bottom'    => '1.5em',
+					),
+				);
+
 				/* Parse CSS from array() */
-				$parse_css = astra_parse_css( $elementor_heading_margin_comp );
+				$parse_css = astra_parse_css( $elementor_hr_style + $elementor_heading_margin_comp );
 
 				$elementor_base_css = array(
 					'.elementor-post.elementor-grid-item.hentry' => array(
