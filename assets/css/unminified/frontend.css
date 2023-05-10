@@ -2283,7 +2283,6 @@ body {
 .ast-header-break-point .main-header-bar-navigation .menu-item-has-children > .ast-menu-toggle {
   display: inline-block;
   position: absolute;
-  font-size: inherit;
   top: 0px;
   right: 20px;
   cursor: pointer;
