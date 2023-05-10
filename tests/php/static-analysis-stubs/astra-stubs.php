@@ -12948,7 +12948,7 @@ namespace {
     \define('ASTRA_THEME_SETTINGS', 'astra-settings');
     \define('ASTRA_THEME_DIR', \trailingslashit(\get_template_directory()));
     \define('ASTRA_THEME_URI', \trailingslashit(\esc_url(\get_template_directory_uri())));
-    \define('ASTRA_PRO_UPGRADE_URL', 'https://wpastra.com/pro/?utm_source=wp&utm_medium=dashboard');
+    \define('ASTRA_PRO_UPGRADE_URL', 'https://wpastra.com/pro/?utm_source=dashboard&utm_medium=free-theme&utm_campaign=upgrade-now');
     /**
      * Minimum Version requirement of the Astra Pro addon.
      * This constant will be used to display the notice asking user to update the Astra addon to the version defined below.

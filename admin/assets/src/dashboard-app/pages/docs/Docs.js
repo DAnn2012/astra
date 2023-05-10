@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { __ } from "@wordpress/i18n";
 import SubSection from "./SubSection";
+import Subcategory from "./Subcategory";
 import UpgradeToPro from "./UpgradeToPro";
 import Astra_Admin_Icons from "@Common/block-icons";
 import SearchResults from "./SearchResults";
@@ -21,6 +22,17 @@ const Docs = ({ setOpen }) => {
 				item.title.toLowerCase().includes(searchKeyword)
 			);
 			setSearchResults(data);
+		}
+	}
+
+	function checkDocsAvailability( catItem, key ) {
+		const docAvailed = astra_admin.astra_docs_data.docs.filter((doc) => {
+			return doc.category.includes(catItem[0]);
+		});
+		if ( docAvailed.length ) {
+			return <SubSection item={catItem} key={key} />
+		} else {
+			return 'astra-pro-modules' === catItem[0] ? <Subcategory item={catItem} key={key} /> : '';
 		}
 	}
 
@@ -70,11 +82,11 @@ const Docs = ({ setOpen }) => {
 								</div>
 							)}
 							{/* Docs subsections */}
-							{Object.entries(
-								astra_admin.astra_docs_data.categories
-							).map((item, key) => (
-								<SubSection item={item} key={key} />
-							))}
+							{ Object.entries(
+									astra_admin.astra_docs_data.categories
+								).map((item, key) => (
+									checkDocsAvailability( item, key )
+							)) }
 							{
 								( ! astra_admin.pro_available && astra_admin.upgrade_notice	) &&
 								<div className="mt-10">
@@ -111,7 +123,7 @@ const Docs = ({ setOpen }) => {
 										</p>
 										<a
 											className="text-sm text-astra focus:text-astra focus-visible:text-astra-hover active:text-astra-hover hover:text-astra-hover no-underline"
-											href="https://wpastra.com/support/?utm_source=wp&utm_medium=dashboard"
+											href="https://wpastra.com/support/?utm_source=dashboard&utm_medium=free-theme&utm_campaign=priority-support"
 											target="_blank"
 											rel="noreferrer"
 										>
@@ -139,7 +151,7 @@ const Docs = ({ setOpen }) => {
 										</p>
 										<a
 											className="flex items-center text-sm text-astra focus:text-astra focus-visible:text-astra-hover active:text-astra-hover hover:text-astra-hover no-underline"
-											href="https://wpastra.com/docs/?utm_source=wp&utm_medium=dashboard"
+											href="https://wpastra.com/docs/?utm_source=dashboard&utm_medium=free-theme&utm_campaign=knowledge"
 											target="_blank"
 											rel="noreferrer"
 										>

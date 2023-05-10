@@ -16,3 +16,4 @@ define( 'ASTRA_THEME_POST_STRUCTURE_DIR', '' );
 define( 'ASTRA_THEME_POST_STRUCTURE_URI', '' );
 define( 'ASTRA_SCROLL_TO_TOP_DIR', '' );
 define( 'ASTRA_SCROLL_TO_TOP_URL', '' );
+define( 'ASTRA_PRO_CUSTOMIZER_UPGRADE_URL', '' );

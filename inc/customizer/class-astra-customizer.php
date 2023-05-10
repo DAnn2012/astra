@@ -1059,7 +1059,7 @@ if ( ! class_exists( 'Astra_Customizer' ) ) {
 					'googleFonts'             => Astra_Font_Families::get_google_fonts(),
 					'variantLabels'           => Astra_Font_Families::font_variant_labels(),
 					'menuLocations'           => $resultant_menus,
-					'upgradeUrl'              => ASTRA_PRO_UPGRADE_URL,
+					'upgradeUrl'              => ASTRA_PRO_CUSTOMIZER_UPGRADE_URL,
 				)
 			);
 
@@ -1309,8 +1309,8 @@ if ( ! class_exists( 'Astra_Customizer' ) ) {
 			$css_prefix = '.min.css';
 			$dir        = 'minified';
 			if ( SCRIPT_DEBUG ) {
-				$js_prefix  = '.js';
-				$dir        = 'unminified';
+				$js_prefix = '.js';
+				$dir       = 'unminified';
 			}
 
 			if ( is_rtl() ) {

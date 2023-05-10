@@ -9,6 +9,11 @@ window.astWpMenuClassChange = function ( path ) {
 		pageUrl = 'admin.php?page=' + pageSlug + '&path=spectra';
 	}
 
+	document.querySelector( 'body' ).classList.remove( 'ast-admin-settings-page' );
+	if( 'settings' === path ) {
+		document.querySelector( 'body' ).classList.add( 'ast-admin-settings-page' );
+	}
+
 	const currentItemsSelector = `.wp-submenu-wrap li > a[href$="${ pageUrl }"]`;
 
 	const currentItems = document.querySelectorAll( currentItemsSelector );

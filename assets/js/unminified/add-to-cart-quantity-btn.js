@@ -175,6 +175,10 @@ function astrawpWooQuantityButtons( $quantitySelector ) {
 
                     }
 
+                    // Trigger the change event on the input.
+                    var changeEvent = new Event('change');
+                    $quantityBox.dispatchEvent(changeEvent);
+
                     // Trigger change event.
                     var update_cart_btn = document.getElementsByName("update_cart");
                     if (update_cart_btn.length > 0) {
