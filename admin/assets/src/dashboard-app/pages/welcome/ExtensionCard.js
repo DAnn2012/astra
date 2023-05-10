@@ -13,7 +13,7 @@ const ExtensionCard = ( props ) => {
 		title_url,
 		links,
 		condition = true,
-		deprecated = false,
+		deprecated = true,
 	} = props.moduleInfo;
 
 	const slug = props.slug;
