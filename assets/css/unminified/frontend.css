@@ -2286,7 +2286,8 @@ body {
   display: inline-block;
   position: absolute;
   font-size: inherit;
-  height: 100%;
+  top: 50%;
+  transform: translate(0, -50%);
   right: 0;
   cursor: pointer;
   -webkit-font-smoothing: antialiased;

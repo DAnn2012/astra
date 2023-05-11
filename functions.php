@@ -180,28 +180,3 @@ require_once ASTRA_THEME_DIR . 'inc/core/markup/class-astra-markup.php';
 require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-filters.php';
 require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-hooks.php';
 require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-functions.php';
-
-// function page_icon( $title, $id = null ) {
-// 	if ( ! is_admin() && ! is_null( $id ) ) {
-// 		if(get_post_meta($id, 'page-icon', true)) {
-// 			$svg = get_post_meta(get_the_ID(), 'page-icon', true);
-// 			$title = file_get_contents( wp_get_upload_dir()['basedir'] . $svg ) . $title;
-// 		}
-// 	}
-//   return $title;
-// }
-// add_filter( 'the_title', 'page_icon', 10, 2 );
-// function remove_page_icon_in_nav_menu( $nav_menu, $args ) {
-//     // we are working with menu, so remove the title filter
-//     remove_filter( 'the_title', 'page_icon', 10, 2 );
-//     return $nav_menu;
-// }
-// // this filter fires just before the nav menu item creation process
-// add_filter( 'pre_wp_nav_menu', 'remove_page_icon_in_nav_menu', 10, 2 );
-// function add_page_icon_non_menu( $items, $args ) {
-//     // we are done working with menu, so add the title filter back
-//     add_filter( 'the_title', 'page_icon', 10, 2 );
-//     return $items;
-// }
-// // this filter fires after nav menu item creation is done
-// add_filter( 'wp_nav_menu_items', 'add_page_icon_non_menu', 10, 2 );

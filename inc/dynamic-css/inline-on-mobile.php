@@ -38,7 +38,7 @@ function astra_inline_on_mobile_css( $dynamic_css ) {
     .ast-header-break-point .ast-mobile-header-wrap .ast-main-header-wrap .main-header-bar-navigation .inline-on-mobile .menu-item .menu-link,
     .ast-header-break-point .ast-mobile-header-wrap .ast-below-header-wrap .main-header-bar-navigation .inline-on-mobile .menu-item .menu-link {
       border: none;
-      margin-right: 1em;
+      margin-right: 16px;
     }
     
     .ast-header-break-point .ast-mobile-header-wrap .ast-above-header-wrap .main-header-bar-navigation .inline-on-mobile .menu-item-has-children > .ast-menu-toggle::before,
@@ -83,9 +83,17 @@ function astra_inline_on_mobile_css( $dynamic_css ) {
 
 	if ( is_rtl() ) {
 		$inline_on_mobile_css .= '
+        .ast-header-break-point .ast-builder-menu-2 .menu-item.menu-item-has-children > .ast-menu-toggle {
+            top: 50% !important;
+        }
+        
         .ast-header-break-point .ast-mobile-header-wrap .ast-flex.inline-on-mobile .menu-item.menu-item-has-children {
             margin-left: 10px;
         }
+        .ast-header-break-point .ast-mobile-header-wrap .ast-below-header-wrap .main-header-bar-navigation .inline-on-mobile .menu-item .menu-link {
+            margin-right: 0;
+        }
+
         .ast-header-break-point .ast-mobile-header-wrap .ast-flex.inline-on-mobile .menu-item.ast-submenu-expanded > .sub-menu {
             display: block;
             position: absolute;
@@ -94,7 +102,7 @@ function astra_inline_on_mobile_css( $dynamic_css ) {
         }
         .ast-header-break-point .ast-mobile-header-wrap .ast-flex.inline-on-mobile .menu-item.ast-submenu-expanded > .sub-menu .menu-item .ast-menu-toggle {
             padding: 0;
-            left: 1em;
+            left: 0;
         }
         .ast-header-break-point .ast-mobile-header-wrap .ast-flex.inline-on-mobile .menu-item.ast-submenu-expanded > .sub-menu > .menu-item > .sub-menu {
             right: 100%;
@@ -104,7 +112,7 @@ function astra_inline_on_mobile_css( $dynamic_css ) {
             left: -15px;
         }
         .ast-header-break-point .ast-mobile-header-wrap .ast-flex.inline-on-mobile .menu-item.menu-item-has-children {
-            margin-left: 10px;
+            padding-left: 10px;
         }
         
         .ast-header-break-point .ast-mobile-header-wrap .ast-flex.inline-on-mobile .menu-item.ast-submenu-expanded > .sub-menu {
@@ -121,6 +129,9 @@ function astra_inline_on_mobile_css( $dynamic_css ) {
 	} else {
 		$inline_on_mobile_css .= '
        
+        .ast-header-break-point .ast-builder-menu-2 .menu-item.menu-item-has-children > .ast-menu-toggle {
+            top: 50% !important;
+        }
         .ast-header-break-point .ast-mobile-header-wrap .ast-flex.inline-on-mobile .menu-item.ast-submenu-expanded > .sub-menu {
             display: block;
             position: absolute;
