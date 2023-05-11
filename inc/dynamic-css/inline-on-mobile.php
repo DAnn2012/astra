@@ -38,7 +38,7 @@ function astra_inline_on_mobile_css( $dynamic_css ) {
     .ast-header-break-point .ast-mobile-header-wrap .ast-main-header-wrap .main-header-bar-navigation .inline-on-mobile .menu-item .menu-link,
     .ast-header-break-point .ast-mobile-header-wrap .ast-below-header-wrap .main-header-bar-navigation .inline-on-mobile .menu-item .menu-link {
       border: none;
-      margin-right: 5px;
+      margin-right: 1em;
     }
     
     .ast-header-break-point .ast-mobile-header-wrap .ast-above-header-wrap .main-header-bar-navigation .inline-on-mobile .menu-item-has-children > .ast-menu-toggle::before,
@@ -78,7 +78,7 @@ function astra_inline_on_mobile_css( $dynamic_css ) {
         content: none;
     }
     .ast-header-break-point .inline-on-mobile .sub-menu {
-        width: 150px;
+        width: max-content;
     }';
 
 	if ( is_rtl() ) {
@@ -117,15 +117,10 @@ function astra_inline_on_mobile_css( $dynamic_css ) {
         .ast-header-break-point .ast-mobile-header-wrap .ast-flex.inline-on-mobile .menu-item.ast-submenu-expanded > .sub-menu > .menu-item > .sub-menu {
             right: 100%;
             left: auto;
-        }
-        .ast-header-break-point .ast-mobile-header-wrap .ast-flex.inline-on-mobile .ast-menu-toggle {
-            left: -15px;
         }';
 	} else {
 		$inline_on_mobile_css .= '
-        .ast-header-break-point .ast-mobile-header-wrap .ast-flex.inline-on-mobile .menu-item.menu-item-has-children {
-            margin-right: 10px;
-        }
+       
         .ast-header-break-point .ast-mobile-header-wrap .ast-flex.inline-on-mobile .menu-item.ast-submenu-expanded > .sub-menu {
             display: block;
             position: absolute;
@@ -140,11 +135,8 @@ function astra_inline_on_mobile_css( $dynamic_css ) {
             left: 100%;
             right: auto;
         }
-        .ast-header-break-point .ast-mobile-header-wrap .ast-flex.inline-on-mobile .ast-menu-toggle {
-            right: -15px;
-        }
         .ast-header-break-point .ast-mobile-header-wrap .ast-flex.inline-on-mobile .menu-item.menu-item-has-children {
-            margin-right: 10px;
+            padding-right: 10px;
         }
         .ast-header-break-point .ast-mobile-header-wrap .ast-flex.inline-on-mobile .menu-item.ast-submenu-expanded > .sub-menu {
             display: block;
@@ -155,9 +147,6 @@ function astra_inline_on_mobile_css( $dynamic_css ) {
         .ast-header-break-point .ast-mobile-header-wrap .ast-flex.inline-on-mobile .menu-item.ast-submenu-expanded > .sub-menu > .menu-item > .sub-menu {
             left: 100%;
             right: auto;
-        }
-        .ast-header-break-point .ast-mobile-header-wrap .ast-flex.inline-on-mobile .ast-menu-toggle {
-            right: -15px;
         }';
 	}
 

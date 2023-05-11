@@ -2017,7 +2017,9 @@ body {
 /**
  * Astra HF Builder - Footer Components Compatibility CSS.
  */
-.site-footer-focus-item, .ast-footer-copyright, .ast-footer-social-wrap {
+.site-footer-focus-item,
+.ast-footer-copyright,
+.ast-footer-social-wrap {
   width: 100%;
 }
 
@@ -2048,12 +2050,13 @@ body {
 .ast-header-break-point .main-header-bar-navigation .menu-item-has-children > .ast-menu-toggle {
   display: inline-block;
   position: absolute;
-  top: 0px;
-  left: 20px;
+  font-size: inherit;
+  height: 100%;
+  left: 0;
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 0 0.907em;
+  padding: 0 1em;
   font-weight: normal;
   line-height: inherit;
 }
@@ -2156,7 +2159,7 @@ body {
 }
 
 .ast-button-wrap .menu-toggle.main-header-menu-toggle {
-  padding: .5em;
+  padding: 0.5em;
   align-items: center;
   -js-display: flex;
   display: flex;
@@ -2164,7 +2167,7 @@ body {
 
 .ast-search-menu-icon.ast-inline-search .search-field {
   width: 100%;
-  padding: 0.60em;
+  padding: 0.6em;
   padding-left: 5.5em;
 }
 
