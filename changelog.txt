@@ -1,3 +1,6 @@
+v4.1.5
+- Fix: Secondary menu SVG alignment on tablet/mobile.
+
 v4.1.4
 - New: Introducing new "Disable Banner Area" metabox based option to control visibility of title banner area. ( https://wpastra.com/docs/introducing-the-new-disable-banner-area-meta-based-option/ )
 - New: Introducing new filter "astra_rank_math_theme_support" to enable/disable rank-math theme support. ( https://wpastra.com/docs/introducing-new-filter-to-enable-disable-rank-math-theme-support/ )
