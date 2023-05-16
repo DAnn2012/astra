@@ -268,12 +268,6 @@ module.exports = function (grunt) {
                     },
                     {
                         src: [
-                            'inc/customizer/custom-controls/assets/js/unminified/custom-controls.js',
-                        ],
-                        dest: 'inc/customizer/custom-controls/assets/js/minified/custom-controls.min.js',
-                    },
-                    {
-                        src: [
                             'inc/builder/type/footer/above-footer/assets/js/unminified/customizer-preview.js',
                         ],
                         dest: 'inc/builder/type/footer/above-footer/assets/js/minified/customizer-preview.min.js',
@@ -570,6 +564,10 @@ module.exports = function (grunt) {
                         src: 'inc/metabox/extend-metabox/css/unminified/metabox-rtl.css',
                         dest: 'inc/metabox/extend-metabox/css/minified/metabox-rtl.min.css',
                     },
+					{
+                        src: 'assets/css/unminified/menu-animation-rtl.css',
+                        dest: 'assets/css/minified/menu-animation-rtl.min.css',
+                    },
                 ]
             }
         },
@@ -632,6 +630,10 @@ module.exports = function (grunt) {
 					'!admin/postcss.config.js',
 					'!admin/tailwind.config.js',
 					'!admin/webpack.config.js',
+					'!playwright-report/**',
+					'!inc/customizer/custom-controls/typography/typography.js',
+					'!inc/customizer/custom-controls/typography/selectWoo.js',
+					'!assets/css/unminified/**',
                 ],
                 dest: 'astra/'
             }
@@ -721,13 +723,6 @@ module.exports = function (grunt) {
                             'inc/customizer/custom-controls/typography/selectWoo.js',
                         ],
                         dest: 'inc/customizer/custom-controls/assets/js/unminified/custom-controls-plain.js',
-                    },
-                    {
-                        src: [
-                            'inc/customizer/custom-controls/assets/js/unminified/custom-controls-plain.js',
-                            'inc/customizer/extend-custom-controls/build/index.js'
-                        ],
-                        dest: 'inc/customizer/custom-controls/assets/js/unminified/custom-controls.js',
                     },
                 ]
             }

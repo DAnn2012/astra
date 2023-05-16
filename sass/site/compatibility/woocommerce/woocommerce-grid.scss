@@ -1407,20 +1407,10 @@ p.demo_store,
 	button.button,
 	input.button,
 	#respond input#submit {
-		font-size: 100%;
 		margin: 0;
-		line-height: 1;
-		cursor: pointer;
 		position: relative;
-		text-decoration: none;
 		overflow: visible;
-		padding: 0.5em 0.75em;
-		font-weight: 700;
-		border-radius: 3px;
 		left: auto;
-		color: $secondarytext;
-		background-color: $secondary;
-		border: 0;
 		display: inline-block;
 		background-image: none;
 		box-shadow: none;
@@ -1452,22 +1442,7 @@ p.demo_store,
 			vertical-align: bottom;
 		}
 
-		&:hover {
-			background-color: $secondary - #111;
-			background-image: none;
-			color: $secondarytext;
-		}
-
 		&.alt {
-			background-color: $primary;
-			color: $primarytext;
-			-webkit-font-smoothing: antialiased;
-
-			&:hover {
-				background-color: $primary - #111;
-				color: $primarytext;
-			}
-
 			&.disabled,
 			&:disabled,
 			&:disabled[disabled],
@@ -1482,7 +1457,6 @@ p.demo_store,
 		&:disabled,
 		&.disabled,
 		&:disabled[disabled] {
-			color: inherit;
 			cursor: not-allowed;
 			opacity: 0.5;
 			padding: 0.618em 1em;
@@ -2725,10 +2699,6 @@ p.demo_store,
 			.button{
 				display: inline-block;
 				width: auto;
-
-				&[name="apply_coupon"] {
-					padding: 10px 40px;
-				}
 			}
 		}
 	}
@@ -3436,10 +3406,6 @@ button.pswp__button--zoom:hover {
 				padding: .5em .75em;
 			}
 		}
-		.button {
-			padding: .5em 1em;
-			line-height: 1.5;
-		}
 
 		input.button{
 			display: inline-block;
@@ -3618,9 +3584,6 @@ button.pswp__button--zoom:hover {
 				padding: .5em 1em;
 				vertical-align: initial;
 				line-height: 1.35;
-				&[name="apply_coupon"] {
-					padding: 10px 40px;
-				}
 			}
 
 			@media ( max-width: 420px ) {

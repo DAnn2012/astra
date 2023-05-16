@@ -776,9 +776,9 @@ if ( ! class_exists( 'Astra_Edd' ) ) :
 					),
 
 					'.ast-edd-site-header-cart .widget_edd_cart_widget .edd_checkout a, .widget_edd_cart_widget .edd_checkout a' => array(
-						'color'            => $btn_h_color,
-						'border-color'     => $btn_bg_h_color,
-						'background-color' => $btn_bg_h_color,
+						'color'                      => $btn_h_color,
+						'border-color'               => $btn_bg_h_color,
+						'background-color'           => $btn_bg_h_color,
 						'border-top-left-radius'     => astra_responsive_spacing( $btn_border_radius_fields, 'top', 'desktop' ),
 						'border-top-right-radius'    => astra_responsive_spacing( $btn_border_radius_fields, 'right', 'desktop' ),
 						'border-bottom-right-radius' => astra_responsive_spacing( $btn_border_radius_fields, 'bottom', 'desktop' ),

@@ -138,7 +138,7 @@ if ( ! function_exists( 'astra_get_post_meta' ) ) {
  * Get post format as per new configurations set in customizer.
  *
  * @return string HTML markup for date span.
- * @since x.x.x
+ * @since 4.1.0
  */
 function astra_get_dynamic_post_format() {
 	$post_type          = strval( get_post_type() );
@@ -147,11 +147,8 @@ function astra_get_dynamic_post_format() {
 	$date_type          = $is_singular ? astra_get_option( 'ast-dynamic-single-' . esc_attr( $post_type ) . '-meta-date-type', 'published' ) : astra_get_option( 'blog-meta-date-type', 'published' );
 	$date_format        = apply_filters( 'astra_post_date_format', ( '' === $date_format_option ) ? get_option( 'date_format' ) : $date_format_option );
 
-	/** @psalm-suppress PossiblyFalseArgument */ // phpcs:ignore Generic.Commenting.DocComment.MissingShort
-	$published_date = esc_html( get_the_date( $date_format ) );
-	/** @psalm-suppress InvalidScalarArgument */ // phpcs:ignore Generic.Commenting.DocComment.MissingShort
-	$modified_date = esc_html( get_the_modified_date( $date_format ) );
-	/** @psalm-suppress PossiblyFalseArgument */ // phpcs:ignore Generic.Commenting.DocComment.MissingShort
+	$published_date = strval( get_the_date( $date_format ) );
+	$modified_date  = strval( get_the_modified_date( $date_format ) );
 
 	if ( 'updated' === $date_type ) {
 		$class    = 'updated';

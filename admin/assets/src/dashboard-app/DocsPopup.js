@@ -8,7 +8,7 @@ const DocsPopup = () => {
 	return (
 		<div>
 			<button onClick={() => setOpen(true)} className="text-xs sm:text-sm font-medium sm:leading-[0.875rem] text-slate-600">
-				{ __( 'Knowledge base', 'astra' ) }
+				{ __( 'Knowledge Base', 'astra' ) }
 			</button>
 			<Transition.Root show={open} as={Fragment}>
 				<Dialog as="div" className="relative z-10" onClose={setOpen}>

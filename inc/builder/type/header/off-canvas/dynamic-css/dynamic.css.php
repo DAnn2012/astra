@@ -252,11 +252,11 @@ function astra_off_canvas_static_css() {
 		}
 		.ast-mobile-popup-drawer .ast-mobile-popup-inner {
 			width: 100%;
-			transform: translateX(100%);
-			max-width: 90%;
+			transform: translateX(-115%);
+			max-width: 0;
 			left: 0;
 			top: 0;
-			background: #fafafa;
+			background: transparent;
 			color: #3a3a3a;
 			bottom: 0;
 			opacity: 0;
@@ -270,7 +270,7 @@ function astra_off_canvas_static_css() {
 			overflow-x:hidden;
 		}
 		.ast-mobile-popup-drawer.ast-mobile-popup-left .ast-mobile-popup-inner {
-			transform: translateX(-100%);
+			transform: translateX(-115%);
 			left: auto;
 			right: 0;
 		}
@@ -342,10 +342,10 @@ function astra_off_canvas_static_css() {
 		.ast-mobile-popup-drawer .ast-mobile-popup-inner {
 			width: 100%;
 			transform: translateX(100%);
-			max-width: 90%;
+			max-width: 0;
 			right: 0;
 			top: 0;
-			background: #fafafa;
+			background: transparent;
 			color: #3a3a3a;
 			bottom: 0;
 			opacity: 0;

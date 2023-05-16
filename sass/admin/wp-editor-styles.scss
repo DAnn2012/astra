@@ -40,7 +40,7 @@ html {
 .ast-highlight-wpblock-onhover .block-editor-block-list__layout .block-editor-block-list__block {
 	transition: all 0.2s;
 	&.is-highlighted,
-	&:hover {
+	&:not(.editor-post-title__input):hover {
 		box-shadow: 0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color);
 	}
 	&.is-highlighted:after {
@@ -509,6 +509,11 @@ body {
 			}
 		}
 	}
+	.editor-styles-wrapper {
+		>.block-editor-block-list__layout.edit-post-visual-editor__post-title-wrapper {
+			padding-top: 0;
+		}
+	}
 }
 
 .wp-block-table {
@@ -520,3 +525,8 @@ body {
 	}
 }
 
+.wp-block-button {
+	button {
+	  border-radius: 2px;
+	}
+}

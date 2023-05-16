@@ -200,11 +200,11 @@ add_filter( 'astra_get_option_dynamic_blog_layouts', 'astra_deprecated_astra_get
 /**
  * Don't apply direct new layouts to legacy users.
  *
- * @since x.x.x
+ * @since 4.1.0
  * @param string $dynamic_blog_layout false if it is an existing user , true if not.
  * @return boolean  $dynamic_blog_layout false if it is an existing user , true if not.
  */
 function astra_deprecated_astra_get_option_dynamic_blog_layouts_filter( $dynamic_blog_layout ) {
-	$dynamic_blog_layout = astra_apply_filters_deprecated( 'astra_get_option_dynamic-blog-layouts', array( $dynamic_blog_layout ), 'x.x.x', 'astra_get_option_dynamic_blog_layouts', '' );
+	$dynamic_blog_layout = astra_apply_filters_deprecated( 'astra_get_option_dynamic-blog-layouts', array( $dynamic_blog_layout ), '4.1.0', 'astra_get_option_dynamic_blog_layouts', '' );
 	return $dynamic_blog_layout;
 }

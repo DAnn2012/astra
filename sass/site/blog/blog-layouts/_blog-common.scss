@@ -28,7 +28,6 @@
 
 .entry-content {
 	word-wrap: break-word;
-	display: flow-root;
 	p {
 		margin-bottom: 1.6em;
 	}
@@ -65,7 +64,7 @@
 	}
 }
 
-.blog, 
+.blog,
 .archive,
 .search {
 	.entry-title {

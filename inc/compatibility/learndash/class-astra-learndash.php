@@ -111,9 +111,9 @@ if ( ! class_exists( 'Astra_LearnDash' ) ) :
 					'font-family' => astra_get_font_family( $body_font_family ),
 				),
 				'body #ld_course_list .btn, body a.btn-blue, body a.btn-blue:visited, body a#quiz_continue_link, body .btn-join, body .learndash_checkout_buttons input.btn-join[type="button"], body #btn-join, body .learndash_checkout_buttons input.btn-join[type="submit"], body .wpProQuiz_content .wpProQuiz_button2' => array(
-					'color'            => $btn_color,
-					'border-color'     => $btn_bg_color,
-					'background-color' => $btn_bg_color,
+					'color'                      => $btn_color,
+					'border-color'               => $btn_bg_color,
+					'background-color'           => $btn_bg_color,
 					'border-top-left-radius'     => astra_responsive_spacing( $btn_border_radius_fields, 'top', 'desktop' ),
 					'border-top-right-radius'    => astra_responsive_spacing( $btn_border_radius_fields, 'right', 'desktop' ),
 					'border-bottom-right-radius' => astra_responsive_spacing( $btn_border_radius_fields, 'bottom', 'desktop' ),

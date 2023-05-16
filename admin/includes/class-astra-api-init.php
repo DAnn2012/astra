@@ -17,7 +17,7 @@ if ( ! class_exists( 'WP_REST_Controller' ) ) {
 /**
  * Astra_API_Init.
  *
- * @since x.x.x
+ * @since 4.1.0
  */
 class Astra_API_Init extends WP_REST_Controller {
 

@@ -1595,20 +1595,10 @@ p.demo_store[data-position="bottom"],
 .woocommerce button.button,
 .woocommerce input.button,
 .woocommerce #respond input#submit {
-  font-size: 100%;
   margin: 0;
-  line-height: 1;
-  cursor: pointer;
   position: relative;
-  text-decoration: none;
   overflow: visible;
-  padding: 0.5em 0.75em;
-  font-weight: 700;
-  border-radius: 3px;
   left: auto;
-  color: #515151;
-  background-color: #ebe9eb;
-  border: 0;
   display: inline-block;
   background-image: none;
   box-shadow: none;
@@ -1650,32 +1640,6 @@ p.demo_store[data-position="bottom"],
   vertical-align: bottom;
 }
 
-.woocommerce a.button:hover,
-.woocommerce button.button:hover,
-.woocommerce input.button:hover,
-.woocommerce #respond input#submit:hover {
-  background-color: #dad8da;
-  background-image: none;
-  color: #515151;
-}
-
-.woocommerce a.button.alt,
-.woocommerce button.button.alt,
-.woocommerce input.button.alt,
-.woocommerce #respond input#submit.alt {
-  background-color: #a46497;
-  color: white;
-  -webkit-font-smoothing: antialiased;
-}
-
-.woocommerce a.button.alt:hover,
-.woocommerce button.button.alt:hover,
-.woocommerce input.button.alt:hover,
-.woocommerce #respond input#submit.alt:hover {
-  background-color: #935386;
-  color: white;
-}
-
 .woocommerce a.button.alt.disabled, .woocommerce a.button.alt:disabled, .woocommerce a.button.alt:disabled[disabled], .woocommerce a.button.alt.disabled:hover, .woocommerce a.button.alt:disabled:hover, .woocommerce a.button.alt:disabled[disabled]:hover,
 .woocommerce button.button.alt.disabled,
 .woocommerce button.button.alt:disabled,
@@ -1709,7 +1673,6 @@ p.demo_store[data-position="bottom"],
 .woocommerce #respond input#submit:disabled,
 .woocommerce #respond input#submit.disabled,
 .woocommerce #respond input#submit:disabled[disabled] {
-  color: inherit;
   cursor: not-allowed;
   opacity: 0.5;
   padding: 0.618em 1em;
@@ -3082,11 +3045,6 @@ p.demo_store[data-position="bottom"],
   width: auto;
 }
 
-.woocommerce #content table.cart .button[name="apply_coupon"],
-.woocommerce-page #content table.cart .button[name="apply_coupon"] {
-  padding: 10px 40px;
-}
-
 .ast-separate-container .ast-woocommerce-container {
   background-color: #fff;
 }
@@ -4130,11 +4088,6 @@ button.pswp__button--zoom:hover {
   padding: .5em .75em;
 }
 
-.woocommerce-cart table.cart td.actions .button {
-  padding: .5em 1em;
-  line-height: 1.5;
-}
-
 .woocommerce-cart table.cart td.actions input.button {
   display: inline-block;
   width: auto;
@@ -4332,10 +4285,6 @@ button.pswp__button--zoom:hover {
   padding: .5em 1em;
   vertical-align: initial;
   line-height: 1.35;
-}
-
-.woocommerce form.checkout_coupon .button[name="apply_coupon"] {
-  padding: 10px 40px;
 }
 
 @media (max-width: 420px) {

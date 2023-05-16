@@ -2668,7 +2668,6 @@ input[type="color"]::-webkit-color-swatch {
 
 .entry-content {
   word-wrap: break-word;
-  display: flow-root;
 }
 
 .entry-content p {

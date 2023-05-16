@@ -112,7 +112,6 @@ if ( ! class_exists( 'Astra_Woo_Shop_Layout_Configs' ) ) {
 					'context'  => array(
 						Astra_Builder_Helper::$design_tab_config,
 					),
-					'divider'  => array( 'ast_class' => 'ast-section-spacing' ),
 				),
 
 				/**
@@ -313,7 +312,7 @@ if ( ! class_exists( 'Astra_Woo_Shop_Layout_Configs' ) ) {
 				'parent'     => ASTRA_THEME_SETTINGS . '[shop-product-structure]',
 				'default'    => astra_get_option( 'shop-add-to-cart-action' ),
 				'section'    => 'woocommerce_product_catalog',
-				'title'      => __( 'Add To Cart Action', 'astra-addon' ),
+				'title'      => __( 'Add To Cart Action', 'astra' ),
 				'type'       => 'sub-control',
 				'control'    => 'ast-select',
 				'linked'     => 'add_cart',

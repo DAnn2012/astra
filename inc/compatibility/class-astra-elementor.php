@@ -69,7 +69,7 @@ if ( ! class_exists( 'Astra_Elementor' ) ) :
 			/**
 			 * Compatibility for Elementor title disable from editor and elementor builder.
 			 *
-			 * @since  x.x.x
+			 * @since  4.1.0
 			 */
 			add_filter( 'astra_entry_header_class', array( $this, 'astra_entry_header_class_custom' ), 1, 99 );
 		}
@@ -80,7 +80,7 @@ if ( ! class_exists( 'Astra_Elementor' ) ) :
 		 *
 		 * @param array $classes Array of elementor edit mode check.
 		 *
-		 * @since x.x.x
+		 * @since 4.1.0
 		 */
 		function astra_entry_header_class_custom( $classes ) {
 			$post_id = astra_get_post_id(); 

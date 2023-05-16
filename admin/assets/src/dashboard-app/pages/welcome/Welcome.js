@@ -129,7 +129,7 @@ const Welcome = () => {
 													}{" "}
 												</span>
 												{__(
-													`What's New in ${astra_admin.theme_name} 4.0.0`,
+													`Watch the Quick Starter Guide`,
 													"astra"
 												)}
 											</button>
@@ -144,7 +144,7 @@ const Welcome = () => {
 								{/* Added rel=0 query paramter at the end to disable YouTube recommendations */}
 								<iframe
 									className="astra-video rounded-md"
-									src={`https://www.youtube-nocookie.com/embed/uBNUpyCM8G8?showinfo=0&autoplay=${allowAutoPlay}&mute=${allowAutoPlay}&rel=0`}
+									src={`https://www.youtube-nocookie.com/embed/TBZd9oligCw?showinfo=0&autoplay=${allowAutoPlay}&mute=${allowAutoPlay}&rel=0`}
 									allow="autoplay"
 									title="YouTube video player"
 									frameBorder="0"
@@ -316,7 +316,7 @@ const Welcome = () => {
 										</p>
 										<a
 											className="text-sm text-astra focus:text-astra focus-visible:text-astra-hover active:text-astra-hover hover:text-astra-hover no-underline"
-											href="https://wpastra.com/support/?utm_source=wp&utm_medium=dashboard"
+											href="https://wpastra.com/support/?utm_source=dashboard&utm_medium=free-theme&utm_campaign=priority-support"
 											target="_blank"
 											rel="noreferrer"
 										>
