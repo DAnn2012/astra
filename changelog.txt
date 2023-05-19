@@ -1,3 +1,5 @@
+v4.16
+- Improvement - Header Footer Builder - "TikTok" added as a social icon.
 v4.1.5
 - Fix: Offcanvas Menu - Transparent empty canvas visible on expanding offcanvas toggle button.
 - Fix: Custom Layouts - Block editor core blocks custom spacing incorrectly applies to custom layout blocks in editor.
