@@ -6,6 +6,7 @@
   "dependencies": {
     "@fonticonpicker/react-fonticonpicker": "^1.2.0",
     "@wordpress/icons": "^6.3.0",
+    "caniuse-lite": "^1.0.30001488",
     "classnames": "^2.3.1",
     "html-react-parser": "^1.4.0",
     "prop-types": "^15.7.2",
