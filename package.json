@@ -46,7 +46,7 @@
     "kind-of": ">=6.0.3",
     "lodash": "^4.17.21",
     "minimist": "^1.2.7",
-    "node-sass": "^7.0.3",
+    "node-sass": "^9.0.0",
     "postcss-flexibility": "git+https://github.com/Nikschavan/postcss-flexibility.git#fix-145-build",
     "puppeteer": "^10.4.0"
   },
