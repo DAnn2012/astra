@@ -765,10 +765,10 @@ class Astra_WP_Editor_CSS {
 		 */
 		if ( 'astra-advanced-hook' !== $post_type ) {
 			$desktop_css['.block-editor-block-list__layout.is-root-container > .wp-block-group, .block-editor-block-list__layout.is-root-container > [data-align="wide"] > .wp-block-group, .block-editor-block-list__layout.is-root-container > [data-align="full"] > .wp-block-group, .block-editor-block-list__layout.is-root-container > .wp-block-cover, .block-editor-block-list__layout.is-root-container > [data-align="wide"] > .wp-block-cover, .block-editor-block-list__layout.is-root-container > [data-align="full"] > .wp-block-cover, .block-editor-block-list__layout.is-root-container > .wp-block-columns, .block-editor-block-list__layout.is-root-container > [data-align="wide"] > .wp-block-columns, .block-editor-block-list__layout.is-root-container > [data-align="full"] > .wp-block-columns'] = array(
-					'padding-top'    => 'var(--wp--custom--ast-default-block-top-padding)',
-					'padding-right'  => 'var(--wp--custom--ast-default-block-right-padding)',
-					'padding-bottom' => 'var(--wp--custom--ast-default-block-bottom-padding)',
-					'padding-left'   => 'var(--wp--custom--ast-default-block-left-padding)',
+				'padding-top'    => 'var(--wp--custom--ast-default-block-top-padding)',
+				'padding-right'  => 'var(--wp--custom--ast-default-block-right-padding)',
+				'padding-bottom' => 'var(--wp--custom--ast-default-block-bottom-padding)',
+				'padding-left'   => 'var(--wp--custom--ast-default-block-left-padding)',
 			);
 		}
 
