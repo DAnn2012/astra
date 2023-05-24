@@ -23,11 +23,11 @@
 		<!-- Creates issue getting remote data. -->
 		<exclude name="WordPressVIPMinimum.Functions.RestrictedFunctions.wp_remote_get_wp_remote_get" />
 		<!-- Creates issue with rendering svg icons. -->
-		<exclude name="WordPressVIPMinimum.Files.IncludingNonPHPFile.IncludingNonPHPFile" /> 
+		<exclude name="WordPressVIPMinimum.Files.IncludingNonPHPFile.IncludingNonPHPFile" />
 		<!-- Ignoring WordpressVIP specific functions for now. -->
-		<exclude name="WordPressVIPMinimum.Functions.RestrictedFunctions.get_adjacent_post_get_next_post" /> 
+		<exclude name="WordPressVIPMinimum.Functions.RestrictedFunctions.get_adjacent_post_get_next_post" />
 		<!-- Ignoring WordpressVIP specific functions for now. -->
-		<exclude name="WordPressVIPMinimum.Functions.RestrictedFunctions.get_adjacent_post_get_previous_post" /> 
+		<exclude name="WordPressVIPMinimum.Functions.RestrictedFunctions.get_adjacent_post_get_previous_post" />
 	</rule>
 
 	<rule ref="WordPress.Security.EscapeOutput">
@@ -60,6 +60,7 @@
 
 	<exclude-pattern>tests/php/static-analysis-stubs/*</exclude-pattern>
 	<exclude-pattern>inc/addons/breadcrumbs/class-astra-breadcrumb-trail.php</exclude-pattern>
+	<exclude-pattern>inc/google-fonts.php</exclude-pattern>
 	<exclude-pattern>*/index.asset.php</exclude-pattern>
 	<exclude-pattern>*/dashboard-app.asset.php</exclude-pattern>
 

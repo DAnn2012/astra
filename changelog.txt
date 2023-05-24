@@ -1,3 +1,12 @@
+v4.1.6 (Unreleased)
+- Improvment - Header Footer Builder - Added new social icon "TikTok".
+- Fix: Header Builder - Menu - Item Divider doesn't work on the last submenu item.
+
+v4.1.5
+- Fix: Offcanvas Menu - Transparent empty canvas visible on expanding offcanvas toggle button.
+- Fix: Custom Layouts - Block editor core blocks custom spacing incorrectly applies to custom layout blocks in editor.
+- Fix: Secondary menu SVG alignment on tablet/mobile including RTL version.
+
 v4.1.4
 - New: Introducing new "Disable Banner Area" metabox based option to control visibility of title banner area. ( https://wpastra.com/docs/introducing-the-new-disable-banner-area-meta-based-option/ )
 - New: Introducing new filter "astra_rank_math_theme_support" to enable/disable rank-math theme support. ( https://wpastra.com/docs/introducing-new-filter-to-enable-disable-rank-math-theme-support/ )
@@ -12,6 +21,7 @@ v4.1.4
 - Fix: Header Builder - Off-canvas - Getting white flash jerk when closing offcanvas toggle menu.
 - Fix: WooCommerce - Pagination does not work for WooCommerce Categories without Subcategories if displaying subcategories on products.
 - Fix: Double border-top applied for footer in customizer preview.
+- Fix: Single product payment icons misalignment on Safari browsers (Mac and iOS).
 
 v4.1.3
 - Fix: Container - Content Boxed layout removes Spectra column or container left padding.
