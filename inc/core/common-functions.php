@@ -177,14 +177,13 @@ if ( ! function_exists( 'astra_get_font_css_value' ) ) {
 					$value            = intval( $value );
 					$fonts            = array();
 					$body_font_size   = astra_get_option( 'font-size-body' );
-					$fonts['desktop'] = ( isset( $body_font_size['desktop'] ) && '' != $body_font_size['desktop'] ) ? $body_font_size['desktop'] : 15;
+					$fonts['desktop'] = ( isset( $body_font_size['desktop'] ) && '' != $body_font_size['desktop'] ) ? $body_font_size['desktop'] : 16;
 					$fonts['tablet']  = ( isset( $body_font_size['tablet'] ) && '' != $body_font_size['tablet'] ) ? $body_font_size['tablet'] : $fonts['desktop'];
 					$fonts['mobile']  = ( isset( $body_font_size['mobile'] ) && '' != $body_font_size['mobile'] ) ? $body_font_size['mobile'] : $fonts['tablet'];
 
 					if ( $fonts[ $device ] ) {
-						$css_val  = ( esc_attr( $value ) / esc_attr( $fonts[ $device ] ) ) . 'rem;';
-						$css_val .= 'font-size:' . esc_attr( $value ) . 'px;';
-					}               
+						$css_val = esc_attr( $value ) . 'px;font-size:' . ( esc_attr( $value ) / esc_attr( $fonts[ $device ] ) ) . 'rem';
+					}
 				} else {
 					$css_val = esc_attr( $value );
 				}
