@@ -2659,7 +2659,6 @@ if ( ! class_exists( 'Astra_Woocommerce' ) ) :
 							font-weight: 500;
 							line-height: normal;
 							letter-spacing: normal;
-							box-shadow: 0 4px 4px rgba(0,0,0,0.15);
 							opacity: 1;
 							visibility: visible;
 							z-index: 4;
@@ -2708,7 +2707,6 @@ if ( ! class_exists( 'Astra_Woocommerce' ) ) :
 						width: 2em;
 						height: 2em;
 						justify-content: center;
-						box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
 					}
 
 					.ast-on-card-button .ahfb-svg-iconset .ast-icon {
