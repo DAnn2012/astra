@@ -3,6 +3,7 @@ v4.1.6 (Unreleased)
 - Improvement: Improved title area customizer control UI for better user experience.
 - Fix: Header Builder - Menu - Item Divider doesn't work on the last submenu item.
 - Fix: Author Link not working on layout 2 for single post title.
+- Improvement: Rearrange surecart pages option in custmizer.
 
 v4.1.5
 - Fix: Offcanvas Menu - Transparent empty canvas visible on expanding offcanvas toggle button.
