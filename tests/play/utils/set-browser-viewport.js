@@ -35,14 +35,12 @@ const PREDEFINED_DIMENSIONS = {
 /**
  * Sets browser viewport to specified type.
  *
- * @this {import('./').PageUtils}
+ * @param {import('@playwright/test').Page} page Playwright page object
  * @param {WPViewport} viewport Viewport name or dimensions object to assign.
  */
-export async function setBrowserViewport( viewport ) {
-	const dimensions =
-		typeof viewport === 'string'
-			? PREDEFINED_DIMENSIONS[ viewport ]
-			: viewport;
+export async function setBrowserViewport(page, viewport) {
+  const dimensions =
+    typeof viewport === "string" ? PREDEFINED_DIMENSIONS[viewport] : viewport;
 
-	await this.page.setViewportSize( dimensions );
+  await page.setViewportSize(dimensions);
 }

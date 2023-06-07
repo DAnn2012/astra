@@ -11,6 +11,7 @@ export const setCustomizeSettings = async ( data, baseURL ) => {
 		},
 	);
 	expect( response.ok ).toBeTruthy();
+
 };
 
 export const getCustomizerSettings = async ( key ) => {
@@ -27,3 +28,8 @@ export const getCustomizerSettings = async ( key ) => {
 		)
 		.then( ( response ) => response.json() );
 };
+
+
+
+
+
