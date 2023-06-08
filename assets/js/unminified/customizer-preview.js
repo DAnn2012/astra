@@ -367,9 +367,9 @@ function astra_background_obj_css( wp_customize, bg_obj, ctrl_name, style ) {
 				}
 			} else if ( 'image' === bg_obj['background-type'] ) {
 				if ( '' !== bg_img ) {
-					if ( undefined !== bg_obj['overlay-type'] && 'none' !== bg_obj['overlay-type'] ) {
-						let overlay_color	= undefined !== bg_obj['overlay-color'] ? bg_obj['overlay-color'] : '';
-						let overlay_gradient	= undefined !== bg_obj['overlay-gradient'] ? bg_obj['overlay-gradient'] : '';
+					if ( 'overlay-type' in bg_obj && 'none' !== bg_obj['overlay-type'] ) {
+						let overlay_color	= 'overlay-color' in bg_obj ? bg_obj['overlay-color'] : '';
+						let overlay_gradient	= 'overlay-gradient' in bg_obj ? bg_obj['overlay-gradient'] : '';
 						if ( 'classic' === bg_obj['overlay-type'] && '' !== overlay_color ) {
 							gen_bg_css = 'background-image: linear-gradient(to right, ' + bg_obj['overlay-color'] + ', ' + bg_obj['overlay-color'] + '), url(' + bg_img + ');';
 						} else if ( 'gradient' === bg_obj['overlay-type'] && '' !== overlay_gradient ) {

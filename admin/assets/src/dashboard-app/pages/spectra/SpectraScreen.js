@@ -112,7 +112,7 @@ const SpectraScreen = () => {
 				<div className="relative flex flex-col items-center">
 					{Astra_Admin_Icons["spectra-logo"]}
 					<h2 className="text-4xl sm:text-[2.5rem] text-slate-800 font-semibold capitalize mb-2 mt-7">
-						{__(`${astra_admin.theme_name} + Spectra = `, "astra")}
+						{`${astra_admin.theme_name} + Spectra = `}
 						<span className="text-[1em] leading-[1em]">
 							{Astra_Admin_Icons['heart-logo']}
 						</span>

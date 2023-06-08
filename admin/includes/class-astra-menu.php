@@ -203,7 +203,7 @@ class Astra_Menu {
 	/**
 	 * In version 2.4.1 Spectra introduces top level admin menu so there is no meaning to show Spectra submenu from Astra menu.
 	 *
-	 * @since x.x.x
+	 * @since 4.1.4
 	 * @return bool true|false.
 	 */
 	public function spectra_has_top_level_menu() {
