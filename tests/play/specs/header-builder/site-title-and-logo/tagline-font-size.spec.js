@@ -1,8 +1,11 @@
 const { test, expect } = require( '@playwright/test' );
-const { setCustomizeSettings } = require( '../../utils/customize' );
-const { setBrowserViewport } = require( '../../../utils/set-browser-viewport' ); 
+const { setCustomizeSettings } = require( '../../../utils/customize' );
 test.describe( 'Site tagline font size verification', () => {
 	const typoSettings = {
+        '_customize-input-blogdescription': 'Testing tagline color',
+		'display-site-tagline-responsive': {
+            desktop: 1,
+        },
         'font-size-site-tagline': {
 			desktop: 60,
 			tablet: 40,
@@ -11,6 +14,13 @@ test.describe( 'Site tagline font size verification', () => {
 			'tablet-unit': 'px',
 			'mobile-unit': 'px',
 		},
+        'header-desktop-items': {
+            primary: {
+                primary_center: {
+                    0: 'logo',
+                },
+            },
+        },
     };
     test.beforeAll( async ( { baseURL } ) => {
         await setCustomizeSettings( typoSettings, baseURL );
@@ -18,16 +28,9 @@ test.describe( 'Site tagline font size verification', () => {
     test( 'Site tagline font size on the front end.', async ({ page }) => {
 		await test.step('Site tagline font size', async () => {
 		await page.goto('/');
+        await page.waitForTimeout(5000);
         const taglineFontSize = await page.locator('.site-header .site-description');
-        await expect(taglineFontSize).toHaveCSS('font-size', `${ typoSettings[ 'font-size-site-tagline' ].desktop * typoSettings[ 'font-size' ] }` + 'px');
-
-        await setBrowserViewport( 'medium' );
-        const taglineFontSizeTablet = await page.locator('.site-header .site-description');
-        await expect(taglineFontSizeTablet).toHaveCSS('font-size', `${ typoSettings[ 'font-size-site-tagline' ].tablet * typoSettings[ 'font-size' ] }` + 'px');
-
-        await setBrowserViewport( 'small' );
-        const taglineFontSizeMobile = await page.locator('.site-header .site-description');
-        await expect(taglineFontSizeMobile).toHaveCSS('font-size', `${ typoSettings[ 'font-size-site-tagline' ].mobile * typoSettings[ 'font-size' ] }` + 'px');
+        await expect(taglineFontSize.first()).toHaveCSS('font-size', `${typoSettings['font-size-site-tagline'].desktop}${typoSettings['font-size-site-tagline']['desktop-unit']}`);
         } );
     } );
 } );

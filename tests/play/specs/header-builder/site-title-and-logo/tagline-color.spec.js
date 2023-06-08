@@ -1,11 +1,19 @@
 const { test, expect } = require( '@playwright/test' );
-const { setCustomizeSettings } = require( '../../../../../utils/customize' );
+const { setCustomizeSettings } = require( '../../../utils/customize' );
 
 test.describe( 'Site tagline color verification', () => {
 	const colorSettings = {
-		'header-color-site-tagline': 'rgb(24, 230, 26)',
-        'display-site-tagline-responsive': {
+		'_customize-input-blogdescription': 'Testing tagline color',
+		'display-site-tagline-responsive': {
             desktop: 1,
+        },
+		'header-color-site-tagline': 'rgb(24, 230, 26)',
+		'header-desktop-items': {
+            primary: {
+                primary_center: {
+                    0: 'logo',
+                },
+            },
         },
     };
     test.beforeAll( async ( { baseURL } ) => {
@@ -14,8 +22,10 @@ test.describe( 'Site tagline color verification', () => {
     test( 'Site tagline color on the front end.', async ({ page }) => {
 		await test.step('Site tagline color', async () => {
 			await page.goto('/');
-			const siteTaglineColor = await page.locator('.ast-site-identity .site-description');
-			await expect(siteTaglineColor).toHaveCSS('color', colorSettings[ 'header-color-site-tagline' ]);
+			await page.waitForTimeout(5000);
+			const siteTaglineColor = await page.$eval('.ast-site-identity .site-description',
+            el => window.getComputedStyle(el).color);
+            await expect(siteTaglineColor).toBe(colorSettings['header-color-site-tagline']);
 		});
     } );
 } );
