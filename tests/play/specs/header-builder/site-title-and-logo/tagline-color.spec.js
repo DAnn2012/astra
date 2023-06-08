@@ -1,5 +1,5 @@
 const { test, expect } = require( '@playwright/test' );
-const { setCustomizeSettings } = require( '../../../../utils/customize' );
+const { setCustomizeSettings } = require( '../../../../../utils/customize' );
 
 test.describe( 'Site tagline color verification', () => {
 	const colorSettings = {

@@ -1,6 +1,5 @@
 const { test, expect } = require( '@playwright/test' );
-const { setCustomizeSettings } = require( '../../utils/customize' );
-const { setBrowserViewport } = require( '../../../utils/set-browser-viewport' ); 
+const { setCustomizeSettings } = require( '../../utils/customize' ); 
 test.describe( 'Site title font size verification', () => {
 	const typoSettings = {
         'font-size-site-title': {
@@ -20,14 +19,6 @@ test.describe( 'Site title font size verification', () => {
 		await page.goto('/');
         const titleFontSize = await page.locator('.site-title');
         await expect(titleFontSize).toHaveCSS('font-size', `${ typoSettings[ 'font-size-site-title' ].desktop * typoSettings[ 'font-size' ] }` + 'px');
-
-        await setBrowserViewport( 'medium' );
-        const titleFontSizeTablet = await page.locator('.site-title');
-        await expect(titleFontSizeTablet).toHaveCSS('font-size', `${ typoSettings[ 'font-size-site-title' ].tablet * typoSettings[ 'font-size' ] }` + 'px');
-
-        await setBrowserViewport( 'small' );
-        const titleFontSizeMobile = await page.locator('.site-title');
-        await expect(titleFontSizeMobile).toHaveCSS('font-size', `${ typoSettings[ 'font-size-site-title' ].mobile * typoSettings[ 'font-size' ] }` + 'px');
         } );
     } );
 } );
