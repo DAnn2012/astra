@@ -1,9 +1,11 @@
 v4.1.6 (Unreleased)
 - Improvement: Header Footer Builder - Added new social icon "TikTok".
 - Improvement: Improved title area customizer control UI for better user experience.
+- Improvement: Refactor duplication blocks of code found in navigation JS file.
 - Fix: Header Builder - Menu - Item Divider doesn't work on the last submenu item.
 - Fix: Author Link not working on layout 2 for single post title.
 - Fix: Offcanvas Menu - Font size incorrectly applies on front end.
+- Fix: Fatal error: Uncaught TypeError: Unsupported operand types: On frontend and customizer.
 
 v4.1.5
 - Fix: Offcanvas Menu - Transparent empty canvas visible on expanding offcanvas toggle button.

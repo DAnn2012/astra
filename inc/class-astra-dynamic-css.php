@@ -3629,9 +3629,9 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 			 *
 			 *   - Sidebar Positions CSS
 			 */
-			$secondary_width = astra_get_option( 'site-sidebar-width' );
-			$primary_width   = absint( 100 - $secondary_width );
-			$meta_style      = '';
+			$secondary_width = absint( astra_get_option( 'site-sidebar-width' ) );
+			$primary_width = absint( 100 - $secondary_width );
+			$meta_style = '';
 
 			// Header Separator.
 			$header_separator       = astra_get_option( 'header-main-sep' );
@@ -3662,7 +3662,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 						'width' => astra_get_css_value( $primary_width, '%' ),
 					),
 					'#secondary' => array(
-						'width' => astra_get_css_value( $secondary_width, '%' ),
+						'width' => astra_get_css_value( strval($secondary_width), '%' ),
 					),
 				);
 
