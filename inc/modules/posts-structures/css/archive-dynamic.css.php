@@ -39,11 +39,7 @@ function astra_post_archive_structure_dynamic_css( $dynamic_css, $dynamic_css_fi
 	$layout_type     = astra_get_option( 'ast-dynamic-archive-' . $current_post_type . '-layout', 'layout-1' );
 	$layout_2_active = ( 'layout-2' === $layout_type ) ? true : false;
 
-	if ( $layout_2_active ) {
-		$selector = '.ast-archive-entry-banner[data-post-type="' . $current_post_type . '"]';
-	} else {
-		$selector = 'body.archive .ast-archive-description';
-	}
+	$selector = ( $layout_2_active ) ? '.ast-archive-entry-banner[data-post-type="' . $current_post_type . '"]' : '';
 
 	$horz_alignment   = astra_get_option( 'ast-dynamic-archive-' . $current_post_type . '-horizontal-alignment' );
 	$desk_h_alignment = ( isset( $horz_alignment['desktop'] ) ) ? $horz_alignment['desktop'] : '';
