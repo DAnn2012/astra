@@ -1773,6 +1773,8 @@ input[type="text"].select2-search__field {
 .ast-section-toggle-icon span {
   font-size: 16px;
   line-height: 16px;
+  width: 16px;
+  height: 16px;
 }
 
 .customize-control-ast-section-toggle {
