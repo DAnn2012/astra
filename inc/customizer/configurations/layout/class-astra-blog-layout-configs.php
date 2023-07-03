@@ -42,7 +42,6 @@ if ( ! class_exists( 'Astra_Blog_Layout_Configs' ) ) {
 					'title'       => __( 'Date', 'astra' ),
 				),
 				'tag'       => __( 'Tag', 'astra' ),
-				'read-time' => __( 'Read Time', 'astra' ),
 			);
 
 			/** @psalm-suppress UndefinedClass */ // phpcs:ignore Generic.Commenting.DocComment.MissingShort

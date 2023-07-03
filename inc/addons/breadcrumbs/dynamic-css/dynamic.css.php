@@ -30,12 +30,12 @@ function astra_breadcrumb_section_dynamic_css( $dynamic_css, $dynamic_css_filter
 	$dynamic_css .= astra_parse_css(
 		array(
 			'.ast-breadcrumbs .trail-browse, .ast-breadcrumbs .trail-items, .ast-breadcrumbs .trail-items li' => array(
-				'display'     => 'inline-block',
-				'margin'      => '0',
-				'padding'     => '0',
-				'border'      => 'none',
-				'background'  => 'inherit',
-				'text-indent' => '0',
+				'display'         => 'inline-block',
+				'margin'          => '0',
+				'padding'         => '0',
+				'border'          => 'none',
+				'background'      => 'inherit',
+				'text-indent'     => '0',
 				'text-decoration' => 'none',
 			),
 			'.ast-breadcrumbs .trail-browse'      => array(

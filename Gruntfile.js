@@ -521,6 +521,10 @@ module.exports = function (grunt) {
                         dest: 'assets/css/minified/compatibility/woocommerce/woocommerce-layout.min-rtl.css',
                     },
                     {
+                        src: 'assets/css/unminified/compatibility/woocommerce/sticky-add-to-cart-rtl.css',
+                        dest: 'assets/css/minified/compatibility/woocommerce/sticky-add-to-cart.min-rtl.css',
+                    },
+                    {
                         src: 'assets/css/unminified/compatibility/woocommerce/woocommerce-grid-rtl.css',
                         dest: 'assets/css/minified/compatibility/woocommerce/woocommerce-grid.min-rtl.css',
                     },

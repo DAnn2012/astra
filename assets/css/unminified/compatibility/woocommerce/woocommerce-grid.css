@@ -3154,6 +3154,7 @@ p.demo_store[data-position="bottom"],
 .woocommerce-page .select2-container .select2-dropdown,
 .woocommerce-page .select2-container .select2-search__field {
   border: 1px solid var(--ast-border-color);
+  z-index: 98;
 }
 
 .woocommerce select, .woocommerce .select2-container .select2-selection--single,

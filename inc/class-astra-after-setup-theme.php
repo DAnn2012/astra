@@ -169,7 +169,9 @@ if ( ! class_exists( 'Astra_After_Setup_Theme' ) ) {
 			add_theme_support( 'woocommerce' );
 
 			// Rank Math Breadcrumb.
-			add_theme_support( 'rank-math-breadcrumbs' );
+			if ( true === apply_filters( 'astra_rank_math_theme_support', true ) ) {
+				add_theme_support( 'rank-math-breadcrumbs' );
+			}
 
 			// Native AMP Support.
 			if ( true === apply_filters( 'astra_amp_support', true ) ) {

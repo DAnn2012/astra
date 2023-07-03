@@ -533,6 +533,9 @@ if ( ! function_exists( 'astra_update_option' ) ) {
 		$theme_options = get_option( ASTRA_THEME_SETTINGS );
 
 		// Update value in options array.
+		if ( ! is_array( $theme_options ) ) {
+			$theme_options = array();
+		}
 		$theme_options[ $option ] = $value;
 
 		update_option( ASTRA_THEME_SETTINGS, $theme_options );
@@ -1482,11 +1485,11 @@ function astra_get_responsive_background_obj( $bg_obj_res, $device ) {
 
 			case 'image':
 				/** @psalm-suppress PossiblyUndefinedStringArrayOffset */ // phpcs:ignore Generic.Commenting.DocComment.MissingShort
-				$overlay_type  = isset( $bg_obj['overlay-type'] ) ? $bg_obj['overlay-type'] : 'none';
+				$overlay_type = isset( $bg_obj['overlay-type'] ) ? $bg_obj['overlay-type'] : 'none';
 				/** @psalm-suppress PossiblyUndefinedStringArrayOffset */ // phpcs:ignore Generic.Commenting.DocComment.MissingShort
 				$overlay_color = isset( $bg_obj['overlay-color'] ) ? $bg_obj['overlay-color'] : '';
 				/** @psalm-suppress PossiblyUndefinedStringArrayOffset */ // phpcs:ignore Generic.Commenting.DocComment.MissingShort
-				$overlay_grad  = isset( $bg_obj['overlay-gradient'] ) ? $bg_obj['overlay-gradient'] : '';
+				$overlay_grad = isset( $bg_obj['overlay-gradient'] ) ? $bg_obj['overlay-gradient'] : '';
 				/** @psalm-suppress PossiblyUndefinedStringArrayOffset */ // phpcs:ignore Generic.Commenting.DocComment.MissingShort
 
 				if ( '' !== $bg_img ) {

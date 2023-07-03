@@ -1133,16 +1133,16 @@ function astra_theme_background_updater_4_1_0() {
 }
 
 /**
- * x.x.x backward handling cases.
+ * 4.1.4 backward handling cases.
  *
  * 1. Migrating users to combined color overlay option to new dedicated overlay options.
  *
- * @since x.x.x
+ * @since 4.1.4
  * @return void
  */
-function astra_theme_background_updater_4_2_0() {
+function astra_theme_background_updater_4_1_4() {
 	$theme_options = get_option( 'astra-settings', array() );
-	if ( ! isset( $theme_options['v4-2-0-update-migration'] ) ) {
+	if ( ! isset( $theme_options['v4-1-4-update-migration'] ) ) {
 		$ast_bg_control_options = array(
 			'off-canvas-background',
 			'footer-adv-bg-obj',
@@ -1198,8 +1198,11 @@ function astra_theme_background_updater_4_2_0() {
 
 		foreach ( $ast_resp_bg_control_options as $key => $resp_bg_option ) {
 			// Desktop version.
-			if ( isset( $theme_options[ $resp_bg_option ]['desktop'] ) && ! isset( $theme_options[ $resp_bg_option ]['desktop']['overlay-type'] ) ) {
+			/** @psalm-suppress PossiblyUndefinedStringArrayOffset */
+			if ( isset( $theme_options[ $resp_bg_option ]['desktop'] ) && is_array( $theme_options[ $resp_bg_option ]['desktop'] ) && ! isset( $theme_options[ $resp_bg_option ]['desktop']['overlay-type'] ) ) {
+				// @codingStandardsIgnoreStart
 				$desk_bg_type = isset( $theme_options[ $resp_bg_option ]['desktop']['background-type'] ) ? $theme_options[ $resp_bg_option ]['desktop']['background-type'] : '';
+				// @codingStandardsIgnoreEnd
 
 				$theme_options[ $resp_bg_option ]['desktop']['overlay-type']     = '';
 				$theme_options[ $resp_bg_option ]['desktop']['overlay-color']    = '';
@@ -1218,17 +1221,17 @@ function astra_theme_background_updater_4_2_0() {
 			}
 
 			// Tablet version.
-			if ( isset( $theme_options[ $resp_bg_option ]['tablet'] ) && ! isset( $theme_options[ $resp_bg_option ]['tablet']['overlay-type'] ) ) {
+			/** @psalm-suppress PossiblyUndefinedStringArrayOffset */
+			if ( isset( $theme_options[ $resp_bg_option ]['tablet'] ) && is_array( $theme_options[ $resp_bg_option ]['tablet'] ) && ! isset( $theme_options[ $resp_bg_option ]['tablet']['overlay-type'] ) ) {
+				// @codingStandardsIgnoreStart
 				$tablet_bg_type = isset( $theme_options[ $resp_bg_option ]['tablet']['background-type'] ) ? $theme_options[ $resp_bg_option ]['tablet']['background-type'] : '';
-
+				// @codingStandardsIgnoreEnd
 				$theme_options[ $resp_bg_option ]['tablet']['overlay-type']     = '';
 				$theme_options[ $resp_bg_option ]['tablet']['overlay-color']    = '';
 				$theme_options[ $resp_bg_option ]['tablet']['overlay-gradient'] = '';
-
 				if ( 'image' === $tablet_bg_type ) {
 					$bg_img   = isset( $theme_options[ $resp_bg_option ]['tablet']['background-image'] ) ? $theme_options[ $resp_bg_option ]['tablet']['background-image'] : '';
 					$bg_color = isset( $theme_options[ $resp_bg_option ]['tablet']['background-color'] ) ? $theme_options[ $resp_bg_option ]['tablet']['background-color'] : '';
-
 					if ( '' !== $bg_img && '' !== $bg_color && ( ! is_numeric( strpos( $bg_color, 'linear-gradient' ) ) && ! is_numeric( strpos( $bg_color, 'radial-gradient' ) ) ) ) {
 						$theme_options[ $resp_bg_option ]['tablet']['overlay-type']     = 'classic';
 						$theme_options[ $resp_bg_option ]['tablet']['overlay-color']    = $bg_color;
@@ -1237,10 +1240,13 @@ function astra_theme_background_updater_4_2_0() {
 				}
 			}
 
-			// Mobile version.
-			if ( isset( $theme_options[ $resp_bg_option ]['mobile'] ) && ! isset( $theme_options[ $resp_bg_option ]['mobile']['overlay-type'] ) ) {
-				$mobile_bg_type = isset( $theme_options[ $resp_bg_option ]['mobile']['background-type'] ) ? $theme_options[ $resp_bg_option ]['mobile']['background-type'] : '';
 
+			// Mobile version.
+			/** @psalm-suppress PossiblyUndefinedStringArrayOffset */
+			if ( isset( $theme_options[ $resp_bg_option ]['mobile'] ) && is_array( $theme_options[ $resp_bg_option ]['mobile'] ) && ! isset( $theme_options[ $resp_bg_option ]['mobile']['overlay-type'] ) ) {
+				// @codingStandardsIgnoreStart
+				$mobile_bg_type = isset( $theme_options[ $resp_bg_option ]['mobile']['background-type'] ) ? $theme_options[ $resp_bg_option ]['mobile']['background-type'] : '';
+				// @codingStandardsIgnoreEnd
 				$theme_options[ $resp_bg_option ]['mobile']['overlay-type']     = '';
 				$theme_options[ $resp_bg_option ]['mobile']['overlay-color']    = '';
 				$theme_options[ $resp_bg_option ]['mobile']['overlay-gradient'] = '';
@@ -1258,7 +1264,21 @@ function astra_theme_background_updater_4_2_0() {
 			}
 		}
 
-		$theme_options['v4-2-0-update-migration'] = true;
+		$theme_options['v4-1-4-update-migration'] = true;
+		update_option( 'astra-settings', $theme_options );
+	}
+}
+
+/**
+ * Handle backward compatibility on version 4.1.6
+ *
+ * @since x.x.x
+ * @return void
+ */
+function astra_theme_background_updater_4_1_6() {
+	$theme_options = get_option( 'astra-settings', array() );
+	if ( ! isset( $theme_options['list-block-vertical-spacing'] ) ) {
+		$theme_options['list-block-vertical-spacing'] = false;
 		update_option( 'astra-settings', $theme_options );
 	}
 }

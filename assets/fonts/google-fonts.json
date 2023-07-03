@@ -375,6 +375,17 @@
         }
     },
     {
+        "Alkatra": {
+            "variants": [
+                "regular",
+                "500",
+                "600",
+                "700"
+            ],
+            "category": "display"
+        }
+    },
+    {
         "Allan": {
             "variants": [
                 "regular",
@@ -839,6 +850,20 @@
         }
     },
     {
+        "Anuphan": {
+            "variants": [
+                "100",
+                "200",
+                "300",
+                "regular",
+                "500",
+                "600",
+                "700"
+            ],
+            "category": "sans-serif"
+        }
+    },
+    {
         "Anybody": {
             "variants": [
                 "100",
@@ -980,21 +1005,6 @@
                 "500",
                 "600",
                 "700"
-            ],
-            "category": "display"
-        }
-    },
-    {
-        "Arima Madurai": {
-            "variants": [
-                "100",
-                "200",
-                "300",
-                "regular",
-                "500",
-                "700",
-                "800",
-                "900"
             ],
             "category": "display"
         }
@@ -2247,6 +2257,14 @@
         }
     },
     {
+        "Braah One": {
+            "variants": [
+                "regular"
+            ],
+            "category": "sans-serif"
+        }
+    },
+    {
         "Brawler": {
             "variants": [
                 "regular",
@@ -2261,6 +2279,22 @@
                 "regular"
             ],
             "category": "serif"
+        }
+    },
+    {
+        "Bruno Ace": {
+            "variants": [
+                "regular"
+            ],
+            "category": "display"
+        }
+    },
+    {
+        "Bruno Ace SC": {
+            "variants": [
+                "regular"
+            ],
+            "category": "display"
         }
     },
     {
@@ -2453,7 +2487,7 @@
                 "800",
                 "900"
             ],
-            "category": "display"
+            "category": "sans-serif"
         }
     },
     {
@@ -2572,6 +2606,17 @@
         }
     },
     {
+        "Carlito": {
+            "variants": [
+                "regular",
+                "italic",
+                "700",
+                "700italic"
+            ],
+            "category": "sans-serif"
+        }
+    },
+    {
         "Carme": {
             "variants": [
                 "regular"
@@ -2610,6 +2655,14 @@
                 "italic"
             ],
             "category": "serif"
+        }
+    },
+    {
+        "Castoro Titling": {
+            "variants": [
+                "regular"
+            ],
+            "category": "display"
         }
     },
     {
@@ -2935,6 +2988,14 @@
         }
     },
     {
+        "Climate Crisis": {
+            "variants": [
+                "regular"
+            ],
+            "category": "display"
+        }
+    },
+    {
         "Coda": {
             "variants": [
                 "regular",
@@ -3023,6 +3084,22 @@
                 "regular"
             ],
             "category": "handwriting"
+        }
+    },
+    {
+        "Comme": {
+            "variants": [
+                "100",
+                "200",
+                "300",
+                "regular",
+                "500",
+                "600",
+                "700",
+                "800",
+                "900"
+            ],
+            "category": "sans-serif"
         }
     },
     {
@@ -3452,6 +3529,14 @@
         }
     },
     {
+        "Darumadrop One": {
+            "variants": [
+                "regular"
+            ],
+            "category": "display"
+        }
+    },
+    {
         "David Libre": {
             "variants": [
                 "regular",
@@ -3491,6 +3576,14 @@
                 "regular"
             ],
             "category": "display"
+        }
+    },
+    {
+        "Delicious Handrawn": {
+            "variants": [
+                "regular"
+            ],
+            "category": "handwriting"
         }
     },
     {
@@ -4501,6 +4594,22 @@
         }
     },
     {
+        "Foldit": {
+            "variants": [
+                "100",
+                "200",
+                "300",
+                "regular",
+                "500",
+                "600",
+                "700",
+                "800",
+                "900"
+            ],
+            "category": "display"
+        }
+    },
+    {
         "Fondamento": {
             "variants": [
                 "regular",
@@ -4607,14 +4716,6 @@
                 "700"
             ],
             "category": "sans-serif"
-        }
-    },
-    {
-        "Fredoka One": {
-            "variants": [
-                "regular"
-            ],
-            "category": "display"
         }
     },
     {
@@ -4850,17 +4951,6 @@
         }
     },
     {
-        "Gentium Book Basic": {
-            "variants": [
-                "regular",
-                "italic",
-                "700",
-                "700italic"
-            ],
-            "category": "serif"
-        }
-    },
-    {
         "Gentium Book Plus": {
             "variants": [
                 "regular",
@@ -5075,6 +5165,19 @@
                 "700"
             ],
             "category": "display"
+        }
+    },
+    {
+        "Golos Text": {
+            "variants": [
+                "regular",
+                "500",
+                "600",
+                "700",
+                "800",
+                "900"
+            ],
+            "category": "sans-serif"
         }
     },
     {
@@ -6055,6 +6158,15 @@
         }
     },
     {
+        "Instrument Serif": {
+            "variants": [
+                "regular",
+                "italic"
+            ],
+            "category": "serif"
+        }
+    },
+    {
         "Inter": {
             "variants": [
                 "100",
@@ -6505,16 +6617,6 @@
         }
     },
     {
-        "Kantumruy": {
-            "variants": [
-                "300",
-                "regular",
-                "700"
-            ],
-            "category": "sans-serif"
-        }
-    },
-    {
         "Kantumruy Pro": {
             "variants": [
                 "100",
@@ -6781,6 +6883,14 @@
                 "regular"
             ],
             "category": "handwriting"
+        }
+    },
+    {
+        "Konkhmer Sleokchher": {
+            "variants": [
+                "regular"
+            ],
+            "category": "display"
         }
     },
     {
@@ -8056,6 +8166,88 @@
         }
     },
     {
+        "Material Icons": {
+            "variants": [
+                "regular"
+            ],
+            "category": "monospace"
+        }
+    },
+    {
+        "Material Icons Outlined": {
+            "variants": [
+                "regular"
+            ],
+            "category": "monospace"
+        }
+    },
+    {
+        "Material Icons Round": {
+            "variants": [
+                "regular"
+            ],
+            "category": "monospace"
+        }
+    },
+    {
+        "Material Icons Sharp": {
+            "variants": [
+                "regular"
+            ],
+            "category": "monospace"
+        }
+    },
+    {
+        "Material Icons Two Tone": {
+            "variants": [
+                "regular"
+            ],
+            "category": "monospace"
+        }
+    },
+    {
+        "Material Symbols Outlined": {
+            "variants": [
+                "100",
+                "200",
+                "300",
+                "regular",
+                "500",
+                "600",
+                "700"
+            ],
+            "category": "monospace"
+        }
+    },
+    {
+        "Material Symbols Rounded": {
+            "variants": [
+                "100",
+                "200",
+                "300",
+                "regular",
+                "500",
+                "600",
+                "700"
+            ],
+            "category": "monospace"
+        }
+    },
+    {
+        "Material Symbols Sharp": {
+            "variants": [
+                "100",
+                "200",
+                "300",
+                "regular",
+                "500",
+                "600",
+                "700"
+            ],
+            "category": "monospace"
+        }
+    },
+    {
         "Maven Pro": {
             "variants": [
                 "regular",
@@ -8150,14 +8342,6 @@
                 "700",
                 "800",
                 "900"
-            ],
-            "category": "handwriting"
-        }
-    },
-    {
-        "Merienda One": {
-            "variants": [
-                "regular"
             ],
             "category": "handwriting"
         }
@@ -9648,10 +9832,13 @@
         "Noto Sans JP": {
             "variants": [
                 "100",
+                "200",
                 "300",
                 "regular",
                 "500",
+                "600",
                 "700",
+                "800",
                 "900"
             ],
             "category": "sans-serif"
@@ -10407,7 +10594,13 @@
         "Noto Sans Syriac": {
             "variants": [
                 "100",
+                "200",
+                "300",
                 "regular",
+                "500",
+                "600",
+                "700",
+                "800",
                 "900"
             ],
             "category": "sans-serif"
@@ -11246,18 +11439,20 @@
         "Nunito Sans": {
             "variants": [
                 "200",
-                "200italic",
                 "300",
-                "300italic",
                 "regular",
-                "italic",
+                "500",
                 "600",
-                "600italic",
                 "700",
-                "700italic",
                 "800",
-                "800italic",
                 "900",
+                "200italic",
+                "300italic",
+                "italic",
+                "500italic",
+                "600italic",
+                "700italic",
+                "800italic",
                 "900italic"
             ],
             "category": "sans-serif"
@@ -11721,6 +11916,31 @@
         }
     },
     {
+        "Pathway Extreme": {
+            "variants": [
+                "100",
+                "200",
+                "300",
+                "regular",
+                "500",
+                "600",
+                "700",
+                "800",
+                "900",
+                "100italic",
+                "200italic",
+                "300italic",
+                "italic",
+                "500italic",
+                "600italic",
+                "700italic",
+                "800italic",
+                "900italic"
+            ],
+            "category": "sans-serif"
+        }
+    },
+    {
         "Pathway Gothic One": {
             "variants": [
                 "regular"
@@ -12022,6 +12242,21 @@
         }
     },
     {
+        "Poltawski Nowy": {
+            "variants": [
+                "regular",
+                "500",
+                "600",
+                "700",
+                "italic",
+                "500italic",
+                "600italic",
+                "700italic"
+            ],
+            "category": "serif"
+        }
+    },
+    {
         "Poly": {
             "variants": [
                 "regular",
@@ -12041,7 +12276,11 @@
     {
         "Pontano Sans": {
             "variants": [
-                "regular"
+                "300",
+                "regular",
+                "500",
+                "600",
+                "700"
             ],
             "category": "sans-serif"
         }
@@ -12914,7 +13153,16 @@
                 "600",
                 "700",
                 "800",
-                "900"
+                "900",
+                "100italic",
+                "200italic",
+                "300italic",
+                "italic",
+                "500italic",
+                "600italic",
+                "700italic",
+                "800italic",
+                "900italic"
             ],
             "category": "serif"
         }
@@ -13115,6 +13363,14 @@
     },
     {
         "Rubik Moonrocks": {
+            "variants": [
+                "regular"
+            ],
+            "category": "display"
+        }
+    },
+    {
+        "Rubik Pixels": {
             "variants": [
                 "regular"
             ],
@@ -13520,6 +13776,25 @@
         }
     },
     {
+        "Schibsted Grotesk": {
+            "variants": [
+                "regular",
+                "500",
+                "600",
+                "700",
+                "800",
+                "900",
+                "italic",
+                "500italic",
+                "600italic",
+                "700italic",
+                "800italic",
+                "900italic"
+            ],
+            "category": "sans-serif"
+        }
+    },
+    {
         "Schoolbell": {
             "variants": [
                 "regular"
@@ -13745,6 +14020,14 @@
     },
     {
         "Siemreap": {
+            "variants": [
+                "regular"
+            ],
+            "category": "display"
+        }
+    },
+    {
+        "Sigmar": {
             "variants": [
                 "regular"
             ],
@@ -14854,6 +15137,30 @@
         }
     },
     {
+        "Tilt Neon": {
+            "variants": [
+                "regular"
+            ],
+            "category": "display"
+        }
+    },
+    {
+        "Tilt Prism": {
+            "variants": [
+                "regular"
+            ],
+            "category": "display"
+        }
+    },
+    {
+        "Tilt Warp": {
+            "variants": [
+                "regular"
+            ],
+            "category": "display"
+        }
+    },
+    {
         "Timmana": {
             "variants": [
                 "regular"
@@ -15433,6 +15740,14 @@
         }
     },
     {
+        "Vina Sans": {
+            "variants": [
+                "regular"
+            ],
+            "category": "display"
+        }
+    },
+    {
         "Voces": {
             "variants": [
                 "regular"
@@ -15722,6 +16037,31 @@
                 "700italic"
             ],
             "category": "serif"
+        }
+    },
+    {
+        "Ysabeau": {
+            "variants": [
+                "100",
+                "200",
+                "300",
+                "regular",
+                "500",
+                "600",
+                "700",
+                "800",
+                "900",
+                "100italic",
+                "200italic",
+                "300italic",
+                "italic",
+                "500italic",
+                "600italic",
+                "700italic",
+                "800italic",
+                "900italic"
+            ],
+            "category": "sans-serif"
         }
     },
     {
