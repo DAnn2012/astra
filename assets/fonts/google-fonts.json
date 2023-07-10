@@ -110,11 +110,33 @@
         }
     },
     {
+        "Agdasima": {
+            "variants": [
+                "regular",
+                "700"
+            ],
+            "category": "sans-serif"
+        }
+    },
+    {
         "Aguafina Script": {
             "variants": [
                 "regular"
             ],
             "category": "handwriting"
+        }
+    },
+    {
+        "Akatab": {
+            "variants": [
+                "regular",
+                "500",
+                "600",
+                "700",
+                "800",
+                "900"
+            ],
+            "category": "sans-serif"
         }
     },
     {
@@ -300,12 +322,24 @@
     {
         "Aleo": {
             "variants": [
+                "100",
+                "200",
                 "300",
-                "300italic",
                 "regular",
-                "italic",
+                "500",
+                "600",
                 "700",
-                "700italic"
+                "800",
+                "900",
+                "100italic",
+                "200italic",
+                "300italic",
+                "italic",
+                "500italic",
+                "600italic",
+                "700italic",
+                "800italic",
+                "900italic"
             ],
             "category": "serif"
         }
@@ -889,6 +923,14 @@
         }
     },
     {
+        "Aoboshi One": {
+            "variants": [
+                "regular"
+            ],
+            "category": "serif"
+        }
+    },
+    {
         "Arapey": {
             "variants": [
                 "regular",
@@ -1398,11 +1440,27 @@
         }
     },
     {
+        "Bacasime Antique": {
+            "variants": [
+                "regular"
+            ],
+            "category": "serif"
+        }
+    },
+    {
         "Bad Script": {
             "variants": [
                 "regular"
             ],
             "category": "handwriting"
+        }
+    },
+    {
+        "Bagel Fat One": {
+            "variants": [
+                "regular"
+            ],
+            "category": "display"
         }
     },
     {
@@ -1777,7 +1835,17 @@
             "variants": [
                 "regular"
             ],
-            "category": "display"
+            "category": "sans-serif"
+        }
+    },
+    {
+        "Belanosima": {
+            "variants": [
+                "regular",
+                "600",
+                "700"
+            ],
+            "category": "sans-serif"
         }
     },
     {
@@ -2572,6 +2640,14 @@
         }
     },
     {
+        "Caprasimo": {
+            "variants": [
+                "regular"
+            ],
+            "category": "display"
+        }
+    },
+    {
         "Capriola": {
             "variants": [
                 "regular"
@@ -2858,6 +2934,14 @@
         }
     },
     {
+        "Cherry Bomb One": {
+            "variants": [
+                "regular"
+            ],
+            "category": "display"
+        }
+    },
+    {
         "Cherry Cream Soda": {
             "variants": [
                 "regular"
@@ -2949,6 +3033,14 @@
         }
     },
     {
+        "Chokokutai": {
+            "variants": [
+                "regular"
+            ],
+            "category": "display"
+        }
+    },
+    {
         "Chonburi": {
             "variants": [
                 "regular"
@@ -3002,14 +3094,6 @@
                 "800"
             ],
             "category": "display"
-        }
-    },
-    {
-        "Coda Caption": {
-            "variants": [
-                "800"
-            ],
-            "category": "sans-serif"
         }
     },
     {
@@ -3649,6 +3733,14 @@
                 "regular"
             ],
             "category": "sans-serif"
+        }
+    },
+    {
+        "Diphylleia": {
+            "variants": [
+                "regular"
+            ],
+            "category": "serif"
         }
     },
     {
@@ -4887,6 +4979,14 @@
         }
     },
     {
+        "Gasoek One": {
+            "variants": [
+                "regular"
+            ],
+            "category": "sans-serif"
+        }
+    },
+    {
         "Gayathri": {
             "variants": [
                 "100",
@@ -4977,6 +5077,22 @@
             "variants": [
                 "regular",
                 "italic"
+            ],
+            "category": "sans-serif"
+        }
+    },
+    {
+        "Geologica": {
+            "variants": [
+                "100",
+                "200",
+                "300",
+                "regular",
+                "500",
+                "600",
+                "700",
+                "800",
+                "900"
             ],
             "category": "sans-serif"
         }
@@ -5255,6 +5371,14 @@
         }
     },
     {
+        "Grandiflora One": {
+            "variants": [
+                "regular"
+            ],
+            "category": "serif"
+        }
+    },
+    {
         "Grandstander": {
             "variants": [
                 "100",
@@ -5373,7 +5497,7 @@
             "variants": [
                 "regular"
             ],
-            "category": "display"
+            "category": "sans-serif"
         }
     },
     {
@@ -5554,6 +5678,8 @@
         "Harmattan": {
             "variants": [
                 "regular",
+                "500",
+                "600",
                 "700"
             ],
             "category": "sans-serif"
@@ -6158,6 +6284,21 @@
         }
     },
     {
+        "Instrument Sans": {
+            "variants": [
+                "regular",
+                "500",
+                "600",
+                "700",
+                "italic",
+                "500italic",
+                "600italic",
+                "700italic"
+            ],
+            "category": "sans-serif"
+        }
+    },
+    {
         "Instrument Serif": {
             "variants": [
                 "regular",
@@ -6520,6 +6661,14 @@
                 "800italic"
             ],
             "category": "sans-serif"
+        }
+    },
+    {
+        "Kablammo": {
+            "variants": [
+                "regular"
+            ],
+            "category": "display"
         }
     },
     {
@@ -7886,6 +8035,7 @@
                 "500",
                 "600",
                 "700",
+                "800",
                 "900"
             ],
             "category": "sans-serif"
@@ -8568,6 +8718,14 @@
         }
     },
     {
+        "Moirai One": {
+            "variants": [
+                "regular"
+            ],
+            "category": "display"
+        }
+    },
+    {
         "Molengo": {
             "variants": [
                 "regular"
@@ -8597,7 +8755,15 @@
             "variants": [
                 "regular"
             ],
-            "category": "display"
+            "category": "monospace"
+        }
+    },
+    {
+        "Monomaniac One": {
+            "variants": [
+                "regular"
+            ],
+            "category": "sans-serif"
         }
     },
     {
@@ -9013,6 +9179,14 @@
                 "regular"
             ],
             "category": "handwriting"
+        }
+    },
+    {
+        "Narnoor": {
+            "variants": [
+                "regular"
+            ],
+            "category": "serif"
         }
     },
     {
@@ -9540,6 +9714,14 @@
         }
     },
     {
+        "Noto Sans Chorasmian": {
+            "variants": [
+                "regular"
+            ],
+            "category": "sans-serif"
+        }
+    },
+    {
         "Noto Sans Coptic": {
             "variants": [
                 "regular"
@@ -9615,7 +9797,8 @@
     {
         "Noto Sans Duployan": {
             "variants": [
-                "regular"
+                "regular",
+                "700"
             ],
             "category": "sans-serif"
         }
@@ -10238,6 +10421,25 @@
         }
     },
     {
+        "Noto Sans Nag Mundari": {
+            "variants": [
+                "regular",
+                "500",
+                "600",
+                "700"
+            ],
+            "category": "sans-serif"
+        }
+    },
+    {
+        "Noto Sans Nandinagari": {
+            "variants": [
+                "regular"
+            ],
+            "category": "sans-serif"
+        }
+    },
+    {
         "Noto Sans New Tai Lue": {
             "variants": [
                 "regular",
@@ -10836,10 +11038,24 @@
     {
         "Noto Serif": {
             "variants": [
+                "100",
+                "200",
+                "300",
                 "regular",
-                "italic",
+                "500",
+                "600",
                 "700",
-                "700italic"
+                "800",
+                "900",
+                "100italic",
+                "200italic",
+                "300italic",
+                "italic",
+                "500italic",
+                "600italic",
+                "700italic",
+                "800italic",
+                "900italic"
             ],
             "category": "serif"
         }
@@ -11132,6 +11348,14 @@
         }
     },
     {
+        "Noto Serif Makasar": {
+            "variants": [
+                "regular"
+            ],
+            "category": "serif"
+        }
+    },
+    {
         "Noto Serif Malayalam": {
             "variants": [
                 "100",
@@ -11181,6 +11405,14 @@
                 "500",
                 "600",
                 "700"
+            ],
+            "category": "serif"
+        }
+    },
+    {
+        "Noto Serif Ottoman Siyaq": {
+            "variants": [
+                "regular"
             ],
             "category": "serif"
         }
@@ -11335,7 +11567,11 @@
     {
         "Noto Traditional Nushu": {
             "variants": [
-                "regular"
+                "300",
+                "regular",
+                "500",
+                "600",
+                "700"
             ],
             "category": "sans-serif"
         }
@@ -11575,6 +11811,14 @@
                 "regular"
             ],
             "category": "serif"
+        }
+    },
+    {
+        "Orbit": {
+            "variants": [
+                "regular"
+            ],
+            "category": "sans-serif"
         }
     },
     {
@@ -11863,6 +12107,14 @@
                 "700"
             ],
             "category": "sans-serif"
+        }
+    },
+    {
+        "Palette Mosaic": {
+            "variants": [
+                "regular"
+            ],
+            "category": "display"
         }
     },
     {
@@ -12158,6 +12410,27 @@
                 "regular"
             ],
             "category": "display"
+        }
+    },
+    {
+        "Playfair": {
+            "variants": [
+                "300",
+                "regular",
+                "500",
+                "600",
+                "700",
+                "800",
+                "900",
+                "300italic",
+                "italic",
+                "500italic",
+                "600italic",
+                "700italic",
+                "800italic",
+                "900italic"
+            ],
+            "category": "serif"
         }
     },
     {
@@ -13127,6 +13400,14 @@
         }
     },
     {
+        "Rock 3D": {
+            "variants": [
+                "regular"
+            ],
+            "category": "display"
+        }
+    },
+    {
         "Rock Salt": {
             "variants": [
                 "regular"
@@ -13770,6 +14051,8 @@
         "Scheherazade New": {
             "variants": [
                 "regular",
+                "500",
+                "600",
                 "700"
             ],
             "category": "serif"
@@ -13995,6 +14278,14 @@
         }
     },
     {
+        "Shizuru": {
+            "variants": [
+                "regular"
+            ],
+            "category": "display"
+        }
+    },
+    {
         "Shojumaru": {
             "variants": [
                 "regular"
@@ -14150,6 +14441,14 @@
                 "regular"
             ],
             "category": "display"
+        }
+    },
+    {
+        "Slackside One": {
+            "variants": [
+                "regular"
+            ],
+            "category": "handwriting"
         }
     },
     {
@@ -14454,25 +14753,6 @@
         }
     },
     {
-        "Source Sans Pro": {
-            "variants": [
-                "200",
-                "200italic",
-                "300",
-                "300italic",
-                "regular",
-                "italic",
-                "600",
-                "600italic",
-                "700",
-                "700italic",
-                "900",
-                "900italic"
-            ],
-            "category": "sans-serif"
-        }
-    },
-    {
         "Source Serif 4": {
             "variants": [
                 "200",
@@ -14490,25 +14770,6 @@
                 "600italic",
                 "700italic",
                 "800italic",
-                "900italic"
-            ],
-            "category": "serif"
-        }
-    },
-    {
-        "Source Serif Pro": {
-            "variants": [
-                "200",
-                "200italic",
-                "300",
-                "300italic",
-                "regular",
-                "italic",
-                "600",
-                "600italic",
-                "700",
-                "700italic",
-                "900",
                 "900italic"
             ],
             "category": "serif"
@@ -15426,6 +15687,18 @@
         }
     },
     {
+        "Tsukimi Rounded": {
+            "variants": [
+                "300",
+                "regular",
+                "500",
+                "600",
+                "700"
+            ],
+            "category": "sans-serif"
+        }
+    },
+    {
         "Tulpen One": {
             "variants": [
                 "regular"
@@ -15902,6 +16175,35 @@
         }
     },
     {
+        "Wix Madefor Display": {
+            "variants": [
+                "regular",
+                "500",
+                "600",
+                "700",
+                "800"
+            ],
+            "category": "sans-serif"
+        }
+    },
+    {
+        "Wix Madefor Text": {
+            "variants": [
+                "regular",
+                "italic",
+                "500",
+                "500italic",
+                "600",
+                "600italic",
+                "700",
+                "700italic",
+                "800",
+                "800italic"
+            ],
+            "category": "sans-serif"
+        }
+    },
+    {
         "Work Sans": {
             "variants": [
                 "100",
@@ -16065,11 +16367,93 @@
         }
     },
     {
+        "Ysabeau Infant": {
+            "variants": [
+                "100",
+                "200",
+                "300",
+                "regular",
+                "500",
+                "600",
+                "700",
+                "800",
+                "900",
+                "100italic",
+                "200italic",
+                "300italic",
+                "italic",
+                "500italic",
+                "600italic",
+                "700italic",
+                "800italic",
+                "900italic"
+            ],
+            "category": "sans-serif"
+        }
+    },
+    {
+        "Ysabeau Office": {
+            "variants": [
+                "100",
+                "200",
+                "300",
+                "regular",
+                "500",
+                "600",
+                "700",
+                "800",
+                "900",
+                "100italic",
+                "200italic",
+                "300italic",
+                "italic",
+                "500italic",
+                "600italic",
+                "700italic",
+                "800italic",
+                "900italic"
+            ],
+            "category": "sans-serif"
+        }
+    },
+    {
+        "Ysabeau SC": {
+            "variants": [
+                "100",
+                "200",
+                "300",
+                "regular",
+                "500",
+                "600",
+                "700",
+                "800",
+                "900"
+            ],
+            "category": "sans-serif"
+        }
+    },
+    {
         "Yuji Boku": {
             "variants": [
                 "regular"
             ],
             "category": "serif"
+        }
+    },
+    {
+        "Yuji Hentaigana Akari": {
+            "variants": [
+                "regular"
+            ],
+            "category": "handwriting"
+        }
+    },
+    {
+        "Yuji Hentaigana Akebono": {
+            "variants": [
+                "regular"
+            ],
+            "category": "handwriting"
         }
     },
     {

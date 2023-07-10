@@ -3522,6 +3522,15 @@ namespace {
         public static function is_elementor_default_color_font_comp()
         {
         }
+		/**
+		 * For existing users, do not provide list vertical spacing.
+		 *
+		 * @since 4.1.6
+		 * @return boolean true for new users, false for old users.
+		 */
+		public static function astra_list_block_vertical_spacing()
+        {
+		}
         /**
          * For existing users, do not load the wide/full width image CSS by default.
          *
@@ -17201,6 +17210,15 @@ namespace {
      * @return void
      */
     function astra_theme_background_updater_4_1_0()
+    {
+    }
+    /**
+     * Handle backward compatibility on version 4.1.6
+     *
+     * @since 4.1.6
+     * @return void
+     */
+    function astra_theme_background_updater_4_1_6()
     {
     }
     /**

@@ -14,6 +14,7 @@ const classNames = (...classes) => classes.filter(Boolean).join(" ");
 
 const Welcome = () => {
 	const query = new URLSearchParams(useLocation()?.search);
+	const displayBannerVideo = astra_admin.show_banner_video ? true : false;
 
 	const allowAutoPlay =
 		"1" === query.get("astra-activation-redirect") ? 1 : 0;
@@ -116,23 +117,25 @@ const Welcome = () => {
 													"astra"
 												)}
 											</button>
-											<button
-												className="inline-flex items-center text-base font-medium text-astra focus:text-astra focus-visible:text-astra-hover active:text-astra-hover hover:text-astra-hover"
-												onClick={ toggleVideoPopup }
-											>
-												<span className="pt-0.5 pl-4 pr-3">
-													{" "}
-													{
-														Astra_Admin_Icons[
-															"play"
-														]
-													}{" "}
-												</span>
-												{__(
-													`Watch the Quick Starter Guide`,
-													"astra"
-												)}
-											</button>
+											{
+												displayBannerVideo && <button
+													className="inline-flex items-center text-base font-medium text-astra focus:text-astra focus-visible:text-astra-hover active:text-astra-hover hover:text-astra-hover"
+													onClick={ toggleVideoPopup }
+												>
+													<span className="pt-0.5 pl-4 pr-3">
+														{" "}
+														{
+															Astra_Admin_Icons[
+																"play"
+															]
+														}{" "}
+													</span>
+													{__(
+														`Watch the Quick Starter Guide`,
+														"astra"
+													)}
+												</button>
+											}
 										</span>
 									</div>
 								</div>
@@ -142,14 +145,16 @@ const Welcome = () => {
 						<div className="grid grid-cols-1 gap-4 lg:col-span-2 h-full">
 							<div className="astra-video-container">
 								{/* Added rel=0 query paramter at the end to disable YouTube recommendations */}
-								<iframe
-									className="astra-video rounded-md"
-									src={`https://www.youtube-nocookie.com/embed/TBZd9oligCw?showinfo=0&autoplay=${allowAutoPlay}&mute=${allowAutoPlay}&rel=0`}
-									allow="autoplay"
-									title="YouTube video player"
-									frameBorder="0"
-									allowFullScreen
-								></iframe>
+								{
+									displayBannerVideo && <iframe
+										className="astra-video rounded-md"
+										src={`https://www.youtube-nocookie.com/embed/TBZd9oligCw?showinfo=0&autoplay=${allowAutoPlay}&mute=${allowAutoPlay}&rel=0`}
+										allow="autoplay"
+										title="YouTube video player"
+										frameBorder="0"
+										allowFullScreen
+									></iframe>
+								}
 							</div>
 						</div>
 					</div>
@@ -407,7 +412,9 @@ const Welcome = () => {
 					)}
 				</div>
 			</div>
-			<VideoPopup allowAutoPlay={ allowAutoPlay } videoPopup={ videoPopup } toggleVideoPopup={ toggleVideoPopup } />
+			{
+				displayBannerVideo && <VideoPopup allowAutoPlay={ allowAutoPlay } videoPopup={ videoPopup } toggleVideoPopup={ toggleVideoPopup } />
+			}
 		</main>
 	);
 };

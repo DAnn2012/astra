@@ -2780,6 +2780,7 @@ p.demo_store,
 	.select2-container {
 		.select2-dropdown, .select2-search__field {
 			border: 1px solid var(--ast-border-color);
+			z-index: 98;
 		}
 	}
 
