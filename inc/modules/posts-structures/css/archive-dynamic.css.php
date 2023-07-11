@@ -42,10 +42,9 @@ function astra_post_archive_structure_dynamic_css( $dynamic_css, $dynamic_css_fi
 	if ( $layout_2_active ) {
 		$selector = '.ast-archive-entry-banner[data-post-type="' . $current_post_type . '"]';
 	} else {
-		$selector = 'body.archive .ast-archive-description';
-
+		$selector = 'body.archive .ast-archive-description ';
 		if( is_rtl() ) {
-			$selector = ' .ast-separate-container .ast-author-box';
+			$selector .= '.ast-separate-container .ast-author-box';
 		}
 	}
 
