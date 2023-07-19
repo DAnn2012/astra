@@ -207,7 +207,10 @@ function astrawpWooQuantityButtons( $quantitySelector ) {
 						// Send the proper header information along with the request
 						xhrRequest.setRequestHeader( "Content-Type", "application/x-www-form-urlencoded" );
 
-						xhrRequest.send( 'action=astra_add_cart_single_product_quantity&hash=' + itemHash + '&quantity=' + quantity + '&qtyNonce=' + qtyNonce );
+						let qtyMin = $quantityBox.getAttribute('min') || '',
+							qtyMax = $quantityBox.getAttribute('max') || '';
+
+						xhrRequest.send( 'action=astra_add_cart_single_product_quantity&hash=' + itemHash + '&quantity=' + quantity + '&qtyNonce=' + qtyNonce + '&qtyMin=' + qtyMin + '&qtyMax=' + qtyMax );
 
 						xhrRequest.onload = function () {
 							if ( xhrRequest.readyState == XMLHttpRequest.DONE ) {   // XMLHttpRequest.DONE == 4
