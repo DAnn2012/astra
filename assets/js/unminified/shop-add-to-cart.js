@@ -5,13 +5,11 @@ jQuery(document).ready(function () {
 
             const slideInCart = jQuery('#astra-mobile-cart-drawer');
 
-            if (typeof astra_shop_add_to_cart.elementor_preview_active !== 'undefined' && !astra_shop_add_to_cart.elementor_preview_active) {
-                if ('slide_in_cart' === astra_shop_add_to_cart.shop_add_to_cart_action && slideInCart) {
-
-                    slideInCart.addClass('active');
-                    jQuery('html').addClass('ast-mobile-cart-active');
-                }
-
+            if ((typeof astra_shop_add_to_cart.elementor_preview_active !== 'undefined' && !astra_shop_add_to_cart.elementor_preview_active) && ('slide_in_cart' === astra_shop_add_to_cart.shop_add_to_cart_action && slideInCart)) {
+                
+                slideInCart.addClass('active');
+                jQuery('html').addClass('ast-mobile-cart-active');
+                
                 if (astra_shop_add_to_cart.is_astra_pro) {
 
                     if ('redirect_cart_page' === astra_shop_add_to_cart.shop_add_to_cart_action) {
