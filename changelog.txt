@@ -8,6 +8,7 @@ v4.1.7 (Unreleased)
 - Fix: Group container inner blocks option does not disable in the editor.
 - Fix: Horizontal line (HR) is not inheriting the global text colors when Elementor is active.
 - Fix: bbPress widget items loading in infinite loop while rendering banner layout.
+- Fix: Slide in cart action for Add to Cart button does not work.
 
 v4.1.6
 - Improvement: Header Footer Builder - Added new social profile "TikTok".
