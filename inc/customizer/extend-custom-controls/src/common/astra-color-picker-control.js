@@ -143,6 +143,7 @@ class AstraColorPickerControl extends Component {
 		}
 
 		let finalpaletteColors = [];
+		const defaultGradient = 'linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%)';
 		let globalColorPalette = wp.customize.control( 'astra-settings[global-color-palette]' ).setting.get();
 
 		Object.entries(globalColorPalette.palette).forEach(([ index, color])=>{
@@ -190,7 +191,7 @@ class AstraColorPickerControl extends Component {
 															<AstraGradientPicker
 																className={`ast-gradient-color-picker ${ AstraBuilderCustomizerData.isWP_5_9 ? 'ast-gradient-ui': '' }`}
 																gradients={[]}
-																value={ this.props.color && this.props.color.includes( 'gradient' ) ? this.props.color : '' }
+																value={ this.props.color && this.props.color.includes( 'gradient' ) ? this.props.color : defaultGradient }
 																onChange={ ( gradient ) => this.onChangeGradientComplete( gradient ) }
 															/>
 														</>
