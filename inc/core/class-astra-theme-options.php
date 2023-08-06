@@ -612,6 +612,7 @@ if ( ! class_exists( 'Astra_Theme_Options' ) ) {
 					'single-page-sidebar-layout'           => false === astra_check_is_structural_setup() ? 'default' : 'no-sidebar',
 					'single-post-sidebar-layout'           => 'default',
 					'archive-post-sidebar-layout'          => 'default',
+					'site-sticky-sidebar'                  => false,
 
 					// Sidebar.
 					'footer-adv'                           => 'disabled',
