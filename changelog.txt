@@ -1,4 +1,5 @@
 v4.1.7 (Unreleased)
+- New: Sticky Sidebar.
 - Improvement: Accessibility improvements for WooCommerce pages.
 - Improvement: New Astra dashboard CTA banner for Starter Template installation.
 - Improvement: Header Footer Builder - Added new social profile "Threads".
