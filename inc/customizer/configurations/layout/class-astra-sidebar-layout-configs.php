@@ -93,10 +93,13 @@ if ( ! class_exists( 'Astra_Sidebar_Layout_Configs' ) ) {
 					'divider'  => array( 'ast_class' => 'ast-bottom-section-divider' ),
 					'settings' => array(),
 				),
+
+				/**
+				 * Option: Sticky Sidebar
+				 */
 				array(
 					'name'     => ASTRA_THEME_SETTINGS . '[site-sticky-sidebar]',
 					'default'  => astra_get_option( 'site-sticky-sidebar' ),
-					'sanitize_callback' => array( 'Astra_Customizer_Sanitizes', 'sanitize_choices' ),
 					'type'     => 'control',
 					'section'  => 'section-sidebars',
 					'title'    => __( 'Enable Scroll to Top', 'astra' ),

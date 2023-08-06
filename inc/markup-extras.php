@@ -101,7 +101,8 @@ if ( ! function_exists( 'astra_body_classes' ) ) {
 		}
 
 		// Sidebar location.
-		$page_layout = 'ast-' . astra_page_layout();
+		$sidebar_layout = astra_page_layout();
+		$page_layout = 'ast-' . $sidebar_layout;
 		$classes[]   = esc_attr( $page_layout );
 
 		// Current Astra verion.
@@ -123,6 +124,13 @@ if ( ! function_exists( 'astra_body_classes' ) ) {
 
 			if ( 'full' == $header_content_layout ) {
 				$classes[] = 'ast-full-width-primary-header';
+			}
+		}
+
+		// Add class for sticky sidebar if activated.
+		if ( 'no-sidebar' !== $sidebar_layout ) {
+			if ( astra_get_option( 'site-sticky-sidebar' ) ) {
+				$classes[] = 'astra-sticky-sidebar-enabled';
 			}
 		}
 

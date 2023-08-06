@@ -1363,6 +1363,13 @@ body {
   }
 }
 
+.astra-sticky-sidebar-enabled .sidebar-main {
+  top: 50px;
+  position: sticky;
+  position: -webkit-sticky;
+  overflow-y: auto;
+}
+
 /*----------  Navigation  ----------*/
 /**
  * 	Navigations

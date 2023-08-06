@@ -83,3 +83,15 @@ if ( ! function_exists( 'astra_page_layout' ) ) {
 		return apply_filters( 'astra_page_layout', $layout );
 	}
 }
+
+function astra_sticky_sidebar_body_classes( $classes ) {
+	$layout = astra_page_layout();
+	if ( 'no-sidebar' !== $layout ) {
+		if ( astra_get_option( 'site-sticky-sidebar' ) ) {
+			$classes[] = 'astra-sticky-sidebar-enabled';
+		}
+	}
+	return $classes;
+}
+
+add_filter( 'body_class', 'astra_sticky_sidebar_body_classes' );
