@@ -102,7 +102,7 @@ if ( ! class_exists( 'Astra_Sidebar_Layout_Configs' ) ) {
 					'default'  => astra_get_option( 'site-sticky-sidebar' ),
 					'type'     => 'control',
 					'section'  => 'section-sidebars',
-					'title'    => __( 'Enable Scroll to Top', 'astra' ),
+					'title'    => __( 'Enable Sticky Sidebar on Scroll', 'astra' ),
 					'priority' => 15,
 					'control'  => 'ast-toggle-control',
 					'divider'  => array( 'ast_class' => 'ast-section-spacing' ),
