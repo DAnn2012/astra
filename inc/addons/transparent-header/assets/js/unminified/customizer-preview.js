@@ -294,7 +294,7 @@
 	astra_css(
 		'astra-settings[transparent-account-type-text-color]',
 		'color',
-		'.ast-theme-transparent-header .ast-header-account-wrap a.ast-header-account-link svg'
+		'.ast-theme-transparent-header .ast-header-account-wrap a.ast-header-account-link svg.ast-arrow-svg'
 	);
 
 	// Menu - Normal Color

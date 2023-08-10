@@ -57,13 +57,13 @@ function astra_hb_account_dynamic_css( $dynamic_css, $dynamic_css_filtered = '' 
 	 * Account CSS.
 	 */
 	$css_output_desktop = array(
-		'.ast-header-account-type-icon'              => array(
+		'.ast-header-account-type-icon'           => array(
 			'-js-display'    => 'inline-flex',
 			'display'        => 'inline-flex',
 			'align-self'     => 'center',
 			'vertical-align' => 'middle',
 		),
-		'.ast-header-account-type-avatar .avatar'    => array(
+		'.ast-header-account-type-avatar .avatar' => array(
 			'display'       => 'inline',
 			'border-radius' => '100%',
 			'max-width'     => '100%',
@@ -87,15 +87,15 @@ function astra_hb_account_dynamic_css( $dynamic_css, $dynamic_css_filtered = '' 
 		$selector . ' .ast-header-account-type-avatar .avatar' => array(
 			'width' => astra_get_css_value( $image_width_desktop, 'px' ),
 		),
-		$selector . ' .ast-header-account-text'      => array(
+		$selector . ' .ast-header-account-text'   => array(
 			'color' => esc_attr( astra_get_option( 'header-account-type-text-color' ) ),
 		),
 
-		$selector . ' a.ast-header-account-link svg' => array(
+		$selector . ' a.ast-header-account-link svg.ast-arrow-svg' => array(
 			'fill' => esc_attr( astra_get_option( 'header-account-type-text-color' ) ),
 		),
 
-		$margin_selector                             => array(
+		$margin_selector                          => array(
 			// Margin CSS.
 			'margin-top'    => astra_responsive_spacing( $margin, 'top', 'desktop' ),
 			'margin-bottom' => astra_responsive_spacing( $margin, 'bottom', 'desktop' ),
@@ -116,7 +116,7 @@ function astra_hb_account_dynamic_css( $dynamic_css, $dynamic_css_filtered = '' 
 			'cursor' => esc_attr( 'pointer' ),
 		);
 
-		$css_output_desktop['.ast-header-account-wrap .ast-header-account-link svg'] = array(
+		$css_output_desktop['.ast-header-account-wrap .ast-header-account-link svg.ast-arrow-svg'] = array(
 			'width'       => esc_attr( '0.6em' ),
 			'height'      => esc_attr( '0.6em' ),
 			'margin-left' => esc_attr( '6px' ),

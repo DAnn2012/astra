@@ -46,7 +46,7 @@
 	astra_css(
 		'astra-settings[header-account-type-text-color]',
 		'fill',
-		selector + ' a.ast-header-account-link svg'
+		selector + ' a.ast-header-account-link svg.ast-arrow-svg'
 	);
 
 	// Icon Size.

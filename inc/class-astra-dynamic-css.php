@@ -3461,7 +3461,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 						'color' => $account_loggedout_text_color,
 					),
 
-					'.ast-theme-transparent-header .ast-header-account-wrap a.ast-header-account-link svg' => array(
+					'.ast-theme-transparent-header .ast-header-account-wrap a.ast-header-account-link svg.ast-arrow-svg' => array(
 						'fill' => $account_loggedout_text_color,
 					),
 				);
