@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6f0bebebf0c8b35eb6282359b8317b66",
+    "content-hash": "4bb415ec88a93adc33a3c81bbc9d5364",
     "packages": [
         {
             "name": "brainstormforce/astra-notices",
@@ -1340,23 +1340,23 @@
         },
         {
             "name": "php-stubs/woocommerce-stubs",
-            "version": "v5.9.1",
+            "version": "v8.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-stubs/woocommerce-stubs.git",
-                "reference": "486ccff117badfab94c404065d37a77d632d7db5"
+                "reference": "0391da1ba19087d4e0656a6d49382b92d1581dda"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-stubs/woocommerce-stubs/zipball/486ccff117badfab94c404065d37a77d632d7db5",
-                "reference": "486ccff117badfab94c404065d37a77d632d7db5",
+                "url": "https://api.github.com/repos/php-stubs/woocommerce-stubs/zipball/0391da1ba19087d4e0656a6d49382b92d1581dda",
+                "reference": "0391da1ba19087d4e0656a6d49382b92d1581dda",
                 "shasum": ""
             },
             "require": {
-                "php-stubs/wordpress-stubs": "^5.3.0"
+                "php-stubs/wordpress-stubs": "^5.3 || ^6.0"
             },
             "require-dev": {
-                "php": "~7.1",
+                "php": "~7.1 || ~8.0",
                 "php-stubs/generator": "^0.8.0"
             },
             "suggest": {
@@ -1378,33 +1378,31 @@
             ],
             "support": {
                 "issues": "https://github.com/php-stubs/woocommerce-stubs/issues",
-                "source": "https://github.com/php-stubs/woocommerce-stubs/tree/v5.9.1"
+                "source": "https://github.com/php-stubs/woocommerce-stubs/tree/v8.0.1"
             },
-            "time": "2022-04-30T06:35:48+00:00"
+            "time": "2023-08-09T19:28:25+00:00"
         },
         {
             "name": "php-stubs/wordpress-stubs",
-            "version": "v5.9.5",
+            "version": "v5.9.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-stubs/wordpress-stubs.git",
-                "reference": "13ecf204a7e6d215a7c0d23e2aa27940fe617717"
+                "reference": "6a18d938d0aef39d091505a4a35b025fb6c10098"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-stubs/wordpress-stubs/zipball/13ecf204a7e6d215a7c0d23e2aa27940fe617717",
-                "reference": "13ecf204a7e6d215a7c0d23e2aa27940fe617717",
+                "url": "https://api.github.com/repos/php-stubs/wordpress-stubs/zipball/6a18d938d0aef39d091505a4a35b025fb6c10098",
+                "reference": "6a18d938d0aef39d091505a4a35b025fb6c10098",
                 "shasum": ""
-            },
-            "replace": {
-                "giacocorsiglia/wordpress-stubs": "*"
             },
             "require-dev": {
                 "nikic/php-parser": "< 4.12.0",
                 "php": "~7.3 || ~8.0",
-                "php-stubs/generator": "^0.8.1",
+                "php-stubs/generator": "^0.8.3",
                 "phpdocumentor/reflection-docblock": "^5.3",
-                "phpstan/phpstan": "^1.2"
+                "phpstan/phpstan": "^1.10.12",
+                "phpunit/phpunit": "^9.5"
             },
             "suggest": {
                 "paragonie/sodium_compat": "Pure PHP implementation of libsodium",
@@ -1425,9 +1423,9 @@
             ],
             "support": {
                 "issues": "https://github.com/php-stubs/wordpress-stubs/issues",
-                "source": "https://github.com/php-stubs/wordpress-stubs/tree/v5.9.5"
+                "source": "https://github.com/php-stubs/wordpress-stubs/tree/v5.9.6"
             },
-            "time": "2022-11-09T05:32:14+00:00"
+            "time": "2023-05-18T04:34:27+00:00"
         },
         {
             "name": "phpcompatibility/php-compatibility",
