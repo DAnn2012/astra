@@ -35,11 +35,18 @@
         selector + ' .ast-header-account-text'
     );
 
-	// Text size.
+	// Text color.
 	astra_css(
 		'astra-settings[header-account-type-text-color]',
 		'color',
 		selector + ' .ast-header-account-text, .ast-mobile-popup-content ' + selector + ' .ast-header-account-text'
+	);
+
+	// Arrow down color.
+	astra_css(
+		'astra-settings[header-account-type-text-color]',
+		'fill',
+		selector + ' a.ast-header-account-link svg'
 	);
 
 	// Icon Size.

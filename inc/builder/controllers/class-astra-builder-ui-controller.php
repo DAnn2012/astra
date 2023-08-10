@@ -410,7 +410,7 @@ if ( ! class_exists( 'Astra_Builder_UI_Controller' ) ) {
 								<span class="ast-header-account-text"><?php echo esc_html( $logged_in_text ); ?></span>
 							<?php } ?>
 							<?php
-							if ( 'click' === $show_menu_on ) {
+							if ( defined( 'ASTRA_EXT_VER' ) && 'menu' === $action_type && 'click' === $show_menu_on ) {
 								echo self::fetch_svg_icon( 'angle-down' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 							}
 							?>

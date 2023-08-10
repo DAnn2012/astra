@@ -3460,6 +3460,10 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 					'.ast-theme-transparent-header .ast-header-account-wrap .ast-header-account-text' => array(
 						'color' => $account_loggedout_text_color,
 					),
+
+					'.ast-theme-transparent-header .ast-header-account-wrap a.ast-header-account-link svg' => array(
+						'fill' => $account_loggedout_text_color,
+					),
 				);
 
 				if ( ! astra_remove_widget_design_options() ) {

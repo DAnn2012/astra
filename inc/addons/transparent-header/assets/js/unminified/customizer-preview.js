@@ -291,6 +291,12 @@
 		'.ast-theme-transparent-header .ast-header-account-wrap .ast-header-account-text'
 	);
 
+	astra_css(
+		'astra-settings[transparent-account-type-text-color]',
+		'color',
+		'.ast-theme-transparent-header .ast-header-account-wrap a.ast-header-account-link svg'
+	);
+
 	// Menu - Normal Color
 	astra_css(
 		'astra-settings[transparent-account-menu-color]',
