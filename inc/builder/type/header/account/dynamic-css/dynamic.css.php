@@ -30,12 +30,13 @@ function astra_hb_account_dynamic_css( $dynamic_css, $dynamic_css_filtered = '' 
 		return $dynamic_css;
 	}
 
-	$_section     = 'section-header-account';
-	$selector     = '.ast-header-account-wrap';
-	$show_menu_on = astra_get_option( 'header-account-action-menu-display-on' );
-	$action_type  = astra_get_option( 'header-account-action-type' );
-	$icon_size    = astra_get_option( 'header-account-icon-size' );
-
+	$_section          = 'section-header-account';
+	$selector          = '.ast-header-account-wrap';
+	$show_menu_on      = astra_get_option( 'header-account-action-menu-display-on' );
+	$action_type       = astra_get_option( 'header-account-action-type' );
+	$icon_size         = astra_get_option( 'header-account-icon-size' );
+	$theme_color       = astra_get_option( 'theme-color' );
+	$link_color        = astra_get_option( 'link-color', $theme_color );
 	$icon_size_desktop = ( isset( $icon_size ) && isset( $icon_size['desktop'] ) && ! empty( $icon_size['desktop'] ) ) ? $icon_size['desktop'] : 20;
 
 	$icon_size_tablet = ( isset( $icon_size ) && isset( $icon_size['tablet'] ) && ! empty( $icon_size['tablet'] ) ) ? $icon_size['tablet'] : 20;
@@ -120,7 +121,7 @@ function astra_hb_account_dynamic_css( $dynamic_css, $dynamic_css_filtered = '' 
 			'width'       => esc_attr( '0.6em' ),
 			'height'      => esc_attr( '0.6em' ),
 			'margin-left' => esc_attr( '6px' ),
-			'fill'        => esc_attr( 'var(--ast-global-color-0)' ),
+			'fill'        => esc_attr( $link_color ),
 		);
 	}
 	
