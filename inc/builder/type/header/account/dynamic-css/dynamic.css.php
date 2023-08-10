@@ -30,10 +30,10 @@ function astra_hb_account_dynamic_css( $dynamic_css, $dynamic_css_filtered = '' 
 		return $dynamic_css;
 	}
 
-	$_section = 'section-header-account';
-	$selector = '.ast-header-account-wrap';
-
-	$icon_size = astra_get_option( 'header-account-icon-size' );
+	$_section     = 'section-header-account';
+	$selector     = '.ast-header-account-wrap';
+	$show_menu_on = astra_get_option( 'header-account-action-menu-display-on' );
+	$icon_size    = astra_get_option( 'header-account-icon-size' );
 
 	$icon_size_desktop = ( isset( $icon_size ) && isset( $icon_size['desktop'] ) && ! empty( $icon_size['desktop'] ) ) ? $icon_size['desktop'] : 20;
 
@@ -97,6 +97,26 @@ function astra_hb_account_dynamic_css( $dynamic_css, $dynamic_css_filtered = '' 
 			'margin-right'  => astra_responsive_spacing( $margin, 'right', 'desktop' ),
 		),
 	);
+
+	if ( $show_menu_on && 'hover' === $show_menu_on ) {
+		$css_output_desktop['.ast-header-account-wrap:hover .ast-account-nav-menu, .ast-header-account-wrap:focus .ast-account-nav-menu'] = array(
+			'right' => esc_attr( '-100%' ),
+			'left'  => esc_attr( 'auto' ),
+		);
+	}
+
+	if ( $show_menu_on && 'click' === $show_menu_on ) {
+		$css_output_desktop['.ast-header-account-wrap'] = array(
+			'cursor' => esc_attr( 'pointer' ),
+		);
+
+		$css_output_desktop['.ast-header-account-wrap .ast-header-account-link .ahfb-svg-iconset svg'] = array(
+			'width'  => esc_attr( '.6em' ),
+			'height' => esc_attr( 'auto' ),
+			'fill'   => esc_attr( 'currentColor' ),
+		);
+	}
+	
 
 	$css_output_tablet = array(
 

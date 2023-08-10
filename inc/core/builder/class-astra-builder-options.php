@@ -1194,20 +1194,21 @@ function astra_hf_builder_customizer_defaults( $defaults ) {
 	/**
 	 * Account element.
 	*/
-	$defaults['header-account-type']            = 'default';
-	$defaults['header-account-login-style']     = 'icon';
-	$defaults['header-account-action-type']     = 'link';
-	$defaults['header-account-link-type']       = 'default';
-	$defaults['header-account-logout-style']    = 'icon';
-	$defaults['header-account-logged-out-text'] = __( 'Log In', 'astra' );
-	$defaults['header-account-logged-in-text']  = __( 'My Account', 'astra' );
-	$defaults['header-account-logout-action']   = 'link';
-	$defaults['header-account-image-width']     = array(
+	$defaults['header-account-type']                   = 'default';
+	$defaults['header-account-login-style']            = 'icon';
+	$defaults['header-account-action-type']            = 'link';
+	$defaults['header-account-action-menu-display-on'] = 'hover';
+	$defaults['header-account-link-type']              = 'default';
+	$defaults['header-account-logout-style']           = 'icon';
+	$defaults['header-account-logged-out-text']        = __( 'Log In', 'astra' );
+	$defaults['header-account-logged-in-text']         = __( 'My Account', 'astra' );
+	$defaults['header-account-logout-action']          = 'link';
+	$defaults['header-account-image-width']            = array(
 		'desktop' => '40',
 		'tablet'  => '',
 		'mobile'  => '',
 	);
-	$defaults['header-account-icon-size']       = array(
+	$defaults['header-account-icon-size']              = array(
 		'desktop' => 18,
 		'tablet'  => 18,
 		'mobile'  => 18,

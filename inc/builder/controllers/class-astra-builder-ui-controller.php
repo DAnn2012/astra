@@ -361,9 +361,9 @@ if ( ! class_exists( 'Astra_Builder_UI_Controller' ) ) {
 
 					$login_profile_type = astra_get_option( 'header-account-login-style' );
 
-					$action_type = astra_get_option( 'header-account-action-type' );
-					$link_type   = astra_get_option( 'header-account-link-type' );
-
+					$action_type  = astra_get_option( 'header-account-action-type' );
+					$link_type    = astra_get_option( 'header-account-link-type' );
+					$show_menu_on = astra_get_option( 'header-account-action-menu-display-on' );
 					$account_link = astra_get_option( 'header-account-login-link' );
 
 					$logged_in_text = astra_get_option( 'header-account-logged-in-text' );
@@ -409,6 +409,11 @@ if ( ! class_exists( 'Astra_Builder_UI_Controller' ) ) {
 								?>
 								<span class="ast-header-account-text"><?php echo esc_html( $logged_in_text ); ?></span>
 							<?php } ?>
+							<?php
+							if ( 'click' === $show_menu_on ) {
+								echo self::fetch_svg_icon( 'angle-down' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+							}
+							?>
 						</a>
 						<?php
 						if ( defined( 'ASTRA_EXT_VER' ) && 'menu' === $action_type ) {
