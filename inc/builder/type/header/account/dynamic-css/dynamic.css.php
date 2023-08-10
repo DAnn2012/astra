@@ -33,7 +33,9 @@ function astra_hb_account_dynamic_css( $dynamic_css, $dynamic_css_filtered = '' 
 	$_section = 'section-header-account';
 	$selector = '.ast-header-account-wrap';
 
-	$icon_size = astra_get_option( 'header-account-icon-size' );
+	$icon_size    = astra_get_option( 'header-account-icon-size' );
+	$show_menu_on = astra_get_option( 'header-account-action-menu-display-on' );
+	$action_type  = astra_get_option( 'header-account-action-type' );
 
 	$icon_size_desktop = ( isset( $icon_size ) && isset( $icon_size['desktop'] ) && ! empty( $icon_size['desktop'] ) ) ? $icon_size['desktop'] : 20;
 
@@ -89,6 +91,7 @@ function astra_hb_account_dynamic_css( $dynamic_css, $dynamic_css_filtered = '' 
 		$selector . ' .ast-header-account-text'   => array(
 			'color' => esc_attr( astra_get_option( 'header-account-type-text-color' ) ),
 		),
+
 		$margin_selector                          => array(
 			// Margin CSS.
 			'margin-top'    => astra_responsive_spacing( $margin, 'top', 'desktop' ),
@@ -97,6 +100,19 @@ function astra_hb_account_dynamic_css( $dynamic_css, $dynamic_css_filtered = '' 
 			'margin-right'  => astra_responsive_spacing( $margin, 'right', 'desktop' ),
 		),
 	);
+
+	if ( defined( 'ASTRA_EXT_VER' ) && 'menu' === $action_type && $show_menu_on && 'hover' === $show_menu_on ) {
+		$css_output_desktop['.ast-header-account-wrap:hover .ast-account-nav-menu, .ast-header-account-wrap:focus .ast-account-nav-menu'] = array(
+			'right' => esc_attr( '-100%' ),
+			'left'  => esc_attr( 'auto' ),
+		);
+	}
+
+	if ( defined( 'ASTRA_EXT_VER' ) && 'menu' === $action_type && $show_menu_on && 'click' === $show_menu_on ) {
+		$css_output_desktop['.ast-header-account-wrap'] = array(
+			'cursor' => esc_attr( 'pointer' ),
+		);
+	}
 
 	$css_output_tablet = array(
 
