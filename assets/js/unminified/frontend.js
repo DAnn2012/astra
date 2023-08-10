@@ -308,6 +308,31 @@ astScrollToTopHandler = function ( masthead, astScrollTop ) {
 		}
 	}
 
+	const accountMenuToggle = function () {
+		const header_account_menu = document.querySelector('.ast-account-nav-menu');
+
+		if(  header_account_menu ) {
+			document.addEventListener('mouseup', function(e) {
+				var container = document.querySelector('.ast-header-account');
+
+				// if the target of the click isn't the container nor a descendant of the container
+				if (!container.contains(e.target)) {
+					header_account_menu.style.right = '';
+					header_account_menu.style.left = '';
+				}
+			});
+
+			const header_account_trigger =  document.querySelector( '.ast-header-account-inner-wrap' );
+
+			if( header_account_trigger ) {
+				header_account_trigger.addEventListener( 'click', function() {
+					header_account_menu.style.right   = header_account_menu.style.right  === '' ? '-100%' : '';
+					header_account_menu.style.left   = header_account_menu.style.left  === '' ? 'auto' : '';
+				});
+			}
+		}
+	}
+
 	/**
 	 * Main Init Function.
 	 */
@@ -441,6 +466,7 @@ astScrollToTopHandler = function ( masthead, astScrollTop ) {
 		}
 
 		accountPopupTrigger();
+		accountMenuToggle();
 
 	}
 
@@ -488,6 +514,7 @@ astScrollToTopHandler = function ( masthead, astScrollTop ) {
 		init();
 
 		accountPopupTrigger();
+		accountMenuToggle();
 
 	} );
 
