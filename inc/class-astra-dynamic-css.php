@@ -3613,6 +3613,9 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 				$parse_css       .= astra_parse_css( $list_spacing_css );
 			}
 
+			// Apply Astra Mini Cart CSS if Elementor mini cart is disabled.
+			$parse_css .= self::elementor_mini_cart_disabled_dynamic_css();
+
 			$parse_css .= $dynamic_css;
 			$custom_css = astra_get_option( 'custom-css' );
 
@@ -4879,6 +4882,75 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 		public static function astra_woo_support_global_settings() {
 			$astra_settings = get_option( ASTRA_THEME_SETTINGS );
 			return apply_filters( 'astra_get_option_woo_support_global_settings', isset( $astra_settings['woo_support_global_settings'] ) ? false : true );
+		}
+
+		/**
+		 * Apply CSS for Mini Cart when Elementor Mini Cart Template is Disabled.
+		 *
+		 * @since x.x.x
+		 * @return string Parsed CSS
+		 */
+		public static function elementor_mini_cart_disabled_dynamic_css() {
+			$is_site_rtl         = is_rtl();
+			$ltr_left            = $is_site_rtl ? 'right' : 'left';
+			$ltr_right           = $is_site_rtl ? 'left' : 'right';
+			if ( defined( 'ELEMENTOR_PRO_VERSION' ) && 'no' === get_option( 'elementor_' . 'use_mini_cart_template' ) ) {
+				$mini_cart_template_css = array(
+					'.woocommerce-js .woocommerce-mini-cart' => array(
+						'margin-inline-start' => '0',
+						'list-style'          => 'none',
+						'padding'             => '1.3em',
+						'flex'                => '1',
+						'overflow'            => 'auto',
+						'position'            => 'relative',
+					),
+					'.woocommerce-js .widget_shopping_cart_content ul li.mini_cart_item' => array(
+						'min-height'            => '60px',
+						'padding-top'           => '1.2em',
+						'padding-bottom'        => '1.2em',
+						'padding-' . $ltr_left  => '5em',
+						'padding-' . $ltr_right => '0',
+					),
+					'.woocommerce-js .woocommerce-mini-cart-item .ast-mini-cart-price-wrap' => array(
+						'float'      => 'right',
+						'margin-top' => '0.5em',
+						'position'   => 'absolute',
+						$ltr_left    => 'auto',
+						$ltr_right   => '0',
+						'top'        => '3.5em',
+					),
+					'.woocommerce-js .widget_shopping_cart_content a.remove' => array(
+						'position' => 'absolute',
+						$ltr_left    => 'auto',
+						$ltr_right   => '0',
+					),
+					'.woocommerce-js .woocommerce-mini-cart__total' => array(
+						'display'         => 'flex',
+						'justify-content' => 'space-between',
+						'padding'         => '0.7em 0',
+						'margin-bottom'   => '0',
+						'font-size'       => '16px',
+						'border-top'      => '1px solid var(--ast-border-color)',
+						'border-bottom'   => '1px solid var(--ast-border-color)',
+					),
+					'.woocommerce-mini-cart__buttons' => array(
+						'display'        => 'flex',
+						'flex-direction' => 'column',
+						'gap'            => '20px',
+						'padding-top'    => '1.34em',
+					),
+					'.woocommerce-mini-cart__buttons .button' => array(
+						'text-align'  => 'center',
+						'font-weight' => '500',
+						'font-size'   => '16px',
+					),
+					'.woocommerce-js ul.product_list_widget li a img' => array(
+						'top' => '52%',
+					),
+				);
+				return astra_parse_css( $mini_cart_template_css );
+			}
+			return '';
 		}
 	}
 }

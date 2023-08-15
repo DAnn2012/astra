@@ -3656,6 +3656,15 @@ namespace {
         public static function astra_check_default_color_typo()
         {
         }
+		/**
+		 * Apply CSS for Mini Cart when Elementor Mini Cart Template is Disabled.
+		 *
+		 * @since x.x.x
+		 * @return string Parsed CSS
+		 */
+		public static function elementor_mini_cart_disabled_dynamic_css() 
+        {
+        }
     }
     /**
      * Global palette class
