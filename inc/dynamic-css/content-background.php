@@ -33,7 +33,7 @@ function astra_content_background_css( $dynamic_css ) {
 	$is_boxed                = astra_is_content_style_boxed();
 	$is_sidebar_boxed        = astra_is_sidebar_style_boxed();
 	$current_layout          = astra_get_content_layout();
-	$narrow_dynamic_selector = 'narrow-width-container' === $current_layout && $is_boxed ? ', .ast-narrow-container .site-content' : '';
+	$narrow_dynamic_selector = 'narrow-container' === $current_layout && $is_boxed ? ', .ast-narrow-container .site-content' : '';
 
 	$author_box_extra_selector = ( true === astra_check_is_structural_setup() ) ? '.site-main' : '';
 
@@ -70,7 +70,7 @@ function astra_content_background_css( $dynamic_css ) {
 	);
 
 	// Apply Content BG Color for Narrow Unboxed Container.
-	if ( ! astra_is_content_style_boxed() ) {
+	if ( ! astra_is_content_style_boxed() && 'narrow-container' === $current_layout ) {
 		$container_css        = array_merge(
 			$container_css,
 			array( '.ast-narrow-container .site-content' => astra_get_responsive_background_obj( $content_bg_obj, 'desktop' ) ),
