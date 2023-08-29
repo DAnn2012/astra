@@ -9,6 +9,7 @@ namespace Elementor;// phpcs:ignore PHPCompatibility.Keywords.NewKeywords.t_name
 
 // @codingStandardsIgnoreStart PHPCompatibility.Keywords.NewKeywords.t_useFound
 use Astra_Global_Palette;
+use Astra_Dynamic_CSS;
 use Elementor\Core\Settings\Manager as SettingsManager;
 // @codingStandardsIgnoreEnd PHPCompatibility.Keywords.NewKeywords.t_useFound
 
@@ -236,9 +237,19 @@ if ( ! class_exists( 'Astra_Elementor' ) ) :
 					update_post_meta( $id, 'ast-title-bar-display', 'disabled' );
 					update_post_meta( $id, 'ast-featured-img', 'disabled' );
 
-					$content_layout = get_post_meta( $id, 'site-content-layout', true );
+					// Compatibility with revamped layouts to update default layout to page builder.
+					$migrated_user = ( ! Astra_Dynamic_CSS::astra_fullwidth_sidebar_support() );
+					if ( $migrated_user ) {
+						$content_layout = get_post_meta( $id, 'site-content-layout', true );
+					} else {
+						$content_layout = get_post_meta( $id, 'ast-site-content-layout', true );
+					}
+
 					if ( empty( $content_layout ) || 'default' == $content_layout ) {
-						update_post_meta( $id, 'site-content-layout', 'page-builder' );
+						if ( $migrated_user ) {
+							update_post_meta( $id, 'site-content-layout', 'page-builder' );
+						}
+						update_post_meta( $id, 'ast-site-content-layout', 'full-width-container' );
 					}
 
 					$sidebar_layout = get_post_meta( $id, 'site-sidebar-layout', true );
