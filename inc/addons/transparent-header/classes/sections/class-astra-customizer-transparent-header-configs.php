@@ -874,7 +874,6 @@ if ( ! class_exists( 'Astra_Customizer_Transparent_Header_Configs' ) ) {
 					),
 				);
 
-				if ( ! astra_remove_widget_design_options() ) {
 					$widget_configs = array(
 						/**
 						 * Option: Transparent Header Builder - Widget Elements configs.
@@ -957,7 +956,7 @@ if ( ! class_exists( 'Astra_Customizer_Transparent_Header_Configs' ) ) {
 					);
 
 					$_hfb_configs = array_merge( $_hfb_configs, $widget_configs );
-				}
+				
 
 				$_configs = array_merge( $_configs, $_hfb_configs );
 

@@ -3413,6 +3413,11 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 				$social_bg_color       = astra_get_option( 'transparent-header-social-icons-bg-color' );
 				$social_bg_hover_color = astra_get_option( 'transparent-header-social-icons-bg-h-color' );
 
+				$widget_title_color      = astra_get_option( 'transparent-header-widget-title-color' );
+				$widget_content_color    = astra_get_option( 'transparent-header-widget-content-color' );
+				$widget_link_color       = astra_get_option( 'transparent-header-widget-link-color' );
+				$widget_link_hover_color = astra_get_option( 'transparent-header-widget-link-h-color' );
+
 				$button_color      = astra_get_option( 'transparent-header-button-text-color' );
 				$button_h_color    = astra_get_option( 'transparent-header-button-text-h-color' );
 				$button_bg_color   = astra_get_option( 'transparent-header-button-bg-color' );
@@ -3467,6 +3472,18 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 					'.ast-theme-transparent-header .ast-header-social-wrap .ast-social-color-type-custom .ast-builder-social-element:hover .social-item-label' => array(
 						'color' => esc_attr( $social_hover_color['desktop'] ),
 					),
+					'.ast-theme-transparent-header .widget-area.header-widget-area .widget-title' => array(
+						'color' => esc_attr( $widget_title_color ),
+					),
+					'.ast-theme-transparent-header .widget-area.header-widget-area .header-widget-area-inner' => array(
+						'color' => esc_attr( $widget_content_color ),
+					),
+					'.ast-theme-transparent-header .widget-area.header-widget-area .header-widget-area-inner a' => array(
+						'color' => esc_attr( $widget_link_color ),
+					),
+					'.ast-theme-transparent-header .widget-area.header-widget-area .header-widget-area-inner a:hover' => array(
+						'color' => esc_attr( $widget_link_hover_color ),
+					),
 					'.ast-theme-transparent-header [CLASS*="ast-header-button-"] .ast-custom-button' => array(
 						'color'      => esc_attr( $button_color ),
 						'background' => esc_attr( $button_bg_color ),
@@ -3500,7 +3517,6 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 					),
 				);
 
-				if ( ! astra_remove_widget_design_options() ) {
 
 					$widget_title_color      = astra_get_option( 'transparent-header-widget-title-color' );
 					$widget_content_color    = astra_get_option( 'transparent-header-widget-content-color' );
@@ -3535,7 +3551,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 					$transparent_header_builder_desktop_css[ $transparent_header_widget_selector . ' a:hover' ] = array(
 						'color' => esc_attr( $widget_link_hover_color ),
 					);
-				}
+				
 
 				if ( Astra_Builder_Helper::is_component_loaded( 'mobile-trigger', 'header', 'mobile' ) ) {
 
