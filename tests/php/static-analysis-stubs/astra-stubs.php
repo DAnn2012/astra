@@ -15998,19 +15998,6 @@ namespace {
     {
     }
     /**
-     * Check whether widget specific config, dynamic CSS, preview JS needs to remove or not. Following cases considered while implementing this.
-     *
-     * 1. Is user is from old Astra setup.
-     * 2. Check if user is new but on lesser WordPress 5.8 versions.
-     * 3. User is new with block widget editor.
-     *
-     * @since 3.6.8
-     * @return boolean
-     */
-    function astra_remove_widget_design_options()
-    {
-    }
-    /**
      * Get Global Color Palettes
      *
      * @return array color palettes array.
