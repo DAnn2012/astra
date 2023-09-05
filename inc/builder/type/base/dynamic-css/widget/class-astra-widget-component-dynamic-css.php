@@ -102,27 +102,6 @@ class Astra_Widget_Component_Dynamic_CSS {
 				);
 
 				$css_output_tablet = array(
-					$selector => array(
-						// Margin CSS.
-						'margin-top'    => astra_responsive_spacing( $margin, 'top', 'tablet' ),
-						'margin-bottom' => astra_responsive_spacing( $margin, 'bottom', 'tablet' ),
-						'margin-left'   => astra_responsive_spacing( $margin, 'left', 'tablet' ),
-						'margin-right'  => astra_responsive_spacing( $margin, 'right', 'tablet' ),
-					),
-				);
-
-				$css_output_mobile = array(
-					$selector => array(
-						// Margin CSS.
-						'margin-top'    => astra_responsive_spacing( $margin, 'top', 'mobile' ),
-						'margin-bottom' => astra_responsive_spacing( $margin, 'bottom', 'mobile' ),
-						'margin-left'   => astra_responsive_spacing( $margin, 'left', 'mobile' ),
-						'margin-right'  => astra_responsive_spacing( $margin, 'right', 'mobile' ),
-					),
-				);
-
-
-				$css_output_tablet = array(
 					$builder_widget_selector              => array(
 						'color'     => $text_color_tablet,
 						// Typography.
