@@ -336,8 +336,6 @@ final class Astra_Builder_Base_Configuration {
 				);
 			}
 
-			if ( ! astra_remove_widget_design_options() ) {
-
 				$html_config[] = array(
 
 					/**
@@ -567,7 +565,6 @@ final class Astra_Builder_Base_Configuration {
 						),
 					);
 				}
-			}
 
 			$html_config[] = self::prepare_visibility_tab( $_section, $type );
 

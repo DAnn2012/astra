@@ -3516,8 +3516,6 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 					),
 				);
 
-				if ( ! astra_remove_widget_design_options() ) {
-
 					$widget_title_color      = astra_get_option( 'transparent-header-widget-title-color' );
 					$widget_content_color    = astra_get_option( 'transparent-header-widget-content-color' );
 					$widget_link_color       = astra_get_option( 'transparent-header-widget-link-color' );
@@ -3551,7 +3549,6 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 					$transparent_header_builder_desktop_css[ $transparent_header_widget_selector . ' a:hover' ] = array(
 						'color' => esc_attr( $widget_link_hover_color ),
 					);
-				}
 
 				if ( Astra_Builder_Helper::is_component_loaded( 'mobile-trigger', 'header', 'mobile' ) ) {
 
