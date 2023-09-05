@@ -566,7 +566,7 @@ final class Astra_Builder_Base_Configuration {
 					);
 				}
 
-			$html_config[] = self::prepare_visibility_tab( $_section, $type );
+				$html_config[] = self::prepare_visibility_tab( $_section, $type );
 
 		}
 
