@@ -77,6 +77,7 @@ const SocialComponent = props => {
 		{value: 'imdb', label: __('IMDB', 'astra'), color: '#000000', background: 'transparent'},
 		{value: 'tiktok', label: __('TikTok', 'astra'), color: '#000000', background: 'transparent'},
 		{value: 'threads', label: __('Threads', 'astra'), color: '#000000', background: 'transparent'},
+		{value: 'twitter-x', label: __('Twitter / X', 'astra'), color: '#000000', background: 'transparent'},
 	]
 
 	const social_sharing = [
@@ -89,6 +90,7 @@ const SocialComponent = props => {
 		{value: 'vk', label: __('VK', 'astra'), color: '#5382b6', background: 'transparent'},
 		{value: 'whatsapp', label: __('WhatsApp', 'astra'), color: '#5BBA67', background: 'transparent'},
 		{value: 'sms', label: __('SMS', 'astra'), color: 'inherit', background: 'transparent'},
+		{value: 'twitter-x', label: __('Twitter / X', 'astra'), color: 'inherit', background: 'transparent'},
 	]
 
 	const social_list = is_sharing_mode ? social_sharing : site_social_icon

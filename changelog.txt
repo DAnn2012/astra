@@ -1,7 +1,10 @@
 v4.3.2 (Unreleased)
+- New: Sticky Sidebar (Needs Doc)
+- New: Introducing new Twitter-X Icon added for Social Sharing and Social Icons.
 - Improvement: Added a new filter 'astra_woo_shop_product_title_link' to remove the product title link from the product page.
 - Fix: Resolved console error which originated from "menu-toggle-close" element click on the frontend.
 - Fix: After WordPress 6.3 update bottom spacing of 'figure' tag is missing.
+- Fix: Header-Footer Builder - Social - Background spacing issue breaking UI in customizer preview.
 
 v4.3.1
 - Fix: Block - Lists block style type updated to "disc" after v4.3.0 update.
