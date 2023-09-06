@@ -429,7 +429,7 @@ final class Astra_Builder_Base_Configuration {
 							'default'   => astra_get_option( $type . '-widget-' . $index . '-text-typography' ),
 							'type'      => 'control',
 							'control'   => 'ast-settings-group',
-							'title'     => __( 'Headinf Font', 'astra' ),
+							'title'     => __( 'Heading Font', 'astra' ),
 							'section'   => $_section,
 							'transport' => 'postMessage',
 							'priority'  => 90,
