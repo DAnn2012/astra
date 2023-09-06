@@ -36,6 +36,10 @@ if ( ! class_exists( 'Astra_Customizer_Button_Configs' ) ) {
 		 */
 		public function register_configuration( $configurations, $wp_customize ) {
 
+		/** @psalm-suppress DocblockTypeContradiction */ // phpcs:ignore Generic.Commenting.DocComment.MissingShort
+		$tab_config = ( true === Astra_Builder_Helper::$is_header_footer_builder_active ) ?
+		Astra_Builder_Helper::$design_tab : Astra_Builder_Helper::$general_tab;
+
 			$_configs = array(
 				array(
 					'name'      => ASTRA_THEME_SETTINGS . '[button-preset-style]',
@@ -413,6 +417,20 @@ if ( ! class_exists( 'Astra_Customizer_Button_Configs' ) ) {
 					'priority'  => 18,
 				),
 
+				/**
+				 * Group: Theme Button color Group
+				 */
+				array(
+					'name'      => ASTRA_THEME_SETTINGS . '[theme-button-color-group]',
+					'default'   => astra_get_option( 'theme-button-color-group' ),
+					'type'      => 'control',
+					'control'   => 'ast-color-group',
+					'title'     => __( 'Text Color', 'astra' ),
+					'section'   => 'section-buttons',
+					'transport' => 'postMessage',
+					'priority'  => 18,
+					'context' => $tab_config,
+				),
 				/**
 				 * Group: Theme Button background colors Group
 				 */
@@ -839,6 +857,18 @@ if ( ! class_exists( 'Astra_Customizer_Button_Configs' ) ) {
 				);
 				$_configs = array_merge( $_configs, $_trans_config );
 
+			}
+
+			if ( true === Astra_Builder_Helper::$is_header_footer_builder_active ) {
+				$_configs[] = array(
+					'name'        => 'section-btn-ast-context-tabs',
+					'section'     => 'section-buttons',
+					'type'        => 'control',
+					'control'     => 'ast-builder-header-control',
+					'priority'    => 0,
+					'description' => '',
+				);
+				
 			}
 
 			return array_merge( $configurations, $_configs );

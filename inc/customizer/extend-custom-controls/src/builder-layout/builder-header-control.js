@@ -56,7 +56,7 @@ const BuilderHeader = (props) => {
 					   className={"nav-tab ahfb-design-tab ahfb-compontent-tabs-button " + (('design' === props.tab) ? "nav-tab-active" : "")}
 					   data-tab="design">
 						<span>
-							{ __('Design', 'astra') }
+							{ __('Designn', 'astra') }
 						</span>
 					</a>
 				</div>

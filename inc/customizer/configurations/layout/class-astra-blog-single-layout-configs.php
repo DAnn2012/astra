@@ -46,7 +46,7 @@ if ( ! class_exists( 'Astra_Blog_Single_Layout_Configs' ) ) {
 					'section'    => 'section-blog-single',
 					'default'    => astra_get_option( 'blog-single-width' ),
 					'priority'   => 6,
-					'title'      => __( 'Content Width', 'astra' ),
+					'title'      => __( 'Contentttttt', 'astra' ),
 					'choices'    => array(
 						'default' => __( 'Default', 'astra' ),
 						'custom'  => __( 'Custom', 'astra' ),
@@ -92,7 +92,7 @@ if ( ! class_exists( 'Astra_Blog_Single_Layout_Configs' ) ) {
 				array(
 					'name'     => ASTRA_THEME_SETTINGS . '[section-blog-single-spacing-divider]',
 					'section'  => 'section-blog-single',
-					'title'    => __( 'Post Spacing', 'astra' ),
+					'title'    => __( 'Post Spacingtttttt', 'astra' ),
 					'type'     => 'control',
 					'control'  => 'ast-heading',
 					'priority' => 24,
@@ -133,6 +133,7 @@ if ( ! class_exists( 'Astra_Blog_Single_Layout_Configs' ) ) {
 					'control'     => 'ast-builder-header-control',
 					'priority'    => 0,
 					'description' => '',
+					'context' => $tab_config
 				);
 			}
 
