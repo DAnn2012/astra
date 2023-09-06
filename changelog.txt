@@ -2,7 +2,6 @@ v4.3.1 (Unreleased)
 - Improvement: Added a new filter 'astra_woo_shop_product_title_link' to remove the product title link from the product page.
 - Fix: Resolved console error which originated from "menu-toggle-close" element click on the frontend.
 - Fix: After WordPress 6.3 update bottom spacing of 'figure' tag is missing.
-- Fix: Header Builder - Normal header Submenu background Color is overriding transparent header submenu background colors.
 
 v4.3.0
 - New: Header-Footer Builder - Social - Enable Brand Color option on hover.

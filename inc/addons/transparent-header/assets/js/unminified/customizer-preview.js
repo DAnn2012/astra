@@ -333,19 +333,4 @@
 		'.ast-theme-transparent-header .ast-header-account-wrap .account-main-navigation .menu-item.current-menu-item > .menu-link'
 	);
 
-	wp.customize( 'astra-settings[transparent-submenu-bg-color-responsive]', function( value ) {
-		value.bind( function( value ) {
-			if ( value.desktop || value.mobile || value.tablet ) {
-				var dynamicStyle = '@media (max-width: 768px) {'
-				dynamicStyle += '.ast-theme-transparent-header .ast-builder-menu .main-header-menu .menu-item .sub-menu, .sub-menu, .ast-header-break-point.ast-theme-transparent-header .ast-builder-menu .main-header-menu .menu-item .sub-menu .sub-menu';
-				dynamicStyle += '{';
-				dynamicStyle += 'background-color:transparent;';
-				dynamicStyle += '}';
-				dynamicStyle += '}';
-
-				astra_add_dynamic_css('ast-theme-transparent-header', dynamicStyle);
-			}
-		} );
-	} );
-
 } )( jQuery );
