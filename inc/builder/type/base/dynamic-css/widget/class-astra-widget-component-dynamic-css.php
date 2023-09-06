@@ -59,9 +59,15 @@ class Astra_Widget_Component_Dynamic_CSS {
 				$title_font_size   = astra_get_option( $builder_type . '-widget-' . $index . '-font-size' );
 				$content_font_size = astra_get_option( $builder_type . '-widget-' . $index . '-content-font-size' );
 
+				$heading_font_size   = astra_get_option( $builder_type . '-widget-' . $index . '-font-size' );
+
 				$title_color_desktop = astra_get_prop( astra_get_option( $builder_type . '-widget-' . $index . '-title-color' ), 'desktop' );
 				$title_color_tablet  = astra_get_prop( astra_get_option( $builder_type . '-widget-' . $index . '-title-color' ), 'tablet' );
 				$title_color_mobile  = astra_get_prop( astra_get_option( $builder_type . '-widget-' . $index . '-title-color' ), 'mobile' );
+
+				$heading_color_desktop = astra_get_prop( astra_get_option( $builder_type . '-widget-' . $index . '-title-color' ), 'desktop' );
+				$heading_color_tablet = astra_get_prop( astra_get_option( $builder_type . '-widget-' . $index . '-title-color' ), 'tablet' );
+				$heading_color_mobile = astra_get_prop( astra_get_option( $builder_type . '-widget-' . $index . '-title-color' ), 'mobile' );
 
 				$text_color_desktop = astra_get_prop( astra_get_option( $builder_type . '-widget-' . $index . '-color' ), 'desktop' );
 				$text_color_tablet  = astra_get_prop( astra_get_option( $builder_type . '-widget-' . $index . '-color' ), 'tablet' );
@@ -92,6 +98,11 @@ class Astra_Widget_Component_Dynamic_CSS {
 						// Typography.
 						'font-size' => astra_responsive_font( $title_font_size, 'desktop' ),
 					),
+					$selector . ' .wp-block-heading'          => array(
+						'color'     => $heading_color_desktop,
+						// Typography.
+						'font-size' => astra_responsive_font( $heading_font_size, 'desktop' ),
+					),
 					$selector                             => array(
 						// Margin CSS.
 						'margin-top'    => astra_responsive_spacing( $margin, 'top', 'desktop' ),
@@ -111,6 +122,11 @@ class Astra_Widget_Component_Dynamic_CSS {
 						'color'     => $title_color_tablet,
 						// Typography.
 						'font-size' => astra_responsive_font( $title_font_size, 'tablet' ),
+					),
+					$selector . ' .wp-block-heading'          => array(
+						'color'     => $heading_color_tablet,
+						// Typography.
+						'font-size' => astra_responsive_font( $heading_font_size, 'desktop' ),
 					),
 					$builder_widget_selector . ' a'       => array(
 						'color' => $link_color_tablet,
@@ -137,6 +153,11 @@ class Astra_Widget_Component_Dynamic_CSS {
 						'color'     => $title_color_mobile,
 						// Typography.
 						'font-size' => astra_responsive_font( $title_font_size, 'mobile' ),
+					),
+					$selector . ' .wp-block-heading'          => array(
+						'color'     => $heading_color_mobile,
+						// Typography.
+						'font-size' => astra_responsive_font( $heading_font_size, 'desktop' ),
 					),
 					$builder_widget_selector . ' a'       => array(
 						'color' => $link_color_mobile,
