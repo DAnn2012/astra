@@ -605,21 +605,13 @@ function astra_builder_widget_css( builder_type = 'header' ) {
 			builder_type + '-widget-' + index + '-title-color',
 			'astra-settings[' + builder_type + '-widget-' + index + '-title-color]',
 			'color',
-			selector + ' .widget-title'
+			selector + ' .widget-title, ' + selector + ' .wp-block-heading'
 		);
-
-        // Widget Heading Color for .wp-block-heading.
-        astra_color_responsive_css(
-            builder_type + '-widget-' + index + '-title-color-heading',
-            'astra-settings[' + builder_type + '-widget-' + index + '-title-color]',
-            'color',
-            selector + ' .wp-block-heading'
-        );
 
 		// Widget Title Typography.
 		astra_responsive_font_size(
 			'astra-settings[' + builder_type + '-widget-' + index + '-font-size]',
-			selector + ' .widget-title'
+			selector + ' .widget-title, ' + selector + ' .wp-block-heading'
 		);
 
 		// Widget Content Typography.
