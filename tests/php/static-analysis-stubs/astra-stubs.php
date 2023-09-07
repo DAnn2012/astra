@@ -3522,6 +3522,15 @@ namespace {
         public static function is_elementor_default_color_font_comp()
         {
         }
+		/**
+		 * For existing users, do not provide list vertical spacing.
+		 *
+		 * @since 4.1.6
+		 * @return boolean true for new users, false for old users.
+		 */
+		public static function astra_list_block_vertical_spacing()
+        {
+		}
         /**
          * For existing users, do not load the wide/full width image CSS by default.
          *
@@ -3638,6 +3647,16 @@ namespace {
         public static function load_cart_static_css()
         {
         }
+		/**
+		 * Core Comment & Search Button Styling Compatibility.
+		 * Old Users - Will not reflect directly.
+		 * New Users - Direct reflection
+		 * @return bool true|false.
+		 * @since 4.2.2
+		 */
+		public static function astra_core_form_btns_styling()
+        {
+        }
         /**
          * Check is new structural things are updated.
          *
@@ -3645,6 +3664,15 @@ namespace {
          * @since 4.0.0
          */
         public static function astra_check_default_color_typo()
+        {
+        }
+        /**
+         * Dynamic CSS to make Sidebar Sticky.
+         *
+         * @return string Sticky Sidebar CSS.
+         * @since x.x.x
+         */
+        public static function astra_sticky_sidebar_css()
         {
         }
     }
@@ -11910,17 +11938,6 @@ namespace {
     class Astra_Posts_Archive_Structures_Configs extends \Astra_Customizer_Config_Base
     {
         /**
-         * Getting dynamic context for sidebar.
-         * Compatibility case: Narrow width + dynamic customizer controls.
-         *
-         * @param string $post_type On basis of this will decide to hide sidebar control or not.
-         * @return mixed
-         * @since 4.0.0
-         */
-        public function get_sidebar_context($post_type)
-        {
-        }
-        /**
          * Getting content layout dynamically.
          * Compatibility case: Narrow width + dynamic customizer controls.
          *
@@ -11961,16 +11978,6 @@ namespace {
      */
     class Astra_Posts_Single_Structures_Configs extends \Astra_Customizer_Config_Base
     {
-        /**
-         * Getting dynamic context for sidebar.
-         * Compatibility case: Narrow width + dynamic customizer controls.
-         *
-         * @param string $post_type On basis of this will decide to hide sidebar control or not.
-         * @since 4.0.0
-         */
-        public function get_sidebar_context($post_type)
-        {
-        }
         /**
          * Getting content layout dynamically.
          * Compatibility case: Narrow width + dynamic customizer controls.
@@ -12804,7 +12811,7 @@ namespace {
          *
          * @var array
          */
-        private static $db_updates = array('3.0.0' => array('astra_header_builder_compatibility'), '3.0.1' => array('astra_clear_assets_cache'), '3.3.0' => array('astra_gutenberg_pattern_compatibility', 'astra_icons_svg_compatibility', 'astra_check_flex_based_css'), '3.4.0' => array('astra_update_cart_style'), '3.5.0' => array('astra_update_related_posts_grid_layout', 'astra_site_title_tagline_responsive_control_migration'), '3.6.0' => array('astra_headings_font_support', 'astra_remove_logo_max_width', 'astra_transparent_header_default_value'), '3.6.3' => array('astra_button_default_values_updated'), '3.6.4' => array('astra_update_underline_link_setting'), '3.6.5' => array('astra_support_block_editor'), '3.6.7' => array('astra_fix_footer_widget_right_margin_case', 'astra_remove_elementor_toc_margin'), '3.6.8' => array('astra_set_removal_widget_design_options_flag'), '3.6.9' => array('astra_zero_font_size_comp', 'astra_unset_builder_elements_underline', 'astra_remove_responsive_account_menu_colors_support'), '3.7.0' => array('astra_global_color_compatibility'), '3.7.4' => array('astra_improve_gutenberg_editor_ui'), '3.7.9' => array('astra_set_default_breadcrumb_separator_option', 'astra_fullwidth_layouts_apply_content_background'), '3.8.1' => array('astra_apply_modern_block_editor_ui'), '3.8.3' => array('astra_update_customizer_layout_defaults', 'astra_apply_modern_block_editor_v2_ui'), '3.9.0' => array('astra_update_single_product_breadcrumb', 'astra_display_cart_total_title_compatibility', 'astra_update_woocommerce_cart_icons', 'astra_legacy_customizer_maintenance', 'astra_apply_modern_ecommerce_setup', 'astra_responsive_shop_content_alignment'), '3.9.2' => array('astra_apply_woocommerce_show_password_icon_css', 'astra_shop_style_design_layout'), '3.9.4' => array('astra_theme_background_updater_3_9_4'), '4.0.0' => array('astra_theme_background_updater_4_0_0'), '4.0.2' => array('astra_theme_background_updater_4_0_2'));
+        private static $db_updates = array('3.0.0' => array('astra_header_builder_compatibility'), '3.0.1' => array('astra_clear_assets_cache'), '3.3.0' => array('astra_gutenberg_pattern_compatibility', 'astra_icons_svg_compatibility', 'astra_check_flex_based_css'), '3.4.0' => array('astra_update_cart_style'), '3.5.0' => array('astra_update_related_posts_grid_layout', 'astra_site_title_tagline_responsive_control_migration'), '3.6.0' => array('astra_headings_font_support', 'astra_remove_logo_max_width', 'astra_transparent_header_default_value'), '3.6.3' => array('astra_button_default_values_updated'), '3.6.4' => array('astra_update_underline_link_setting'), '3.6.5' => array('astra_support_block_editor'), '3.6.7' => array('astra_fix_footer_widget_right_margin_case', 'astra_remove_elementor_toc_margin'), '3.6.8' => array('astra_set_removal_widget_design_options_flag'), '3.6.9' => array('astra_zero_font_size_comp', 'astra_unset_builder_elements_underline', 'astra_remove_responsive_account_menu_colors_support'), '3.7.0' => array('astra_global_color_compatibility'), '3.7.4' => array('astra_improve_gutenberg_editor_ui'), '3.7.9' => array('astra_set_default_breadcrumb_separator_option', 'astra_fullwidth_layouts_apply_content_background'), '3.8.1' => array('astra_apply_modern_block_editor_ui'), '3.8.3' => array('astra_update_customizer_layout_defaults', 'astra_apply_modern_block_editor_v2_ui'), '3.9.0' => array('astra_update_single_product_breadcrumb', 'astra_display_cart_total_title_compatibility', 'astra_update_woocommerce_cart_icons', 'astra_legacy_customizer_maintenance', 'astra_apply_modern_ecommerce_setup', 'astra_responsive_shop_content_alignment'), '3.9.2' => array('astra_apply_woocommerce_show_password_icon_css', 'astra_shop_style_design_layout'), '3.9.4' => array('astra_theme_background_updater_3_9_4'), '4.0.0' => array('astra_theme_background_updater_4_0_0'), '4.0.2' => array('astra_theme_background_updater_4_0_2') );
         /**
          *  Constructor
          */
@@ -15173,6 +15180,16 @@ namespace {
     {
     }
     /**
+     * Function which will return the Sidebar Layout to determine default body classes for Editor.
+     *
+     * @since 4.2.0
+     * @param string $post_type Post Type.
+     * @return string Sidebar Layout.
+     */
+    function astra_get_sidebar_layout_for_editor( $post_type )
+    {
+    }
+    /**
      * Determines, whether the specific hook type is actually supported.
      *
      * Plugin developers should always check for the support of a <strong>specific</strong>
@@ -15506,6 +15523,15 @@ namespace {
      * @since 4.0.0
      */
     function astra_entry_content_single_page()
+    {
+    }
+    /**
+    * Check whether user is exising or new to override the hr tag styling for elementor
+    *
+    * @since 4.3.0
+    * @return boolean
+    */
+    function astra_can_add_styling_for_hr()
     {
     }
     /**
@@ -17194,6 +17220,110 @@ namespace {
     function astra_theme_background_updater_4_0_2()
     {
     }
+	/**
+	 * Checks whether content style is boxed for current layout.
+	 *
+	 * @since 4.2.0
+     * @param mixed $post_id Current post ID.
+	 * @return boolean
+	 */
+    function astra_is_content_style_boxed( $post_id = false )
+    {
+    }
+	/**
+	 * Check if the current page is a third party page.
+	 *
+	 * @since 4.2.0
+	 * @param bool $is_sidebar_option Optional. Whether to check sidebar option needed for Lifterlms case. Default false.
+	 * @return string|bool Returns the name of third party if page belongs to any, otherwise returns false.
+	 */
+	function astra_with_third_party( $is_sidebar_option = false)
+    {
+    }
+	/**
+	 * Check if the sidebar style is boxed.
+	 *
+	 * @since 4.2.0
+     * @param mixed $post_id Current post ID.
+	 * @return bool Whether the sidebar style is boxed.
+	 */
+	function astra_is_sidebar_style_boxed( $post_id = false )
+    {
+    }
+	/**
+	 * Migrate old meta layout to new layout.
+	 *
+	 * @since 4.2.0
+	 * @param mixed $meta_layout
+	 * @return mixed new layout.
+	 */
+	function astra_migrate_meta_layout( $meta_layout )
+    {
+    }
+    /**
+     * Return current content layout as per new layout selection.
+     *
+     * @since 4.2.0
+     * @param mixed $new_content_option The new content layout option.
+     * @param mixed $level The level of the layout.
+     * @param mixed $post_id The id to fetch post meta.
+     * @param mixed $old_meta The old content layout option for migration cases.
+     * @return mixed content layout.
+     */
+	function astra_toggle_layout( $new_content_option, $level, $post_id = false, $old_meta = false )
+    {
+    }
+    /**
+     * Handle migration from old to new layouts.
+     *
+     * Migration cases for old users, old layouts -> new layouts.
+     * @since 4.2.0
+     * @param mixed $old_layout
+     * @param mixed $new_layout
+     * @param mixed $content_style
+     * @param mixed $sidebar_style
+     * @param array $theme_options
+     * @return array $theme_options The updated theme options.
+     */
+    function astra_apply_layout_migration( $old_layout, $new_layout, $content_style, $sidebar_style, $theme_options )
+    {
+    }
+    /**
+     * Applies an unboxed container to the content.
+     *
+     * @since 4.2.0
+     * @param array $content_bg_obj The background object for the content.
+     * @param bool  $is_boxed Container style is boxed or not.
+     * @param bool  $is_sidebar_boxed Sidebar style is boxed or not.
+     * @param mixed $current_layout The current container layout applied.
+     * @return array $content_bg_obj The updated background object for the content.
+     */
+    function astra_apply_unboxed_container( $content_bg_obj, $is_boxed, $is_sidebar_boxed, $current_layout )
+    {
+    }
+	/**
+	 * Switch to legacy boxed layouts (Content Boxed, Boxed) as per content style selection.
+	 *
+	 * @since 4.2.0
+	 * @param mixed $content_layout Current layout.
+	 * @param boolean $is_boxed Current content style.
+	 * @param boolean $is_sidebar_boxed Current sidebar style.
+     * @param mixed $post_id Current post ID.
+	 * @return mixed The content layout.
+	 */
+	function astra_apply_boxed_layouts( $content_layout, $is_boxed, $is_sidebar_boxed, $post_id = false )
+    {
+    }
+	/**
+	 * WooCommerce, LifterLMS, EDD Archive (Shop, Courses, Memberships etc) Meta value.
+	 *
+	 * @since 4.2.0
+	 * @param mixed $option name of the option to fetch.
+	 * @return mixed meta_value
+	 */
+	function astra_third_party_archive_meta( $option )
+    {
+    }
     /**
      * Handle backward compatibility on version 4.1.0
      *
@@ -17201,6 +17331,24 @@ namespace {
      * @return void
      */
     function astra_theme_background_updater_4_1_0()
+    {
+    }
+    /**
+     * Handle backward compatibility on version 4.1.6
+     *
+     * @since 4.1.6
+     * @return void
+     */
+    function astra_theme_background_updater_4_1_6()
+    {
+    }
+    /**
+     * Handle backward compatibility on version 4.1.7
+     *
+     * @since 4.1.7
+     * @return void
+     */
+    function astra_theme_background_updater_4_1_7()
     {
     }
     /**

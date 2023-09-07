@@ -9,7 +9,7 @@ function classNames( ...classes ) {
 
 const OldHeaderFooter = () => {
 
-	if( ! astra_admin.show_builder_migration ) {
+	if( astra_admin.show_builder_migration ) {
 		return '';
 	}
 

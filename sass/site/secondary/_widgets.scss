@@ -210,6 +210,8 @@
 		}
 	}
 	#today {
-	    background: $color-background-active;
+	    color:$color-background-active;
+		font-weight: bold;
+		border-bottom: 2px solid $color-background-active ;
 	}
 }

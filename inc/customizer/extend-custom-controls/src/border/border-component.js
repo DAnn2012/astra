@@ -69,6 +69,8 @@ const BorderComponent = props => {
 		event.target.parentElement.classList.add('disconnected');
 	};
 
+	const allEqual = arr => arr.every(val => val === arr[0]);
+
 	const {
 		label,
 		description,
@@ -79,6 +81,15 @@ const BorderComponent = props => {
 		name,
 		suffix
 	} = props.control.params;
+
+	const currentValues = Object.keys(choices).map(choiceID => {
+		return props_value[choiceID];
+	});
+
+	const areValuesDifferent = allEqual(currentValues);
+
+	let connectedClass = ( ( false === areValuesDifferent ) ) ? '' : 'connected';
+	let disconnectedClass = ( ( false === areValuesDifferent ) ) ? '' : 'disconnected';
 
 	let htmlLabel = <span className="customize-control-title">{label ? label : __('Background', 'astra')}</span>;
 	let htmlDescription = description ?
@@ -97,7 +108,7 @@ const BorderComponent = props => {
 		const linkActive = parse( svgIcons['hyper-link-enable'] );
 		const linkDeactivated = parse( svgIcons['hyper-link-disable'] );
 
-		htmlLinkedChoices = <li key={id} className="ast-border-input-item-link disconnected">
+		htmlLinkedChoices = <li key={id} className={`ast-border-input-item-link ${disconnectedClass}`}>
 					<span className="ast-border-connected wp-ui-highlight"
 						  onClick={() => {
 							  onConnectedClick();
@@ -115,7 +126,7 @@ const BorderComponent = props => {
 	htmlChoices = Object.keys(choices).map(choiceID => {
 		if (choices[choiceID]) {
 			var html = <li {...inputAttrs} key={choiceID} className='ast-border-input-item'>
-				<input type='number' className='ast-border-input ast-border-desktop connected' data-id={choiceID}
+				<input type='number' className={`ast-border-input ast-border-desktop ${connectedClass}`} data-id={choiceID}
 					   data-name={name} onChange={() => onBorderChange(choiceID)} value={props_value[choiceID]}
 					   data-element-connect={id}/>
 				<span className="ast-border-title">{choices[choiceID]}</span>

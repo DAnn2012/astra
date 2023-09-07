@@ -485,7 +485,7 @@ p.demo_store,
 /**
  * Main WooCommerce styles
  */
-.woocommerce {
+.woocommerce-js {
 	.blockUI.blockOverlay {
 		position: relative;
 		@include loader();
@@ -1279,6 +1279,20 @@ p.demo_store,
 	}
 
 	ul.products li.product {
+
+		&.product-category {
+			padding-bottom: 0;
+
+			a {
+				height: 100%;
+
+				img {
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+
 		.onsale {
 			top: 0;
 			right: 0;
@@ -1300,6 +1314,12 @@ p.demo_store,
 			display: block;
 			margin: 0 0 1em;
 			box-shadow: none;
+
+			&.show-on-hover {
+				width: 0;
+				height: 0;
+				object-fit: cover;
+			}
 		}
 
 		strong {
@@ -1344,6 +1364,11 @@ p.demo_store,
 
 		a.ast-loop-product__link {
 			display: inline-block;
+		}
+
+		&:hover .show-on-hover  {
+			width: 100%;
+			height: 100%;
 		}
 	}
 
@@ -2506,7 +2531,7 @@ p.demo_store,
 	}
 }
 
-.woocommerce,
+.woocommerce-js,
 .woocommerce-page {
 	/**
 	 * Product Saerch Widget
@@ -2763,7 +2788,7 @@ p.demo_store,
 /**
  * Woocommerce common form design
  */
- .woocommerce,
+ .woocommerce-js,
 .woocommerce-page{
 	input[type=text], input[type=email], input[type=url], input[type=password], input[type=number], input[type=search], input[type=reset], input[type=tel], textarea, form .form-row textarea {
 		border-color: var(--ast-border-color);
@@ -2780,6 +2805,7 @@ p.demo_store,
 	.select2-container {
 		.select2-dropdown, .select2-search__field {
 			border: 1px solid var(--ast-border-color);
+			z-index: 98;
 		}
 	}
 
@@ -3660,7 +3686,7 @@ button.pswp__button--zoom:hover {
 	}
 }
 
-.woocommerce {
+.woocommerce-js {
 
 	#secondary {
 		.woocommerce ul.cart_list,
@@ -4128,20 +4154,6 @@ button.pswp__button--zoom:hover {
 .woocommerce-page {
 
 	.widget {
-		.widget-title-common {
-			font-size: 1.2em;
-			font-weight: 500;
-			margin-bottom: 1rem;
-			color: var(--ast-global-color-3);
-		}
-
-		> div h3 {
-			@extend .widget-title-common;
-		}
-
-		.widget-title {
-			@extend .widget-title-common;
-		}
 
 		.wc-block-price-slider {
 			padding-top: 0.15em;
@@ -4254,4 +4266,8 @@ button.pswp__button--zoom:hover {
 .ast-site-header-cart .widget_shopping_cart, .astra-cart-drawer {
 	background-color: var(--ast-global-color-5);
 	border: 1px solid var(--ast-border-color);
+}
+
+.woocommerce-js .sold-individually .button.single_add_to_cart_button{
+    margin-left: -1em;
 }

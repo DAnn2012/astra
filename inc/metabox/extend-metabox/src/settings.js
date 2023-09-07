@@ -11,6 +11,7 @@ import AstSelectorControl from './ast-selector.js';
 import svgIcons from '../../../../assets/svg/svgs.json';
 import { SelectControl, PanelBody, Modal } from '@wordpress/components';
 import parse from 'html-react-parser';
+
 const { __ } = wp.i18n;
 
 const MetaSettings = props => {
@@ -25,7 +26,6 @@ const MetaSettings = props => {
     const closeModal = () => setOpen( false );
 
 	const is_hide_content_layout_sidebar = astMetaParams.is_hide_content_layout_sidebar;
-	const [ contentLayout, setContentLayout ] = useState(props.meta['site-content-layout']);
 
 	// Adjust spacing & borders for table.
 	const topTableSpacing = <tr className="ast-extra-spacing"><td className="ast-border"></td><td></td></tr>;
@@ -37,6 +37,14 @@ const MetaSettings = props => {
 	} );
 
 	const contentLayoutOptions = Object.entries( astMetaParams.content_layout ).map( ( [ key, name ] ) => {
+		return ( { label: name, value: key } );
+	} );
+
+	const contentStyleOptions = Object.entries( astMetaParams.content_style ).map( ( [ key, name ] ) => {
+		return ( { label: name, value: key } );
+	} );
+
+	const sidebarStyleOptions = Object.entries( astMetaParams.content_style ).map( ( [ key, name ] ) => {
 		return ( { label: name, value: key } );
 	} );
 
@@ -93,22 +101,44 @@ const MetaSettings = props => {
 		/>);
 	});
 
-	const [isDefaultNarrow, setIsDefaultNarrow] = useState(false);
-
-	// Side effect calling DOM API to check if current default layout is set to narrow width content layout.
+	// Migrate meta layout, content style and sidebar options if old user.
 	useEffect(() => {
-		if (document.querySelector('body').classList.contains('ast-default-layout-narrow-container')) {
-			setIsDefaultNarrow(true);
+		if ( astMetaParams.v4_1_6_migration && undefined !== props.meta['astra-migrate-meta-layouts'] && 'set' !== props.meta['astra-migrate-meta-layouts'] ) {
+			props.setMetaFieldValue( 'set', 'astra-migrate-meta-layouts' );
+			switch ( props.meta['site-content-layout'] ) {
+				case 'plain-container':
+					props.setMetaFieldValue( 'normal-width-container', 'ast-site-content-layout' );
+					props.setMetaFieldValue( 'unboxed', 'site-content-style' );
+					props.setMetaFieldValue( 'unboxed', 'site-sidebar-style' );
+					break;
+				case 'boxed-container':
+					props.setMetaFieldValue( 'normal-width-container', 'ast-site-content-layout' );
+					props.setMetaFieldValue( 'boxed', 'site-content-style' );
+					props.setMetaFieldValue( 'boxed', 'site-sidebar-style' );
+					break;
+				case 'content-boxed-container':
+					props.setMetaFieldValue( 'normal-width-container', 'ast-site-content-layout' );
+					props.setMetaFieldValue( 'boxed', 'site-content-style' );
+					props.setMetaFieldValue( 'unboxed', 'site-sidebar-style' );
+					break;
+				case 'page-builder':
+					props.setMetaFieldValue( 'full-width-container', 'ast-site-content-layout' );
+					props.setMetaFieldValue( 'unboxed', 'site-content-style' );
+					props.setMetaFieldValue( 'unboxed', 'site-sidebar-style' );
+					break;
+				case 'narrow-container':
+					props.setMetaFieldValue( 'narrow-width-container', 'ast-site-content-layout' );
+					props.setMetaFieldValue( 'unboxed', 'site-content-style' );
+					props.setMetaFieldValue( 'unboxed', 'site-sidebar-style' );
+					break;
+				default:
+					props.setMetaFieldValue( 'default', 'ast-site-content-layout' );
+					props.setMetaFieldValue( 'default', 'site-content-style' );
+					props.setMetaFieldValue( 'default', 'site-sidebar-style' );
+					break;
+			}
 		}
-		else {
-			setIsDefaultNarrow(false);
-		}
-	}, [contentLayout, setIsDefaultNarrow]);
-
-	// Display sidebar options or not.
-	const showSidebar = () => {
-		return (('narrow-container' === contentLayout) || ('default' === contentLayout && isDefaultNarrow)) ? false : true;
-	}
+	}, [props.meta['astra-migrate-meta-layouts']] );
 
 	return (
 		<>
@@ -132,30 +162,44 @@ const MetaSettings = props => {
 
 					{/* Content Layout Setting */}
 					{ ! is_hide_content_layout_sidebar && (<PanelBody
-						title={ __( 'Content Layout', 'astra' ) }
+						title={ __( 'Container', 'astra' ) }
 						initialOpen={ true }
 					>
+						<label id='ast-label-container-layout' className='ast-sub-section-title'>{ __( 'Container Layout', 'astra' ) }</label>
 						<div className="ast-sidebar-layout-meta-wrap components-base-control__field">
 							<AstRadioImageControl
-								metavalue = { ( undefined !== props.meta['site-content-layout'] && ''!== props.meta['site-content-layout'] ? props.meta['site-content-layout'] : 'default' ) }
+								metavalue = { ( undefined !== props.meta['ast-site-content-layout'] && ''!== props.meta['ast-site-content-layout'] ? props.meta['ast-site-content-layout'] : 'default' ) }
 								choices = { contentLayoutOptions }
-								id = { 'site-content-layout' }
-								onChange={ ( val ) => {
-									setContentLayout(val);
+								id = { 'ast-site-content-layout' }
+								onChange={ ( val ) => {						
 									if ( val === 'narrow-container' ) props.setMetaFieldValue( 'no-sidebar', 'site-sidebar-layout');
-									props.setMetaFieldValue( val, 'site-content-layout' );
+									props.setMetaFieldValue( val, 'ast-site-content-layout' );
 								} }
 							/>
 						</div>
+						<label id='ast-label-container-style' className='ast-sub-section-title'>{ __( 'Container Style', 'astra' ) }</label>
+						<div className="ast-sidebar-layout-meta-wrap components-base-control__field">
+							<AstSelectorControl
+								metavalue = { ( undefined !== props.meta['site-content-style'] && ''!== props.meta['site-content-style'] ? props.meta['site-content-style'] : 'default' ) }
+								choices = { contentStyleOptions }
+								id = { 'site-content-style' }
+								onChange={ ( val ) => {
+									props.setMetaFieldValue( val, 'site-content-style' );
+								} }
+							/>
+						</div>
+						<p className='description'>
+							{ __( 'Container style will apply only when layout is set to either normal or narrow.', 'astra' ) }
+						</p>
 					</PanelBody>
-					)}
+					)}				
 
 					{/* Sidebar Setting */}
-					{ ! is_hide_content_layout_sidebar && showSidebar() && (
 					<PanelBody
 						title={ __( 'Sidebar', 'astra' ) }
 						initialOpen={ false }
 					>
+						<label id='ast-label-sidebar-layout' className='ast-sub-section-title'>{ __( 'Sidebar Layout', 'astra' ) }</label>
 						<div className="ast-sidebar-layout-meta-wrap components-base-control__field">
 							<AstRadioImageControl
 								metavalue = { ( undefined !== props.meta['site-sidebar-layout'] && ''!== props.meta['site-sidebar-layout'] ? props.meta['site-sidebar-layout'] : 'default' ) }
@@ -166,8 +210,23 @@ const MetaSettings = props => {
 								} }
 							/>
 						</div>
+						{ ! astMetaParams.v4_1_6_migration && (
+							<p className='description'>
+								{ __( 'Sidebar will only apply when container layout is set to normal.', 'astra' ) }
+							</p>
+						)}
+						<label id='ast-label-sidebar-style' className='ast-sub-section-title'>{ __( 'Sidebar Style', 'astra' ) }</label>
+						<div className="ast-sidebar-layout-meta-wrap components-base-control__field">
+							<AstSelectorControl
+								metavalue = { ( undefined !== props.meta['site-sidebar-style'] && ''!== props.meta['site-sidebar-style'] ? props.meta['site-sidebar-style'] : 'default' ) }
+								choices = { sidebarStyleOptions }
+								id = { 'site-sidebar-style' }
+								onChange={ ( val ) => {
+									props.setMetaFieldValue( val, 'site-sidebar-style' );
+								} }
+							/>
+						</div>
 					</PanelBody>
-					)}
 
 					{/* Disable Section Setting */}
 					{ ! is_hide_content_layout_sidebar && ( <PanelBody

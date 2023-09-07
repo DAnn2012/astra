@@ -81,6 +81,8 @@ const ResponsiveSpacingComponent = props => {
 					  value={state[`${device}-unit`]}></input>;
 	};
 
+	const allEqual = arr => arr.every(val => val === arr[0]);
+
 	const renderInputHtml = (device, active = '') => {
 		const {
 			linked_choices,
@@ -91,8 +93,14 @@ const ResponsiveSpacingComponent = props => {
 			connected
 		} = props.control.params;
 
-		let connectedClass = ( false === connected ) ? '' : 'connected';
-		let disconnectedClass = ( false === connected ) ? '' : 'disconnected';
+		const currentValues = Object.keys(choices).map(choiceID => {
+			return state[device][choiceID];
+		});
+
+		const areValuesDifferent = allEqual(currentValues);
+
+		let connectedClass = ( ( false === connected ) || ( false === areValuesDifferent ) ) ? '' : 'connected';
+		let disconnectedClass = ( ( false === connected ) || ( false === areValuesDifferent ) ) ? '' : 'disconnected';
 		let itemLinkDesc = __('Link Values Together', 'astra');
 		let linkHtml = null;
 		let htmlChoices = null;

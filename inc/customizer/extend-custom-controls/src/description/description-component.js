@@ -7,7 +7,9 @@ const DescriptionComponent = props => {
 	let htmlLabel = null;
 	let htmlHelp = null;
 	let htmlDescription = null;
-
+	if ( props.control.params.hide ) {
+		return;
+	}
 	if (props.control.params.label) {
 		htmlLabel = <span className="customize-control-title">{props.control.params.label}</span>;
 	}
