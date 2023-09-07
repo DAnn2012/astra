@@ -1,4 +1,5 @@
 const { test, expect } = require( '@playwright/test' );
+const { adminLogin } = require( '../../../../utils/adminlogin' );
 const { setCustomizeSettings } = require( '../../../../utils/customize' );
 const { setBrowserViewport } = require( '../../../../utils/set-browser-viewport' );
 
@@ -28,6 +29,8 @@ test.describe( 'HTML 1 color verification', () => {
 		await setCustomizeSettings( colorSettings, baseURL );
 	} );
     test( 'HTML 1 color on the front end.', async ({ page }) => {
+        const login = new adminLogin( page );
+        await login.loginAsAdmin();
 		await test.step('HTML 1 color', async () => {
 			await page.goto('/');
             const htmlColor = await page.$eval('.ast-header-html-1 .ast-builder-html-element',
