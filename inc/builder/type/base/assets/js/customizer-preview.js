@@ -608,6 +608,14 @@ function astra_builder_widget_css( builder_type = 'header' ) {
 			selector + ' .widget-title'
 		);
 
+        // Widget Heading Color for .wp-block-heading.
+        astra_color_responsive_css(
+            builder_type + '-widget-' + index + '-title-color-heading',
+            'astra-settings[' + builder_type + '-widget-' + index + '-title-color]',
+            'color',
+            selector + ' .wp-block-heading'
+        );
+
 		// Widget Title Typography.
 		astra_responsive_font_size(
 			'astra-settings[' + builder_type + '-widget-' + index + '-font-size]',
