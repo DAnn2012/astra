@@ -683,14 +683,16 @@ function hasWordPressWidgetBlockEditor() {
 	 */
 	wp.customize( 'astra-settings[ast-header-responsive-logo-width]', function( setting ) {
 		setting.bind( function( logo_width ) {
+			let tabletBreakPoint    = astraCustomizer.tablet_breakpoint || 921,
+				mobileBreakPoint    = astraCustomizer.mobile_breakpoint || 544;
+
 			if ( logo_width['desktop'] != '' || logo_width['tablet'] != '' || logo_width['mobile'] != '' ) {
-				var dynamicStyle = '#masthead .site-logo-img .custom-logo-link img { max-width: ' + logo_width['desktop'] + 'px; } @media( max-width: 768px ) { #masthead .site-logo-img .custom-logo-link img { max-width: ' + logo_width['tablet'] + 'px; } #masthead .site-logo-img img { max-height: ' + logo_width['tablet'] + 'px; } } @media( max-width: 544px ) { .ast-header-break-point .site-branding img, .ast-header-break-point #masthead .site-logo-img .custom-logo-link img { max-width: ' + logo_width['mobile'] + 'px; }' +
-			    '#masthead .site-logo-img img { max-height: ' + logo_width['mobile'] + 'px; } .astra-logo-svg{width: ' + logo_width['mobile'] + 'px !important; } }';
+				var dynamicStyle = '#masthead .site-logo-img .custom-logo-link img { max-width: ' + logo_width['desktop'] + 'px; height: ' + logo_width['desktop'] + 'px; width: 100%; } @media( max-width: ' + tabletBreakPoint + 'px ) { #masthead .site-logo-img .custom-logo-link img { max-width: ' + logo_width['tablet'] + 'px; height: ' + logo_width['tablet'] + 'px; width: 100%; } #masthead .site-logo-img img { max-height: ' + logo_width['tablet'] + 'px; } } @media( max-width: ' + mobileBreakPoint + 'px ) { #masthead .site-logo-img .custom-logo-link img { max-width: ' + logo_width['mobile'] + 'px; height: ' + logo_width['mobile'] + 'px; width: 100%; }' + '#masthead .site-logo-img img { max-width: ' + logo_width['mobile'] + 'px; max-height: ' + logo_width['mobile'] + 'px; width: 100%; height: 100%; } }';
 				astra_add_dynamic_css( 'ast-header-responsive-logo-width', dynamicStyle );
-				var mobileLogoStyle = '.ast-header-break-point #masthead .site-logo-img .custom-mobile-logo-link img { max-width: ' + logo_width['tablet'] + 'px; } @media( max-width: 768px ) { .ast-header-break-point #masthead .site-logo-img .custom-mobile-logo-link img { max-width: ' + logo_width['tablet'] + 'px; }  @media( max-width: 544px ) { .ast-header-break-point #masthead .site-logo-img .custom-mobile-logo-link img { max-width: ' + logo_width['mobile'] + 'px; }';
+
+				var mobileLogoStyle = '.ast-header-break-point #masthead .site-logo-img .custom-mobile-logo-link img { max-width: ' + logo_width['tablet'] + 'px; } @media( max-width: ' + tabletBreakPoint + 'px ) { .ast-header-break-point #masthead .site-logo-img .custom-mobile-logo-link img { max-width: ' + logo_width['tablet'] + 'px; }  @media( max-width: ' + mobileBreakPoint + 'px ) { .ast-header-break-point #masthead .site-logo-img .custom-mobile-logo-link img { max-width: ' + logo_width['mobile'] + 'px; }';
 				astra_add_dynamic_css( 'mobile-header-logo-width', mobileLogoStyle );
-			}
-			else{
+			} else {
 				wp.customize.preview.send( 'refresh' );
 			}
 		} );
@@ -704,7 +706,7 @@ function hasWordPressWidgetBlockEditor() {
 			var desktopTitleVisibility  = ( logo_visibility['desktop'] ) ? 'block' : 'none';
 			var tabletTitleVisibility  = ( logo_visibility['tablet'] ) ? 'block' : 'none';
 			var mobileTitleVisibility  = ( logo_visibility['mobile'] ) ? 'block' : 'none';
-			var tabletBreakPoint    = astraBuilderPreview.tablet_break_point || 768,
+			var tabletBreakPoint    = astraBuilderPreview.tablet_break_point || 921,
 				mobileBreakPoint    = astraBuilderPreview.mobile_break_point || 544;
 			var dynamicStyle = '.ast-site-title-wrap .site-title { display: ' + desktopTitleVisibility + ';} @media( max-width: ' + tabletBreakPoint + 'px) { .ast-site-title-wrap .site-title { display: ' + tabletTitleVisibility + ';} } @media( max-width: ' + mobileBreakPoint + 'px) { .ast-site-title-wrap .site-title { display: ' + mobileTitleVisibility + ';} }';
 			astra_add_dynamic_css( 'display-site-title-responsive', dynamicStyle );

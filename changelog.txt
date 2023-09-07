@@ -4,8 +4,10 @@ v4.3.2 (Unreleased)
 - Improvement: Added a new filter 'astra_woo_shop_product_title_link' to remove the product title link from the product page.
 - Improvement: Header-Footer Builder - Widget design options added by default in Astra.
 - Fix: Resolved console error which originated from "menu-toggle-close" element click on the frontend.
-- Fix: After WordPress 6.3 update bottom spacing of 'figure' tag is missing.
+- Fix: After WordPress 6.3 bottom spacing of 'figure' tag is missing.
 - Fix: Header-Footer Builder - Social - Background spacing issue breaking UI in customizer preview.
+- Fix: Block Editor - After WordPress 6.3 compatibility title visibility SVG icon jerks on page load with slow networks.
+- Fix: Site Identity - Logo Width sizes not working as expected in the customizer preview.
 
 v4.3.1
 - Fix: Block - Lists block style type updated to "disc" after v4.3.0 update.
